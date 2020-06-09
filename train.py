@@ -15,7 +15,7 @@ class SAModule(torch.nn.Module):
         self.r = r
         self.conv = PointConv(nn)
 
-    def forward(self, x, pos, batch, num_samples=64):
+    def forward(self, x, pos, batch, num_samples=32):
         idx = fps(pos, batch, ratio=self.ratio)
         row, col = radius(pos, pos[idx], self.r, batch, batch[idx],
                           max_num_neighbors=num_samples)
@@ -48,12 +48,11 @@ class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
 
-        self.sa1_module = SAModule(0.5, 0.1, MLP([3 + 3, 32, 32, 64]))
-        self.sa2_module = SAModule(0.25, 0.2, MLP([64 + 3, 64, 64, 128]))
-        self.sa3_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
-        self.sa4_module = SAModule(0.25, 0.4, MLP([256 + 3, 256, 256, 512]))
+        self.sa1_module = SAModule(0.5, 0.2, MLP([3 + 3, 64, 64, 128]))
+        self.sa2_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
+        self.sa3_module = SAModule(0.25, 0.4, MLP([256 + 3, 256, 512, 1024]))
 
-        self.lin1 = Lin(512, 1024)
+        self.lin1 = Lin(1024, 1024)
         self.lin2 = Lin(1024, 2048)
         self.lin3 = Lin(2048, 2048 * 3)
 
@@ -61,17 +60,12 @@ class Net(torch.nn.Module):
         sa1_out = self.sa1_module(data.x, data.x, data.batch)
         sa2_out = self.sa2_module(*sa1_out)
         sa3_out = self.sa3_module(*sa2_out)
-        sa4_out = self.sa4_module(*sa3_out)
-        x, pos, batch = sa4_out
+        x, pos, batch = sa3_out
 
         x = global_max_pool(x, batch)
-        pos = pos.new_zeros((x.size(0), 3))
-        batch = torch.arange(x.size(0), device=batch.device)
 
         x = F.relu(self.lin1(x))
-        x = F.dropout(x, p=0.5, training=self.training)
         x = F.relu(self.lin2(x))
-        x = F.dropout(x, p=0.5, training=self.training)
         x = self.lin3(x)
         return x
     
