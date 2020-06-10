@@ -67,6 +67,7 @@ def train():
             torch.sum(1 + out[2] - out[1].pow(2) - out[2].exp(),dim=1))
         loss = CHM + KLD
         loss.backward()
+        optimizer.step()
         total_loss += loss.item() * data.num_graphs
         if step % 50 == 0:
             print(step)
