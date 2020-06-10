@@ -8,6 +8,7 @@ from chamfer_distance import ChamferDistance
 from Data import ShapeNet_2048
 from train_AE import SAModule, GlobalSAModule, MLP
 
+BETA = 1e-6
 
 class Net(torch.nn.Module):
     def __init__(self):
@@ -15,15 +16,15 @@ class Net(torch.nn.Module):
 
         self.sa1_module = SAModule(0.2, 0.2, MLP([3 + 3, 64, 64, 128]))
         self.sa2_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
-        self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 256, 512])) 
+        self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 256, 1024])) 
         
 
-        self.mu_lin = Lin(512,20)
-        self.sig_lin = Lin(512,20)
+        self.mu_lin = Lin(1024,64)
+        self.sig_lin = Lin(1024,64)
         
-        self.lin1 = Lin(20, 512)
-        self.lin2 = Lin(512, 1024)
-        self.lin3 = Lin(1024, 2048 * 3)
+        self.lin1 = Lin(64, 1024)
+        self.lin2 = Lin(1024, 2048)
+        self.lin3 = Lin(2048, 2048 * 3)
     
     
     def encode(self, x, batch):
@@ -53,7 +54,7 @@ class Net(torch.nn.Module):
         return self.decode(z), mu, logvar
 
 
-def train():
+def train(epoch):
     model.train()
     total_loss = 0
     step = 0
@@ -63,16 +64,19 @@ def train():
         out = model(data)
         dist1, dist2 = criterion(out[0].reshape(-1,2048,3), data.x.reshape(-1,2048,3))
         CHM = (torch.mean(dist1)) + (torch.mean(dist2)) 
-        KLD = -0.5 * torch.mean(
+        KLD = BETA * -0.5 * torch.mean(
             torch.sum(1 + out[2] - out[1].pow(2) - out[2].exp(),dim=1))
         loss = CHM + KLD
         loss.backward()
         optimizer.step()
         total_loss += loss.item() * data.num_graphs
-        if step % 50 == 0:
-            print(step)
-            print('KLD:',KLD.item()/len(data))
-            print('CHM:',CHM.item()/len(data))
+        if step % 10 == 0:
+            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}\tLoss_recons: {:.6f}\tLoss_kld: {:.6f}'.format(
+                epoch, step * len(data), len(train_loader.dataset),
+                100. * step / len(train_loader),
+                loss.item() / len(data), 
+                CHM.item()/ len(data),
+                KLD.item()/len(data)))
         step += 1
     return total_loss / len(dataset)
 
@@ -92,7 +96,7 @@ if __name__ == '__main__':
     print('Training started:')
     criterion = ChamferDistance()
     for epoch in range(1, 401):
-        loss = train()
+        loss = train(epoch)
         print('Epoch {:03d}, Loss: {:.4f}'.format(
             epoch, loss))
         if epoch % 10 ==0:
