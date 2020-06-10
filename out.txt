@@ -46,552 +46,1720 @@ Net(
         (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
       )
       (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
         (0): Linear(in_features=256, out_features=512, bias=True)
         (1): ReLU()
         (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
       )
-      (2): Sequential(
-        (0): Linear(in_features=512, out_features=1024, bias=True)
-        (1): ReLU()
-        (2): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      )
     )
   )
-  (mu_lin): Linear(in_features=1024, out_features=100, bias=True)
-  (sig_lin): Linear(in_features=1024, out_features=100, bias=True)
-  (lin1): Linear(in_features=100, out_features=1024, bias=True)
-  (lin2): Linear(in_features=1024, out_features=2048, bias=True)
-  (lin3): Linear(in_features=2048, out_features=6144, bias=True)
+  (mu_lin): Linear(in_features=512, out_features=20, bias=True)
+  (sig_lin): Linear(in_features=512, out_features=20, bias=True)
+  (lin1): Linear(in_features=20, out_features=512, bias=True)
+  (lin2): Linear(in_features=512, out_features=1024, bias=True)
+  (lin3): Linear(in_features=1024, out_features=6144, bias=True)
 )
 Training started:
 0
-KLD: tensor(77913.2969, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(81.6962, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 63.017842610677086
+CHM: 0.05760690073172251
 50
-KLD: tensor(191.0802, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0060, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 1.0048914750417073
+CHM: 0.001912743008385102
 100
-KLD: tensor(123.3392, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.3460877736409505
+CHM: 0.0013260611643393834
 150
-KLD: tensor(77.8430, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.172427237033844
+CHM: 0.0013350024819374084
 200
-KLD: tensor(47.9380, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 001, Loss: 518.7501
+KLD: 0.15898295243581137
+CHM: 0.0012182958113650482
+Epoch 001, Loss: 4.4669
 0
-KLD: tensor(51.6005, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.1297090450922648
+CHM: 0.0012615743714074294
 50
-KLD: tensor(42.1707, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.08326150973637898
+CHM: 0.0013444263798495133
 100
-KLD: tensor(29.9961, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.09655024607976277
+CHM: 0.001703794424732526
 150
-KLD: tensor(25.7368, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.05970015128453573
+CHM: 0.0012636031024158
 200
-KLD: tensor(25.4297, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 002, Loss: 32.2441
+KLD: 0.056688969333966575
+CHM: 0.001293539224813382
+Epoch 002, Loss: 0.2670
 0
-KLD: tensor(22.4890, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.047497073809305825
+CHM: 0.0011547747999429703
 50
-KLD: tensor(24.0914, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.05533530314763387
+CHM: 0.0015151094024380047
 100
-KLD: tensor(18.9535, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0049, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.04388152559598287
+CHM: 0.0012544129664699237
 150
-KLD: tensor(17.1775, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.03168982267379761
+CHM: 0.0011100079864263535
 200
-KLD: tensor(17.8103, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 003, Loss: 19.3304
+KLD: 0.036058925092220306
+CHM: 0.0015931534580886364
+Epoch 003, Loss: 0.1259
 0
-KLD: tensor(15.0879, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.02635871370633443
+CHM: 0.0010153551896413167
 50
-KLD: tensor(15.0250, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.02746513734261195
+CHM: 0.0011427461480100949
 100
-KLD: tensor(13.3403, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0054, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.02743929127852122
+CHM: 0.0014498583041131496
 150
-KLD: tensor(12.7122, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.022611384590466816
+CHM: 0.0012153896192709606
 200
-KLD: tensor(12.4332, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 004, Loss: 14.0423
+KLD: 0.021504322687784832
+CHM: 0.0011503576921919982
+Epoch 004, Loss: 0.0775
 0
-KLD: tensor(11.7825, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.021951086819171906
+CHM: 0.001485371341307958
 50
-KLD: tensor(11.4779, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.018095331887404125
+CHM: 0.00129584859435757
 100
-KLD: tensor(11.7799, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.021196819841861725
+CHM: 0.0011195323119560878
 150
-KLD: tensor(10.4329, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.016457887987295788
+CHM: 0.0014746361412107944
 200
-KLD: tensor(9.3984, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 005, Loss: 10.6903
+KLD: 0.01473076269030571
+CHM: 0.001497762743383646
+Epoch 005, Loss: 0.0545
 0
-KLD: tensor(9.6907, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.011975338061650595
+CHM: 0.001437813974916935
 50
-KLD: tensor(9.1370, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.012792989611625671
+CHM: 0.0012988409337898095
 100
-KLD: tensor(8.8022, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.009871286650498709
+CHM: 0.0010845464033385117
 150
-KLD: tensor(7.7492, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.01067177951335907
+CHM: 0.0013284776359796524
 200
-KLD: tensor(7.0957, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 006, Loss: 8.1241
+KLD: 0.010141801089048386
+CHM: 0.001146194680283467
+Epoch 006, Loss: 0.0405
 0
-KLD: tensor(6.8089, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.01040994127591451
+CHM: 0.0011990749432394903
 50
-KLD: tensor(7.1809, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.008886472011605898
+CHM: 0.001251865178346634
 100
-KLD: tensor(6.5975, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.009621354440848032
+CHM: 0.001383383758366108
 150
-KLD: tensor(5.9198, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0030, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.010060679167509079
+CHM: 0.001093862500662605
 200
-KLD: tensor(5.1157, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 007, Loss: 6.1272
+KLD: 0.009980209171772003
+CHM: 0.0010504381110270817
+Epoch 007, Loss: 0.0324
 0
-KLD: tensor(5.3175, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.008204467594623566
+CHM: 0.0011858311481773853
 50
-KLD: tensor(5.0021, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0047, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.009927452852328619
+CHM: 0.001313941553235054
 100
-KLD: tensor(4.2582, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.008767185111840567
+CHM: 0.0013576637332638104
 150
-KLD: tensor(4.6249, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0057, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.006559143463770549
+CHM: 0.0010841165979703267
 200
-KLD: tensor(4.1759, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 008, Loss: 4.7112
+KLD: 0.006474963078896205
+CHM: 0.0016675957789023717
+Epoch 008, Loss: 0.0267
 0
-KLD: tensor(3.8868, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.007335152477025986
+CHM: 0.0012147693584362667
 50
-KLD: tensor(3.7835, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.00696660578250885
+CHM: 0.0013104851047197978
 100
-KLD: tensor(3.5870, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0070181538661321
+CHM: 0.0012608574082454045
 150
-KLD: tensor(3.5167, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.006516654044389725
+CHM: 0.0013163577144344647
 200
-KLD: tensor(3.4216, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 009, Loss: 3.6325
+KLD: 0.005804508924484253
+CHM: 0.001401408575475216
+Epoch 009, Loss: 0.0227
 0
-KLD: tensor(2.9748, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.007577488198876381
+CHM: 0.0012877870661516984
 50
-KLD: tensor(2.5768, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.005627052237590154
+CHM: 0.0013720868155360222
 100
-KLD: tensor(2.4886, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.005071379865209262
+CHM: 0.001198455070455869
 150
-KLD: tensor(2.4806, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004323710997899373
+CHM: 0.0011524097838749487
 200
-KLD: tensor(2.5890, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 010, Loss: 2.8141
+KLD: 0.0054706962158282595
+CHM: 0.0010097965908547242
+Epoch 010, Loss: 0.0201
 0
-KLD: tensor(2.6679, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004950999282300472
+CHM: 0.0011732520069926977
 50
-KLD: tensor(2.0428, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0054122886310021085
+CHM: 0.0013892923792203267
 100
-KLD: tensor(1.9820, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004734507761895657
+CHM: 0.001422889530658722
 150
-KLD: tensor(2.3073, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0035163924718896547
+CHM: 0.0011649803879360359
 200
-KLD: tensor(2.0159, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0031, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 011, Loss: 2.2806
+KLD: 0.004584976471960545
+CHM: 0.0015592575073242188
+Epoch 011, Loss: 0.0178
 0
-KLD: tensor(1.6370, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004015864804387093
+CHM: 0.001201213492701451
 50
-KLD: tensor(1.9028, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0046785327916344
+CHM: 0.001649827075501283
 100
-KLD: tensor(1.7131, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004263438594837983
+CHM: 0.0014156339069207509
 150
-KLD: tensor(1.7697, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.003182970608274142
+CHM: 0.0014224510329465072
 200
-KLD: tensor(1.2551, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 012, Loss: 1.7810
+KLD: 0.003949204149345557
+CHM: 0.0012517589299629133
+Epoch 012, Loss: 0.0169
 0
-KLD: tensor(1.4075, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0041962241133054095
+CHM: 0.001470946396390597
 50
-KLD: tensor(1.5179, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004456518528362115
+CHM: 0.0013441536575555801
 100
-KLD: tensor(1.2738, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004401455322901408
+CHM: 0.0013204387699564297
 150
-KLD: tensor(1.3255, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0033604462320605912
+CHM: 0.0013216159616907437
 200
-KLD: tensor(1.1470, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 013, Loss: 1.4514
+KLD: 0.003444253777464231
+CHM: 0.001159975305199623
+Epoch 013, Loss: 0.0146
 0
-KLD: tensor(1.3366, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0032820189371705055
+CHM: 0.001158654224127531
 50
-KLD: tensor(1.1099, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.003644279514749845
+CHM: 0.0011762767098844051
 100
-KLD: tensor(0.9533, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0029552259172002473
+CHM: 0.001378711313009262
 150
-KLD: tensor(1.0912, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0031626752267281213
+CHM: 0.0013445713557302952
 200
-KLD: tensor(1.0312, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 014, Loss: 1.1783
+KLD: 0.0033095733573039374
+CHM: 0.0012117107398808002
+Epoch 014, Loss: 0.0135
 0
-KLD: tensor(1.0533, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0029908946404854455
+CHM: 0.0010058578724662464
 50
-KLD: tensor(1.1427, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0032275027285019555
+CHM: 0.0013651965806881587
 100
-KLD: tensor(1.3472, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0047, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0025729496652881303
+CHM: 0.001222593088944753
 150
-KLD: tensor(0.8533, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0027839243412017822
+CHM: 0.0012263694467643897
 200
-KLD: tensor(0.9985, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 015, Loss: 1.0104
+KLD: 0.002259659580886364
+CHM: 0.0012037317889432113
+Epoch 015, Loss: 0.0127
 0
-KLD: tensor(1.0768, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002882992538313071
+CHM: 0.0012662202740708988
 50
-KLD: tensor(0.8264, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0026862360537052155
+CHM: 0.0013801103147367637
 100
-KLD: tensor(0.7555, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0030511670435468354
+CHM: 0.0011459020121643941
 150
-KLD: tensor(0.8912, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002910440477232138
+CHM: 0.0014401160491009553
 200
-KLD: tensor(0.8626, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 016, Loss: 0.9071
+KLD: 0.002847605695327123
+CHM: 0.0012481287121772766
+Epoch 016, Loss: 0.0124
 0
-KLD: tensor(0.8480, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.003899539510409037
+CHM: 0.0010802955366671085
 50
-KLD: tensor(0.7385, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.003130970522761345
+CHM: 0.0011505441119273503
 100
-KLD: tensor(1.2892, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002768109552562237
+CHM: 0.0014740324889620144
 150
-KLD: tensor(0.7282, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.001970327148834864
+CHM: 0.0013159289956092834
 200
-KLD: tensor(0.6829, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0048, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 017, Loss: 0.8004
+KLD: 0.002356266292432944
+CHM: 0.001408167804280917
+Epoch 017, Loss: 0.0117
 0
-KLD: tensor(0.8204, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.00220473762601614
+CHM: 0.0012515744504829247
 50
-KLD: tensor(0.6361, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0023190354307492576
+CHM: 0.0009929966957618792
 100
-KLD: tensor(0.7498, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002532694488763809
+CHM: 0.001268008801465233
 150
-KLD: tensor(0.9399, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002653529867529869
+CHM: 0.0011331797577440739
 200
-KLD: tensor(0.5975, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 018, Loss: 0.7087
+KLD: 0.003153580861787001
+CHM: 0.001177578077962001
+Epoch 018, Loss: 0.0121
 0
-KLD: tensor(0.6508, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0049, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002582166033486525
+CHM: 0.0012330225047965844
 50
-KLD: tensor(0.6230, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004202257531384627
+CHM: 0.0010401499457657337
 100
-KLD: tensor(0.5697, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0025363359600305557
+CHM: 0.0011333180591464043
 150
-KLD: tensor(0.6985, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002635586385925611
+CHM: 0.0009886644935856264
 200
-KLD: tensor(0.4539, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 019, Loss: 0.6391
+KLD: 0.003277024875084559
+CHM: 0.0012751449054727952
+Epoch 019, Loss: 0.0115
 0
-KLD: tensor(0.6414, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002610056350628535
+CHM: 0.0011999951675534248
 50
-KLD: tensor(0.5477, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0031, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002185110623637835
+CHM: 0.00116358557716012
 100
-KLD: tensor(0.5867, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0018544827277461688
+CHM: 0.0014698862408598263
 150
-KLD: tensor(0.6529, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0022671582798163095
+CHM: 0.0010460508055984974
 200
-KLD: tensor(0.5479, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 020, Loss: 0.5691
+KLD: 0.0022416915744543076
+CHM: 0.000996825285255909
+Epoch 020, Loss: 0.0104
 0
-KLD: tensor(0.4925, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0016577687735358875
+CHM: 0.0015004008697966735
 50
-KLD: tensor(0.4741, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.001792928824822108
+CHM: 0.0010174856676409643
 100
-KLD: tensor(0.5937, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0019753811260064444
+CHM: 0.0011762276602288086
 150
-KLD: tensor(0.5320, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.00208894411722819
+CHM: 0.0011962308393170436
 200
-KLD: tensor(0.5764, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 021, Loss: 0.5348
+KLD: 0.0028237365186214447
+CHM: 0.0012421808981647093
+Epoch 021, Loss: 0.0104
 0
-KLD: tensor(0.5649, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0024509653449058533
+CHM: 0.0011587446400274832
 50
-KLD: tensor(0.4364, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002223155771692594
+CHM: 0.001136529880265395
 100
-KLD: tensor(0.4874, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0032026522482434907
+CHM: 0.001104742909471194
 150
-KLD: tensor(0.4688, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0030, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0024639591574668884
+CHM: 0.0009876851302882035
 200
-KLD: tensor(0.4491, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 022, Loss: 0.4916
+KLD: 0.0019063800573349
+CHM: 0.0012437126909693081
+Epoch 022, Loss: 0.0110
 0
-KLD: tensor(0.4020, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.00238045584410429
+CHM: 0.0011233531404286623
 50
-KLD: tensor(0.4408, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0018092564617594082
+CHM: 0.0014120057846109073
 100
-KLD: tensor(0.4508, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0022963648661971092
+CHM: 0.0011619445867836475
 150
-KLD: tensor(0.5362, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0028, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0024200836196541786
+CHM: 0.0011761834224065144
 200
-KLD: tensor(0.3827, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 023, Loss: 0.4551
+KLD: 0.0019191764295101166
+CHM: 0.0011219669443865616
+Epoch 023, Loss: 0.0098
 0
-KLD: tensor(0.4290, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002092055045068264
+CHM: 0.0011790205414096515
 50
-KLD: tensor(0.4339, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0031430205951134362
+CHM: 0.001188614871352911
 100
-KLD: tensor(0.3593, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0018341423322757084
+CHM: 0.0012627959561844666
 150
-KLD: tensor(0.5231, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0020370945955316224
+CHM: 0.0010217780557771523
 200
-KLD: tensor(0.3796, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 024, Loss: 0.4219
+KLD: 0.0017195452625552814
+CHM: 0.0011316473440577586
+Epoch 024, Loss: 0.0101
 0
-KLD: tensor(0.3982, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0015744076420863469
+CHM: 0.0012430987941722076
 50
-KLD: tensor(0.7266, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002237125299870968
+CHM: 0.0011219490164270003
 100
-KLD: tensor(0.3845, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002127776543299357
+CHM: 0.001228776682789127
 150
-KLD: tensor(0.3645, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0019569452852010727
+CHM: 0.0009542937235285839
 200
-KLD: tensor(0.4319, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 025, Loss: 0.4056
+KLD: 0.0024679098278284073
+CHM: 0.0011234430906673272
+Epoch 025, Loss: 0.0105
 0
-KLD: tensor(0.3699, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0048, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0032598435257871947
+CHM: 0.0012052344003071387
 50
-KLD: tensor(0.4012, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002072688192129135
+CHM: 0.0014509184596439202
 100
-KLD: tensor(0.3558, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002480656529466311
+CHM: 0.0011269453292091687
 150
-KLD: tensor(0.3678, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0022327850262324014
+CHM: 0.0012243033852428198
 200
-KLD: tensor(0.3915, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 026, Loss: 0.3903
+KLD: 0.0024662859116991362
+CHM: 0.0010628170954684417
+Epoch 026, Loss: 0.0100
 0
-KLD: tensor(0.5126, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0019118500252564747
+CHM: 0.0015821997076272964
 50
-KLD: tensor(0.3324, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0019668632497390113
+CHM: 0.0012452463464190562
 100
-KLD: tensor(0.4455, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0016087995221217473
+CHM: 0.0012491986465950806
 150
-KLD: tensor(0.4527, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0017180073385437329
+CHM: 0.0011272513462851446
 200
-KLD: tensor(0.3311, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 027, Loss: 0.3594
+KLD: 0.001320969934264819
+CHM: 0.0012632557190954685
+Epoch 027, Loss: 0.0094
 0
-KLD: tensor(0.3395, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002326138007144133
+CHM: 0.0013227957921723525
 50
-KLD: tensor(0.2912, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0015300543357928593
+CHM: 0.0012582407798618078
 100
-KLD: tensor(0.2653, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002688937820494175
+CHM: 0.001341522050400575
 150
-KLD: tensor(0.3316, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0057, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002231584551433722
+CHM: 0.001277768596385916
 200
-KLD: tensor(0.4309, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 028, Loss: 0.3646
+KLD: 0.0021163675313194594
+CHM: 0.0012306719242284696
+Epoch 028, Loss: 0.0116
 0
-KLD: tensor(0.2963, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0024297330528497696
+CHM: 0.0013175190736850102
 50
-KLD: tensor(0.3004, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002013111487030983
+CHM: 0.001260598422959447
 100
-KLD: tensor(0.3104, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.001907135049502055
+CHM: 0.0011030682362616062
 150
-KLD: tensor(0.3318, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0031, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0019474886357784271
+CHM: 0.0011835322560121615
 200
-KLD: tensor(0.3216, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 029, Loss: 0.3279
+KLD: 0.0017940749724706013
+CHM: 0.0015057834486166637
+Epoch 029, Loss: 0.0089
 0
-KLD: tensor(0.2296, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0021015054856737456
+CHM: 0.0015314090996980667
 50
-KLD: tensor(0.2972, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0012857342759768169
+CHM: 0.0012574958770225446
 100
-KLD: tensor(0.2778, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.003507635866602262
+CHM: 0.001199647629012664
 150
-KLD: tensor(0.2386, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0019583354393641153
+CHM: 0.0011653820984065533
 200
-KLD: tensor(0.4815, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 030, Loss: 0.3020
+KLD: 0.0025703289235631623
+CHM: 0.0014996672980487347
+Epoch 030, Loss: 0.0096
 0
-KLD: tensor(0.2777, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.00559057171146075
+CHM: 0.0011456759336094062
 50
-KLD: tensor(0.1865, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0025076729555924735
+CHM: 0.001284101822723945
 100
-KLD: tensor(0.2459, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0018881084397435188
+CHM: 0.001159277589370807
 150
-KLD: tensor(0.3891, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0016793568308154743
+CHM: 0.0012175807108481724
 200
-KLD: tensor(0.2814, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 031, Loss: 0.3008
+KLD: 0.00149251955250899
+CHM: 0.00116159215879937
+Epoch 031, Loss: 0.0098
 0
-KLD: tensor(0.2620, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002457349250713984
+CHM: 0.0012383765230576198
 50
-KLD: tensor(0.2600, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0016884608194231987
+CHM: 0.0014410515626271565
 100
-KLD: tensor(0.2215, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0013315326844652493
+CHM: 0.0015050200745463371
 150
-KLD: tensor(0.2354, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.004306927944223086
+CHM: 0.0010073580779135227
 200
-KLD: tensor(0.2794, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 032, Loss: 0.2713
+KLD: 0.003136579878628254
+CHM: 0.0013151556874314945
+Epoch 032, Loss: 0.0105
 0
-KLD: tensor(0.2486, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002072491372625033
+CHM: 0.0012831698792676132
 50
-KLD: tensor(0.2193, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.0016673688466350238
+CHM: 0.0009859998244792223
 100
-KLD: tensor(0.2138, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.001289871521294117
+CHM: 0.0014744737806419532
 150
-KLD: tensor(0.4099, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.002153760753571987
+CHM: 0.0010172976180911064
 200
-KLD: tensor(0.2484, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
-Epoch 033, Loss: 0.2903
+KLD: 0.0022685822720328965
+CHM: 0.0011475838255137205
+Epoch 033, Loss: 0.0098
 0
-KLD: tensor(0.3882, device='cuda:0', grad_fn=<MulBackward0>)
-CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+KLD: 0.00217967356244723
+CHM: 0.001138261053711176
+50
+KLD: 0.0017230802526076634
+CHM: 0.0011534194151560466
+100
+KLD: 0.0012000389397144318
+CHM: 0.0010927953602125247
+150
+KLD: 0.0019556498154997826
+CHM: 0.0012552186381071806
+200
+KLD: 0.001571013902624448
+CHM: 0.0011578979901969433
+Epoch 034, Loss: 0.0095
+0
+KLD: 0.0021489442636569342
+CHM: 0.0013485564850270748
+50
+KLD: 0.0019445773214101791
+CHM: 0.0010460196062922478
+100
+KLD: 0.0011342447251081467
+CHM: 0.0010468780528753996
+150
+KLD: 0.0011144249389568965
+CHM: 0.0010153171606361866
+200
+KLD: 0.00178818063189586
+CHM: 0.0014293384738266468
+Epoch 035, Loss: 0.0097
+0
+KLD: 0.0017404019211729367
+CHM: 0.001229404006153345
+50
+KLD: 0.0011224839836359024
+CHM: 0.001150083417693774
+100
+KLD: 0.0028958311304450035
+CHM: 0.0011911064696808655
+150
+KLD: 0.0053983281056086225
+CHM: 0.0012129823832462232
+200
+KLD: 0.003209937053422133
+CHM: 0.0014381917814413707
+Epoch 036, Loss: 0.0110
+0
+KLD: 0.0025907338907321296
+CHM: 0.0014730735371510189
+50
+KLD: 0.0025204097231229148
+CHM: 0.0012002036285897095
+100
+KLD: 0.001964966766536236
+CHM: 0.0012059727062781651
+150
+KLD: 0.0025162103896339736
+CHM: 0.0012959940358996391
+200
+KLD: 0.0016578749443093936
+CHM: 0.0011717636759082477
+Epoch 037, Loss: 0.0103
+0
+KLD: 0.0017186685775717099
+CHM: 0.001569996898372968
+50
+KLD: 0.001812964677810669
+CHM: 0.0013481526014705498
+100
+KLD: 0.0027250098064541817
+CHM: 0.0010521910929431517
+150
+KLD: 0.001966738452514013
+CHM: 0.0012438122648745775
+200
+KLD: 0.0011785527070363362
+CHM: 0.0010257054430743058
+Epoch 038, Loss: 0.0095
+0
+KLD: 0.0008995458483695984
+CHM: 0.0011192869084576766
+50
+KLD: 0.0031852833926677704
+CHM: 0.0012255373876541853
+100
+KLD: 0.0015685704226295154
+CHM: 0.0012995786188791196
+150
+KLD: 0.001479715419312318
+CHM: 0.001371879130601883
+200
+KLD: 0.0033218481888373694
+CHM: 0.0011356041456262271
+Epoch 039, Loss: 0.0103
+0
+KLD: 0.00295465812087059
+CHM: 0.0013918932527303696
+50
+KLD: 0.0022395579144358635
+CHM: 0.0012738381046801805
+100
+KLD: 0.0024446072056889534
+CHM: 0.001168733307470878
+150
+KLD: 0.002407411734263102
+CHM: 0.001278689286361138
+200
+KLD: 0.0007739656915267309
+CHM: 0.0011707835365086794
+Epoch 040, Loss: 0.0105
+0
+KLD: 0.001713162288069725
+CHM: 0.001232221567382415
+50
+KLD: 0.0021187194312612214
+CHM: 0.0013610535922149818
+100
+KLD: 0.0014444636180996895
+CHM: 0.0010969776970644791
+150
+KLD: 0.0026293788105249405
+CHM: 0.0011189183375487726
+200
+KLD: 0.004173269805808862
+CHM: 0.0014101052656769753
+Epoch 041, Loss: 0.0113
+0
+KLD: 0.0016630760704477627
+CHM: 0.0015620061506827672
+50
+KLD: 0.0020092145229379335
+CHM: 0.0012511617969721556
+100
+KLD: 0.000993434339761734
+CHM: 0.0014596637338399887
+150
+KLD: 0.0013452839727203052
+CHM: 0.0011981117228666942
+200
+KLD: 0.0009123586739102999
+CHM: 0.0010338560678064823
+Epoch 042, Loss: 0.0081
+0
+KLD: 0.0010488716264565785
+CHM: 0.001293985949208339
+50
+KLD: 0.0017970701058705647
+CHM: 0.001289323748399814
+100
+KLD: 0.0037398949886361756
+CHM: 0.0010378952914228041
+150
+KLD: 0.0016513125350077946
+CHM: 0.0012061926536262035
+200
+KLD: 0.0017710762719313304
+CHM: 0.0012645871223260958
+Epoch 043, Loss: 0.0102
+0
+KLD: 0.001246822066605091
+CHM: 0.0010833324243625004
+50
+KLD: 0.0011729042356212933
+CHM: 0.0010990160517394543
+100
+KLD: 0.0020033142839868865
+CHM: 0.0010850736871361732
+150
+KLD: 0.0013281212498744328
+CHM: 0.0010703925509005785
+200
+KLD: 0.001175559125840664
+CHM: 0.0013399339901904266
+Epoch 044, Loss: 0.0081
+0
+KLD: 0.001716912103195985
+CHM: 0.0011319369077682495
+50
+KLD: 0.002209814265370369
+CHM: 0.0013563275958100955
+100
+KLD: 0.001109153653184573
+CHM: 0.001270659112681945
+150
+KLD: 0.0011955130224426587
+CHM: 0.001162435549000899
+200
+KLD: 0.0033274535089731216
+CHM: 0.0012279589039584
+Epoch 045, Loss: 0.0084
+0
+KLD: 0.001748449169099331
+CHM: 0.0010687572260697682
+50
+KLD: 0.0013321936130523682
+CHM: 0.0012300269833455484
+100
+KLD: 0.0026947607596715293
+CHM: 0.0014710514806210995
+150
+KLD: 0.0013314168900251389
+CHM: 0.000994511026268204
+200
+KLD: 0.0016451760505636532
+CHM: 0.0012674936248610418
+Epoch 046, Loss: 0.0084
+0
+KLD: 0.0009608408436179161
+CHM: 0.0011347751133143902
+50
+KLD: 0.0014782122646768887
+CHM: 0.0012215939350426197
+100
+KLD: 0.0008682707945505778
+CHM: 0.001165013915548722
+150
+KLD: 0.002854574161271254
+CHM: 0.0011340547353029251
+200
+KLD: 0.0037018281097213426
+CHM: 0.0013915918146570523
+Epoch 047, Loss: 0.0099
+0
+KLD: 0.002010112628340721
+CHM: 0.0011163547945519288
+50
+KLD: 0.00233482817808787
+CHM: 0.001392323523759842
+100
+KLD: 0.0022093973432977996
+CHM: 0.00122100580483675
+150
+KLD: 0.0011109296853343646
+CHM: 0.0015220319231351216
+200
+KLD: 0.0017378469929099083
+CHM: 0.0012862806518872578
+Epoch 048, Loss: 0.0096
+0
+KLD: 0.0009661801159381866
+CHM: 0.0011372636848439772
+50
+KLD: 0.001125709464152654
+CHM: 0.0014361465970675151
+100
+KLD: 0.0008410196751356125
+CHM: 0.001057466957718134
+150
+KLD: 0.0009976783767342567
+CHM: 0.0011909406166523695
+200
+KLD: 0.0009590893362959226
+CHM: 0.0011404226534068584
+Epoch 049, Loss: 0.0067
+0
+KLD: 0.0007039575527111689
+CHM: 0.001185769448056817
+50
+KLD: 0.001488772841791312
+CHM: 0.0012810325715690851
+100
+KLD: 0.0007558406020204226
+CHM: 0.0013433073957761128
+150
+KLD: 0.0022973129525780678
+CHM: 0.0010697121421496074
+200
+KLD: 0.0012340449417630832
+CHM: 0.001403364973763625
+Epoch 050, Loss: 0.0090
+0
+KLD: 0.001210238163669904
+CHM: 0.0012290778880318005
+50
+KLD: 0.0033031910037000975
+CHM: 0.000975678830097119
+100
+KLD: 0.0025353835274775824
+CHM: 0.001262714931120475
+150
+KLD: 0.0010671652853488922
+CHM: 0.0009757910544673601
+200
+KLD: 0.005066875368356705
+CHM: 0.0011878755564490955
+Epoch 051, Loss: 0.0126
+0
+KLD: 0.007871984814604124
+CHM: 0.0012761113854746025
+50
+KLD: 0.002789221083124479
+CHM: 0.0010714619420468807
+100
+KLD: 0.0005200393497943878
+CHM: 0.0013460304277638595
+150
+KLD: 0.0006118603050708771
+CHM: 0.0013015543421109517
+200
+KLD: 0.0010063167040546734
+CHM: 0.0013084855551520984
+Epoch 052, Loss: 0.0108
+0
+KLD: 0.0011565328265229862
+CHM: 0.0011409801275779803
+50
+KLD: 0.0006255827223261198
+CHM: 0.0014006124498943489
+100
+KLD: 0.00041167500118414563
+CHM: 0.0010580378584563732
+150
+KLD: 0.0002646467958887418
+CHM: 0.0013879615192612012
+200
+KLD: 0.00027712155133485794
+CHM: 0.0011272556924571593
+Epoch 053, Loss: 0.0049
+0
+KLD: 0.00035703306396802265
+CHM: 0.001131663021321098
+50
+KLD: 0.00023633334785699844
+CHM: 0.0013297585149606068
+100
+KLD: 0.0003874506801366806
+CHM: 0.0012399543387194474
+150
+KLD: 0.0006369793166716894
+CHM: 0.0011492279979089897
+200
+KLD: 0.0005304825802644094
+CHM: 0.0010415467744072278
+Epoch 054, Loss: 0.0050
+0
+KLD: 0.0007142058263222376
+CHM: 0.0011634919792413712
+50
+KLD: 0.0008229060719410578
+CHM: 0.001047322837014993
+100
+KLD: 0.0014918682475884755
+CHM: 0.0013805972412228584
+150
+KLD: 0.00042087119072675705
+CHM: 0.0011813398450613022
+200
+KLD: 0.0003388350208600362
+CHM: 0.0012182466064890225
+Epoch 055, Loss: 0.0057
+0
+KLD: 0.00046218186616897583
+CHM: 0.001145020592957735
+50
+KLD: 0.0005926480516791344
+CHM: 0.0013925842940807343
+100
+KLD: 0.0004055378958582878
+CHM: 0.001186892157420516
+150
+KLD: 0.0003702966496348381
+CHM: 0.0010829730114589136
+200
+KLD: 0.0005044601857662201
+CHM: 0.0012306943535804749
+Epoch 056, Loss: 0.0052
+0
+KLD: 0.000627079668144385
+CHM: 0.0010979092524697383
+50
+KLD: 0.0006628663589557012
+CHM: 0.0010580018473168213
+100
+KLD: 0.0009148623794317245
+CHM: 0.0012375008470068376
+150
+KLD: 0.0008205364768703779
+CHM: 0.0014421483501791954
+200
+KLD: 0.0014769636715451877
+CHM: 0.0012211743742227554
+Epoch 057, Loss: 0.0074
+0
+KLD: 0.008190150062243143
+CHM: 0.0011264477701236804
+50
+KLD: 0.0023474283516407013
+CHM: 0.00108737638220191
+100
+KLD: 0.0014776202539602916
+CHM: 0.0010475477514167626
+150
+KLD: 0.0005009714514017105
+CHM: 0.0013429629616439342
+200
+KLD: 0.0006771789242823919
+CHM: 0.00113954891761144
+Epoch 058, Loss: 0.0083
+0
+KLD: 0.000525857632358869
+CHM: 0.0009238741671045622
+50
+KLD: 0.0008048750460147858
+CHM: 0.0013485175246993701
+100
+KLD: 0.00032168378432591754
+CHM: 0.001108507780979077
+150
+KLD: 0.0004271998380621274
+CHM: 0.0014602141454815865
+200
+KLD: 0.00043788614372412365
+CHM: 0.0013316456849376361
+Epoch 059, Loss: 0.0051
+0
+KLD: 0.00045197798560063046
+CHM: 0.0014646449126303196
+50
+KLD: 0.0007073764378825823
+CHM: 0.0013283581162492435
+100
+KLD: 0.0004123719409108162
+CHM: 0.0011452906765043736
+150
+KLD: 0.0010344656184315681
+CHM: 0.0012262324647357066
+200
+KLD: 0.000579257495701313
+CHM: 0.0015112444137533505
+Epoch 060, Loss: 0.0059
+0
+KLD: 0.0008544086789091428
+CHM: 0.0013707478841145833
+50
+KLD: 0.0012823712701598804
+CHM: 0.0010599022110303242
+100
+KLD: 0.000906029095252355
+CHM: 0.0011548791856815417
+150
+KLD: 0.0022897937645514808
+CHM: 0.0012088986113667488
+200
+KLD: 0.0035224674890438714
+CHM: 0.0010897638276219368
+Epoch 061, Loss: 0.0088
+0
+KLD: 0.0019542736311753592
+CHM: 0.0013756447782119114
+50
+KLD: 0.0019689397886395454
+CHM: 0.0009577193607886633
+100
+KLD: 0.001043650321662426
+CHM: 0.0010689675497512023
+150
+KLD: 0.0009312517940998077
+CHM: 0.0011842003247390191
+200
+KLD: 0.0007247750957806905
+CHM: 0.0011109438880036275
+Epoch 062, Loss: 0.0083
+0
+KLD: 0.0005578516672054926
+CHM: 0.0011448150811096032
+50
+KLD: 0.0004111401115854581
+CHM: 0.0011121168887863557
+100
+KLD: 0.0005578395600120226
+CHM: 0.001520660084982713
+150
+KLD: 0.00027993352462848026
+CHM: 0.001098002850388487
+200
+KLD: 0.0002414984628558159
+CHM: 0.0010075291308263938
+Epoch 063, Loss: 0.0051
+0
+KLD: 0.0005376832559704781
+CHM: 0.0017617053041855495
+50
+KLD: 0.0008146309604247411
+CHM: 0.0012972008747359116
+100
+KLD: 0.0005978619058926901
+CHM: 0.0010478229572375615
+150
+KLD: 0.0009256054957707723
+CHM: 0.0011570608088125784
+200
+KLD: 0.002981500389675299
+CHM: 0.0012993837396303813
+Epoch 064, Loss: 0.0067
+0
+KLD: 0.001867431526382764
+CHM: 0.0011441074311733246
+50
+KLD: 0.00947460283835729
+CHM: 0.001199875958263874
+100
+KLD: 0.007691994930307071
+CHM: 0.00113401236012578
+150
+KLD: 0.0019350045671065648
+CHM: 0.0010869173953930538
+200
+KLD: 0.0010902052745223045
+CHM: 0.0010138692644735177
+Epoch 065, Loss: 0.0232
+0
+KLD: 0.0006788137058417002
+CHM: 0.0010960958898067474
+50
+KLD: 0.0003064768388867378
+CHM: 0.0012847461427251499
+100
+KLD: 0.0001965422804156939
+CHM: 0.0013406310851375263
+150
+KLD: 0.00019471626728773117
+CHM: 0.0009472051945825418
+200
+KLD: 0.00035517507543166477
+CHM: 0.0011667365518709023
+Epoch 066, Loss: 0.0046
+0
+KLD: 8.463580161333084e-05
+CHM: 0.0014009056612849236
+50
+KLD: 0.0005695301418503126
+CHM: 0.0012804071884602308
+100
+KLD: 0.00039797866096099216
+CHM: 0.0010523054127891858
+150
+KLD: 0.0002792980521917343
+CHM: 0.001211063548301657
+200
+KLD: 0.0006484786669413248
+CHM: 0.0014314213767647743
+Epoch 067, Loss: 0.0051
+0
+KLD: 0.0003045142317811648
+CHM: 0.0011580281425267458
+50
+KLD: 0.00025283731520175934
+CHM: 0.001179494196549058
+100
+KLD: 0.0006814816345771154
+CHM: 0.0013203869263331096
+150
+KLD: 0.0010448116809129715
+CHM: 0.001428022359808286
+200
+KLD: 0.0018134908750653267
+CHM: 0.0009715395669142405
+Epoch 068, Loss: 0.0052
+0
+KLD: 0.000812447319428126
+CHM: 0.0009953787084668875
+50
+KLD: 0.0006984202191233635
+CHM: 0.0011062147095799446
+100
+KLD: 0.0006210959206024805
+CHM: 0.001463383436203003
+150
+KLD: 0.0001428223525484403
+CHM: 0.0014130605074266593
+200
+KLD: 0.00012417323887348175
+CHM: 0.00121528678573668
+Epoch 069, Loss: 0.0058
+0
+KLD: 0.0001791271691521009
+CHM: 0.0012500739345947902
+50
+KLD: 0.0006057812521855036
+CHM: 0.001051860551039378
+100
+KLD: 0.0002914518117904663
+CHM: 0.0010296152904629707
+150
+KLD: 0.0003133409967025121
+CHM: 0.0012216665782034397
+200
+KLD: 0.001252874421576659
+CHM: 0.0011885546458264191
+Epoch 070, Loss: 0.0057
+0
+KLD: 0.000745005284746488
+CHM: 0.0014203836520512898
+50
+KLD: 0.004464001394808292
+CHM: 0.0013052203382054965
+100
+KLD: 0.0014960306386152904
+CHM: 0.0011151339082668226
+150
+KLD: 0.0003172382712364197
+CHM: 0.0011250302195549011
+200
+KLD: 0.000816174161930879
+CHM: 0.0012207640490184228
+Epoch 071, Loss: 0.0092
+0
+KLD: 0.001589854247868061
+CHM: 0.000917686615139246
+50
+KLD: 0.0004580166811744372
+CHM: 0.0013290053854386012
+100
+KLD: 0.00017789720247189203
+CHM: 0.001419542667766412
+150
+KLD: 7.535330951213837e-05
+CHM: 0.0010817327226201694
+200
+KLD: 0.00046417396515607834
+CHM: 0.0011114116447667282
+Epoch 072, Loss: 0.0051
+0
+KLD: 0.001167978470524152
+CHM: 0.0012142211198806763
+50
+KLD: 0.0002544882396856944
+CHM: 0.0012346037353078525
+100
+KLD: 0.0009206539640824
+CHM: 0.0011662131485839684
+150
+KLD: 0.0007975927243630091
+CHM: 0.0010142731480300426
+200
+KLD: 0.005272637431820233
+CHM: 0.0013702912256121635
+Epoch 073, Loss: 0.0096
+0
+KLD: 0.013033753881851831
+CHM: 0.0012175881614287694
+50
+KLD: 0.0015243211140235264
+CHM: 0.0012505993557473023
+100
+KLD: 0.00036836788058280945
+CHM: 0.0011015204557528098
+150
+KLD: 0.00016642858584721884
+CHM: 0.0010601837808887165
+200
+KLD: 0.00022681709378957748
+CHM: 0.001150487611691157
+Epoch 074, Loss: 0.0113
+0
+KLD: 0.00034889734039704007
+CHM: 0.0013992177943388622
+50
+KLD: 0.00044793449342250824
+CHM: 0.0011018730389575164
+100
+KLD: 0.0007951088870565096
+CHM: 0.0010809549130499363
+150
+KLD: 0.00031710447122653324
+CHM: 0.001373058029760917
+200
+KLD: 0.00038816283146540326
+CHM: 0.0014638084297378857
+Epoch 075, Loss: 0.0054
+0
+KLD: 0.0002981058011452357
+CHM: 0.001405495995034774
+50
+KLD: 0.00021088620026906332
+CHM: 0.0012196375367542107
+100
+KLD: 0.0002893029401699702
+CHM: 0.0011956923020382721
+150
+KLD: 0.0020257169380784035
+CHM: 0.0010897443474580844
+200
+KLD: 0.00040559036036332447
+CHM: 0.0014140734759469826
+Epoch 076, Loss: 0.0059
+0
+KLD: 0.0011023509626587231
+CHM: 0.0011610186969240506
+50
+KLD: 0.000314778337876002
+CHM: 0.0011217646921674411
+100
+KLD: 0.0005530271058281263
+CHM: 0.0010888681281358004
+150
+KLD: 9.861774742603302e-05
+CHM: 0.0011145946724961202
+200
+KLD: 0.00010967844476302464
+CHM: 0.0013144724071025848
+Epoch 077, Loss: 0.0051
+0
+KLD: 0.0003285280739267667
+CHM: 0.001078851365794738
+50
+KLD: 0.0009603310997287432
+CHM: 0.0011375020258128643
+100
+KLD: 0.0002333220715324084
+CHM: 0.0012479959211001794
+150
+KLD: 0.00044143075744311017
+CHM: 0.001189492332438628
+200
+KLD: 0.0013232662652929623
+CHM: 0.0010565104894340038
+Epoch 078, Loss: 0.0052
+0
+KLD: 0.0003850857416788737
+CHM: 0.0010073042164246242
+50
+KLD: 0.006080673386653264
+CHM: 0.0011239888456960518
+100
+KLD: 0.007620535790920258
+CHM: 0.001232664876927932
+150
+KLD: 0.0013652130340536435
+CHM: 0.0013351463712751865
+200
+KLD: 0.0001408196985721588
+CHM: 0.0013411336888869603
+Epoch 079, Loss: 0.0213
+0
+KLD: 0.00033855531364679337
+CHM: 0.001083430213232835
+50
+KLD: 0.0007032627860705057
+CHM: 0.0009418552120526632
+100
+KLD: 0.0002366133655110995
+CHM: 0.0008822354332854351
+150
+KLD: 0.0013444417466719945
+CHM: 0.0011294021581610043
+200
+KLD: 0.00034337614973386127
+CHM: 0.0010195192880928516
+Epoch 080, Loss: 0.0050
+0
+KLD: 0.00048460594067970913
+CHM: 0.0012453148762385051
+50
+KLD: 0.00010434631258249283
+CHM: 0.0015381528064608574
+100
+KLD: 5.9211005767186485e-05
+CHM: 0.0010897382162511349
+150
+KLD: 0.00010770528266827266
+CHM: 0.00108333770185709
+200
+KLD: 5.458326389392217e-05
+CHM: 0.0011424163822084665
+Epoch 081, Loss: 0.0040
+0
+KLD: 5.121063441038132e-05
+CHM: 0.00101350046073397
+50
+KLD: 6.006130327781042e-05
+CHM: 0.001111668845017751
+100
+KLD: 0.00016884226351976395
+CHM: 0.0012654718787719805
+150
+KLD: 0.00015188815693060556
+CHM: 0.0012212603663404782
+200
+KLD: 0.00022431276738643646
+CHM: 0.001128487754613161
+Epoch 082, Loss: 0.0042
+0
+KLD: 0.00026316257814566296
+CHM: 0.0011285904329270124
+50
+KLD: 0.00013355196764071783
+CHM: 0.0013267798349261284
+100
+KLD: 0.0018173844243089359
+CHM: 0.001253557779515783
+150
+KLD: 0.0009366342176993688
+CHM: 0.0011568961975475152
+200
+KLD: 0.0011657591288288434
+CHM: 0.0011828670588632424
+Epoch 083, Loss: 0.0072
+0
+KLD: 0.0012206795314947765
+CHM: 0.0011235279186318319
+50
+KLD: 0.0008855657652020454
+CHM: 0.0010928039749463399
+100
+KLD: 0.000560451919833819
+CHM: 0.0012304758032162983
+150
+KLD: 0.0020331908017396927
+CHM: 0.0010745767503976822
+200
+KLD: 0.0029996115093429885
+CHM: 0.0011533306290705998
+Epoch 084, Loss: 0.0070
+0
+KLD: 0.0008150646463036537
+CHM: 0.0012052992824465036
+50
+KLD: 0.009860495726267496
+CHM: 0.0010493684870501359
+100
+KLD: 0.001029114859799544
+CHM: 0.0010172088320056598
+150
+KLD: 0.0005469409128030142
+CHM: 0.0011237701401114464
+200
+KLD: 0.00034723617136478424
+CHM: 0.0011509380613764126
+Epoch 085, Loss: 0.0165
+0
+KLD: 0.0003882506862282753
+CHM: 0.0010827835649251938
+50
+KLD: 0.0003645922988653183
+CHM: 0.0012154811217139165
+100
+KLD: 0.00015845398108164468
+CHM: 0.001291840026775996
+150
+KLD: 0.00017883659650882086
+CHM: 0.0011938256211578846
+200
+KLD: 0.00014423144360383353
+CHM: 0.0008830378452936808
+Epoch 086, Loss: 0.0046
+0
+KLD: 6.0338216523329415e-05
+CHM: 0.001269830313200752
+50
+KLD: 0.0002775111546119054
+CHM: 0.0012609177889923255
+100
+KLD: 0.00036450382322072983
+CHM: 0.0013606874272227287
+150
+KLD: 0.00011585590740044911
+CHM: 0.0012114073615521193
+200
+KLD: 7.041916251182556e-05
+CHM: 0.0014723801674942176
+Epoch 087, Loss: 0.0043
+0
+KLD: 7.396874328454335e-05
+CHM: 0.0012130285613238811
+50
+KLD: 0.8279674053192139
+CHM: 0.001022431068122387
+100
+KLD: 0.0101780965924263
+CHM: 0.001361981499940157
+150
+KLD: 0.0011176566282908122
+CHM: 0.0012766771639386814
+200
+KLD: 0.0007200647766391436
+CHM: 0.001246498975281914
+Epoch 088, Loss: 0.3649
+0
+KLD: 0.0005282148097952207
+CHM: 0.0013052971723179023
+50
+KLD: 0.0004598802576462428
+CHM: 0.0012756814248859882
+100
+KLD: 0.0004521912584702174
+CHM: 0.0011544536488751571
+150
+KLD: 0.00035549762348333996
+CHM: 0.0013659214600920677
+200
+KLD: 0.0005731207008163134
+CHM: 0.0012870928427825372
+Epoch 089, Loss: 0.0051
+0
+KLD: 0.00021245175351699194
+CHM: 0.0013260707880059879
+50
+KLD: 0.0004392433911561966
+CHM: 0.0014814216022690137
+100
+KLD: 0.0001704397921760877
+CHM: 0.0013151587918400764
+150
+KLD: 0.0003387962157527606
+CHM: 0.0012418126376966636
+200
+KLD: 0.0001165165255467097
+CHM: 0.0015144608914852142
+Epoch 090, Loss: 0.0045
+0
+KLD: 0.00023293371001879373
+CHM: 0.0011323538298408191
+50
+KLD: 0.0002784871806701024
+CHM: 0.0013285620758930843
+100
+KLD: 0.0001968418558438619
+CHM: 0.0010204548016190529
+150
+KLD: 0.00025728996843099594
+CHM: 0.0011320138971010845
+200
+KLD: 0.00016901021202405295
+CHM: 0.0012648670623699825
+Epoch 091, Loss: 0.0043
+0
+KLD: 0.00016407575458288193
+CHM: 0.0010967729613184929
+50
+KLD: 0.00025583958874146145
+CHM: 0.0011182279170801241
+100
+KLD: 0.0003731471175948779
+CHM: 0.0010876001324504614
+150
+KLD: 0.00014645947764317194
+CHM: 0.0015059846142927806
+200
+KLD: 0.00021892444541056952
+CHM: 0.001018326651925842
+Epoch 092, Loss: 0.0043
+0
+KLD: 0.0003582512338956197
+CHM: 0.0011560587833325069
+50
+KLD: 0.0002908008173108101
+CHM: 0.0010807421058416367
+100
+KLD: 0.0002187549447019895
+CHM: 0.0011473738898833592
+150
+KLD: 0.000224201629559199
+CHM: 0.0011101668545355399
+200
+KLD: 0.00026325974613428116
+CHM: 0.0010440329400201638
+Epoch 093, Loss: 0.0045
+0
+KLD: 0.00013931033511956534
+CHM: 0.0012754596148928006
+50
+KLD: 0.00011243267605702083
+CHM: 0.0012872192698220413
+100
+KLD: 0.0001224015528957049
+CHM: 0.0013746535405516624
+150
+KLD: 0.00035599060356616974
+CHM: 0.0012325003432730834
+200
+KLD: 0.00018512209256490073
+CHM: 0.0011040489965428908
+Epoch 094, Loss: 0.0042
+0
+KLD: 0.00012783085306485495
+CHM: 0.001130094441274802
+50
+KLD: 9.504177918036778e-05
+CHM: 0.0010967644241948922
+100
+KLD: 0.0001954706385731697
+CHM: 0.0012579578906297684
+150
+KLD: 0.0003079126278559367
+CHM: 0.001493833027780056
+200
+KLD: 0.00014822961141665777
+CHM: 0.0011965318117290735
+Epoch 095, Loss: 0.0044
+0
+KLD: 0.00022778566926717758
+CHM: 0.001076973353823026
+50
+KLD: 0.00013472077747186026
+CHM: 0.0013052579015493393
+100
+KLD: 0.0004986468702554703
+CHM: 0.0013935730482141178
+150
+KLD: 0.00014618939409653345
+CHM: 0.0011801404568056266
+200
+KLD: 0.0001926294838388761
+CHM: 0.0011006149773796399
+Epoch 096, Loss: 0.0043
+0
+KLD: 0.00014335072288910547
+CHM: 0.0011057159087310235
+50
+KLD: 0.00023185182362794876
+CHM: 0.0013124786006907623
+100
+KLD: 0.00039121446510155994
+CHM: 0.0010646052348117034
+150
+KLD: 8.761603385210037e-05
+CHM: 0.0013105380348861217
+200
+KLD: 0.00042024441063404083
+CHM: 0.0013741937776406605
+Epoch 097, Loss: 0.0045
+0
+KLD: 0.0002535134553909302
+CHM: 0.0011844720381001632
+50
+KLD: 0.00021378106127182642
+CHM: 0.0010532008794446786
+100
+KLD: 0.0004427166034777959
+CHM: 0.0015892249842484791
+150
+KLD: 0.0002965352808435758
+CHM: 0.0010056620618949335
+200
+KLD: 0.0002377443015575409
+CHM: 0.0013295381019512813
+Epoch 098, Loss: 0.0044
+0
+KLD: 0.0001363555590311686
+CHM: 0.0013435597841938336
+50
+KLD: 0.00024020268271366754
+CHM: 0.0012333461393912633
+100
+KLD: 0.0011835725357135136
+CHM: 0.0010866595742603142
+150
+KLD: 0.000380735844373703
+CHM: 0.0011286012983570497
+200
+KLD: 0.000388737457493941
+CHM: 0.0012016543187201023
+Epoch 099, Loss: 0.0047
+0
+KLD: 0.00022492650896310806
+CHM: 0.001067708246409893
+50
+KLD: 0.00040806954105695087
+CHM: 0.0010596917321284611
+100
+KLD: 0.00042761707057555515
+CHM: 0.0011778157204389572
+150
+KLD: 0.0002481515208880107
+CHM: 0.0011980134683350723
+200
+KLD: 0.0004252869014938672
+CHM: 0.0012373416684567928
+Epoch 100, Loss: 0.0049
+0
+KLD: 0.00027492549270391464
+CHM: 0.0009974464774131775
+50
+KLD: 0.0002687210217118263
+CHM: 0.0012242762216677268
+100
+KLD: 0.0004306410749753316
+CHM: 0.001397181147088607
+150
+KLD: 0.0008541643619537354
+CHM: 0.0010625699845453103
+200
+KLD: 0.00023443158715963364
+CHM: 0.00119262693139414
+Epoch 101, Loss: 0.0049
+0
+KLD: 0.00047945696860551834
+CHM: 0.0010983611767490704
+50
+KLD: 0.00046135764569044113
+CHM: 0.0012670236950119336
+100
+KLD: 0.000434320109585921
+CHM: 0.0011270969019581873
+150
+KLD: 0.0007518241181969643
+CHM: 0.0014450036299725373
+200
+KLD: 0.002043231079975764
+CHM: 0.0012986321623126666
+Epoch 102, Loss: 0.0066
+0
+KLD: 0.0027074810738364854
+CHM: 0.001098289309690396
+50
+KLD: 0.000940125435590744
+CHM: 0.0012753273670872052
+100
+KLD: 0.00035180213550726574
+CHM: 0.0013392423279583454
+150
+KLD: 0.0002048679937918981
+CHM: 0.0010393074092765648
+200
+KLD: 0.00036885930846134823
+CHM: 0.0011616343011458714
+Epoch 103, Loss: 0.0055
+0
+KLD: 0.00018167061110337576
+CHM: 0.0012852787816276152
+50
+KLD: 0.0006560798113544782
+CHM: 0.0011676525852332513
+100
+KLD: 0.0005085089554389318
+CHM: 0.0011621853336691856
+150
+KLD: 0.0006132458026210467
+CHM: 0.0013313811893264453
+200
+KLD: 0.0006718014677365621
+CHM: 0.0010958245644966762
+Epoch 104, Loss: 0.0057
+0
+KLD: 0.0007502585649490356
+CHM: 0.001096199421832959
+50
+KLD: 0.0008838872114817301
+CHM: 0.0011725878963867824
+100
+KLD: 0.0011614660422007244
+CHM: 0.0011234236881136894
+150
+KLD: 0.001919494941830635
+CHM: 0.001221095910295844
+200
+KLD: 0.001994673783580462
+CHM: 0.0010105922507743041
+Epoch 105, Loss: 0.0084
+0
+KLD: 0.0022403507803877196
+CHM: 0.0010041510686278343
+50
+KLD: 0.0007911172385017077
+CHM: 0.0009755445644259453
+100
+KLD: 0.0022401238481203714
+CHM: 0.0011670372138420741
+150
+KLD: 0.0004268838092684746
+CHM: 0.001434480616201957
+200
+KLD: 0.0004194484402736028
+CHM: 0.0012235503333310287
+Epoch 106, Loss: 0.0070
+0
+KLD: 0.0002500278254350026
+CHM: 0.001127460893864433

@@ -96,4 +96,4 @@ if __name__ == '__main__':
         print('Epoch {:03d}, Loss: {:.4f}'.format(
             epoch, loss))
         if epoch % 10 ==0:
-            torch.save(model.state_dict(),'./pointVAECh'+'{}'.format(epoch)+'.pt')
+            torch.save(model.state_dict(),'./saved_models/pointVAECh'+'{}'.format(epoch)+'.pt')
