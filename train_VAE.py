@@ -15,14 +15,14 @@ class Net(torch.nn.Module):
 
         self.sa1_module = SAModule(0.2, 0.2, MLP([3 + 3, 64, 64, 128]))
         self.sa2_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
-        self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 512, 1024])) 
+        self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 256, 512])) 
         
-        self.mu_lin = Lin(1024,1024)
-        self.sig_lin = Lin(1024,1024)
+        self.mu_lin = Lin(512,20)
+        self.sig_lin = Lin(512,20)
         
-        self.lin1 = Lin(1024, 1024)
-        self.lin2 = Lin(1024, 2048)
-        self.lin3 = Lin(2048, 2048 * 3)
+        self.lin1 = Lin(20, 512)
+        self.lin2 = Lin(512, 1024)
+        self.lin3 = Lin(1024, 2048 * 3)
     
     
     
@@ -71,8 +71,8 @@ def train():
         total_loss += loss.item() * data.num_graphs
         if step % 50 == 0:
             print(step)
-            print('KLD:',KLD)
-            print('CHM:',CHM)
+            print('KLD:',KLD.item()/len(data))
+            print('CHM:',CHM.item()/len(data))
         step += 1
     return total_loss / len(dataset)
 
