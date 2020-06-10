@@ -93,7 +93,7 @@ def train():
 
 if __name__ == '__main__':
 
-    path = '../data/shapenet_2048'
+    path = '../../data/shapenet_2048'
     dataset = ShapeNet_2048(path, split='trainval', categories='Chair')
     print(dataset[0])
     train_loader = DataLoader(
