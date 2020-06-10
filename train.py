@@ -48,10 +48,10 @@ class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
 
-        self.sa1_module = SAModule(0.5, 0.2, MLP([3 + 3, 64, 64, 128]))
+        self.sa1_module = SAModule(0.2, 0.2, MLP([3 + 3, 64, 64, 128]))
         self.sa2_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
-        self.sa3_module = SAModule(0.25, 0.4, MLP([256 + 3, 256, 512, 1024]))
-
+        self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 512, 1024])) 
+        
         self.lin1 = Lin(1024, 1024)
         self.lin2 = Lin(1024, 2048)
         self.lin3 = Lin(2048, 2048 * 3)
@@ -60,9 +60,8 @@ class Net(torch.nn.Module):
         sa1_out = self.sa1_module(data.x, data.x, data.batch)
         sa2_out = self.sa2_module(*sa1_out)
         sa3_out = self.sa3_module(*sa2_out)
+        
         x, pos, batch = sa3_out
-
-        x = global_max_pool(x, batch)
 
         x = F.relu(self.lin1(x))
         x = F.relu(self.lin2(x))
