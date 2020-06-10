@@ -17,10 +17,10 @@ class Net(torch.nn.Module):
         self.sa2_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
         self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 512, 1024])) 
         
-        self.mu_lin = Lin(1024,1024)
-        self.sig_lin = Lin(1024,1024)
+        self.mu_lin = Lin(1024,100)
+        self.sig_lin = Lin(1024,100)
         
-        self.lin1 = Lin(1024, 1024)
+        self.lin1 = Lin(100, 1024)
         self.lin2 = Lin(1024, 2048)
         self.lin3 = Lin(2048, 2048 * 3)
     
@@ -67,6 +67,7 @@ def train():
             torch.sum(1 + out[2] - out[1].pow(2) - out[2].exp(),dim=1))
         loss = CHM + KLD
         loss.backward()
+        optimizer.step()
         total_loss += loss.item() * data.num_graphs
         if step % 50 == 0:
             print(step)
