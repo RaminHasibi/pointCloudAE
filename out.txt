@@ -1,0 +1,597 @@
+Data(category=[1], x=[2048, 3])
+Net(
+  (sa1_module): SAModule(
+    (conv): PointConv(local_nn=Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=6, out_features=64, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    ), global_nn=None)
+  )
+  (sa2_module): SAModule(
+    (conv): PointConv(local_nn=Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=131, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=128, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    ), global_nn=None)
+  )
+  (sa3_module): GlobalSAModule(
+    (nn): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=259, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=512, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=512, out_features=1024, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (mu_lin): Linear(in_features=1024, out_features=100, bias=True)
+  (sig_lin): Linear(in_features=1024, out_features=100, bias=True)
+  (lin1): Linear(in_features=100, out_features=1024, bias=True)
+  (lin2): Linear(in_features=1024, out_features=2048, bias=True)
+  (lin3): Linear(in_features=2048, out_features=6144, bias=True)
+)
+Training started:
+0
+KLD: tensor(77913.2969, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(81.6962, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(191.0802, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0060, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(123.3392, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(77.8430, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(47.9380, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 001, Loss: 518.7501
+0
+KLD: tensor(51.6005, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(42.1707, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(29.9961, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(25.7368, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(25.4297, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 002, Loss: 32.2441
+0
+KLD: tensor(22.4890, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(24.0914, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(18.9535, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0049, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(17.1775, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(17.8103, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 003, Loss: 19.3304
+0
+KLD: tensor(15.0879, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(15.0250, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(13.3403, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0054, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(12.7122, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(12.4332, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 004, Loss: 14.0423
+0
+KLD: tensor(11.7825, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(11.4779, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(11.7799, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(10.4329, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(9.3984, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 005, Loss: 10.6903
+0
+KLD: tensor(9.6907, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(9.1370, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(8.8022, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(7.7492, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(7.0957, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 006, Loss: 8.1241
+0
+KLD: tensor(6.8089, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(7.1809, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(6.5975, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(5.9198, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0030, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(5.1157, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 007, Loss: 6.1272
+0
+KLD: tensor(5.3175, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(5.0021, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0047, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(4.2582, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(4.6249, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0057, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(4.1759, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 008, Loss: 4.7112
+0
+KLD: tensor(3.8868, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(3.7835, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(3.5870, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(3.5167, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(3.4216, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 009, Loss: 3.6325
+0
+KLD: tensor(2.9748, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(2.5768, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(2.4886, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(2.4806, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(2.5890, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 010, Loss: 2.8141
+0
+KLD: tensor(2.6679, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(2.0428, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(1.9820, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(2.3073, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(2.0159, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0031, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 011, Loss: 2.2806
+0
+KLD: tensor(1.6370, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(1.9028, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(1.7131, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(1.7697, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(1.2551, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0045, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 012, Loss: 1.7810
+0
+KLD: tensor(1.4075, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(1.5179, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(1.2738, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(1.3255, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(1.1470, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 013, Loss: 1.4514
+0
+KLD: tensor(1.3366, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(1.1099, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.9533, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(1.0912, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(1.0312, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 014, Loss: 1.1783
+0
+KLD: tensor(1.0533, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(1.1427, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(1.3472, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0047, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.8533, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.9985, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 015, Loss: 1.0104
+0
+KLD: tensor(1.0768, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.8264, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.7555, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.8912, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.8626, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 016, Loss: 0.9071
+0
+KLD: tensor(0.8480, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.7385, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(1.2892, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.7282, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.6829, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0048, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 017, Loss: 0.8004
+0
+KLD: tensor(0.8204, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.6361, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.7498, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.9399, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.5975, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 018, Loss: 0.7087
+0
+KLD: tensor(0.6508, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0049, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.6230, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.5697, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.6985, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.4539, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 019, Loss: 0.6391
+0
+KLD: tensor(0.6414, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.5477, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0031, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.5867, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.6529, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.5479, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 020, Loss: 0.5691
+0
+KLD: tensor(0.4925, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.4741, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.5937, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.5320, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.5764, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 021, Loss: 0.5348
+0
+KLD: tensor(0.5649, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.4364, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.4874, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.4688, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0030, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.4491, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 022, Loss: 0.4916
+0
+KLD: tensor(0.4020, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.4408, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.4508, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.5362, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0028, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.3827, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 023, Loss: 0.4551
+0
+KLD: tensor(0.4290, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.4339, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.3593, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.5231, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0032, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.3796, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 024, Loss: 0.4219
+0
+KLD: tensor(0.3982, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.7266, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.3845, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.3645, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.4319, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 025, Loss: 0.4056
+0
+KLD: tensor(0.3699, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0048, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.4012, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0037, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.3558, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.3678, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.3915, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 026, Loss: 0.3903
+0
+KLD: tensor(0.5126, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.3324, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.4455, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.4527, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.3311, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 027, Loss: 0.3594
+0
+KLD: tensor(0.3395, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.2912, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.2653, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.3316, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0057, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.4309, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 028, Loss: 0.3646
+0
+KLD: tensor(0.2963, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.3004, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0044, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.3104, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.3318, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0031, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.3216, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0038, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 029, Loss: 0.3279
+0
+KLD: tensor(0.2296, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.2972, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.2778, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.2386, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.4815, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0042, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 030, Loss: 0.3020
+0
+KLD: tensor(0.2777, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.1865, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0043, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.2459, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.3891, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.2814, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 031, Loss: 0.3008
+0
+KLD: tensor(0.2620, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0040, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.2600, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0039, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.2215, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.2354, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0046, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.2794, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 032, Loss: 0.2713
+0
+KLD: tensor(0.2486, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0041, device='cuda:0', grad_fn=<AddBackward0>)
+50
+KLD: tensor(0.2193, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+100
+KLD: tensor(0.2138, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0034, device='cuda:0', grad_fn=<AddBackward0>)
+150
+KLD: tensor(0.4099, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0036, device='cuda:0', grad_fn=<AddBackward0>)
+200
+KLD: tensor(0.2484, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0033, device='cuda:0', grad_fn=<AddBackward0>)
+Epoch 033, Loss: 0.2903
+0
+KLD: tensor(0.3882, device='cuda:0', grad_fn=<MulBackward0>)
+CHM: tensor(0.0035, device='cuda:0', grad_fn=<AddBackward0>)
