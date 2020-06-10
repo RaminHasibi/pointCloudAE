@@ -17,22 +17,13 @@ class Net(torch.nn.Module):
         self.sa2_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
         self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 256, 512])) 
         
-<<<<<<< HEAD
-        self.mu_lin = Lin(1024,100)
-        self.sig_lin = Lin(1024,100)
-        
-        self.lin1 = Lin(100, 1024)
-        self.lin2 = Lin(1024, 2048)
-        self.lin3 = Lin(2048, 2048 * 3)
-=======
+
         self.mu_lin = Lin(512,20)
         self.sig_lin = Lin(512,20)
         
         self.lin1 = Lin(20, 512)
         self.lin2 = Lin(512, 1024)
         self.lin3 = Lin(1024, 2048 * 3)
->>>>>>> my-saved-work
-    
     
     
     def encode(self, x, batch):
