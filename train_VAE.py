@@ -12,6 +12,7 @@ from sklearn.model_selection import train_test_split
 
 BETA = 1e-6
 Bottle = 128
+
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -101,9 +102,9 @@ if __name__ == '__main__':
     print(model)
     print('Training started:')
     criterion = ChamferDistance()
-    for epoch in range(1, 401):
+    for epoch in range(1, 200):
         loss = train(epoch)
         print('Epoch {:03d}, Loss: {:.4f}'.format(
             epoch, loss))
         if epoch % 20 ==0:
-            torch.save(model.state_dict(),'./saved_models/pointVAE_{}_{}_Ch'.format(Bottle,BETA)+'{}'.format(epoch)+'.pt')
+            torch.save(model.state_dict(),'./saved_models/ratio_pointVAE_{}_{}_Ch'.format(Bottle,BETA)+'{}'.format(epoch)+'.pt')
