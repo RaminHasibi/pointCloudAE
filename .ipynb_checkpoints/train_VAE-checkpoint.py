@@ -11,12 +11,12 @@ from train_AE import SAModule, GlobalSAModule, MLP
 from sklearn.model_selection import train_test_split
 
 BETA = 1e-6
-Bottle = 256
+Bottle = 128
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
 
-        self.sa1_module = SAModule(0.2, 0.2, MLP([3 + 3, 64, 64, 128]))
+        self.sa1_module = SAModule(0.5, 0.2, MLP([3 + 3, 64, 64, 128]))
         self.sa2_module = SAModule(0.25, 0.4, MLP([128 + 3, 128, 128, 256]))
         self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 256, 1024])) 
         
