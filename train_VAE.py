@@ -10,8 +10,8 @@ from Data import ShapeNet_2048
 from train_AE import SAModule, GlobalSAModule, MLP
 from sklearn.model_selection import train_test_split
 
-BETA = 1e-5
-
+BETA = 1e-6
+Bottle = 256
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -21,10 +21,10 @@ class Net(torch.nn.Module):
         self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 256, 1024])) 
         
 
-        self.mu_lin = Lin(1024,128)
-        self.sig_lin = Lin(1024,128)
+        self.mu_lin = Lin(1024,Bottle)
+        self.sig_lin = Lin(1024,Bottle)
         
-        self.lin1 = Lin(128, 1024)
+        self.lin1 = Lin(Bottle, 1024)
         self.lin2 = Lin(1024, 2048)
         self.lin3 = Lin(2048, 2048 * 3)
     
@@ -105,5 +105,5 @@ if __name__ == '__main__':
         loss = train(epoch)
         print('Epoch {:03d}, Loss: {:.4f}'.format(
             epoch, loss))
-        if epoch % 10 ==0:
-            torch.save(model.state_dict(),'./saved_models/pointVAECh'+'{}'.format(epoch)+'.pt')
+        if epoch % 20 ==0:
+            torch.save(model.state_dict(),'./saved_models/pointVAE_{}_{}_Ch'.format(Bottle,BETA)+'{}'.format(epoch)+'.pt')
