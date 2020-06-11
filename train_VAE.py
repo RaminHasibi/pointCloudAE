@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 import torch.nn.functional as F
 from torch.nn import Sequential as Seq, Linear as Lin, ReLU, BatchNorm1d as BN
 import torch_geometric.transforms as T
@@ -7,8 +8,9 @@ from torch_geometric.nn import PointConv, fps, radius, global_max_pool
 from chamfer_distance import ChamferDistance
 from Data import ShapeNet_2048
 from train_AE import SAModule, GlobalSAModule, MLP
+from sklearn.model_selection import train_test_split
 
-BETA = 1e-6
+BETA = 1e-5
 
 class Net(torch.nn.Module):
     def __init__(self):
@@ -19,10 +21,10 @@ class Net(torch.nn.Module):
         self.sa3_module = GlobalSAModule(MLP([256 + 3, 256, 256, 1024])) 
         
 
-        self.mu_lin = Lin(1024,64)
-        self.sig_lin = Lin(1024,64)
+        self.mu_lin = Lin(1024,128)
+        self.sig_lin = Lin(1024,128)
         
-        self.lin1 = Lin(64, 1024)
+        self.lin1 = Lin(128, 1024)
         self.lin2 = Lin(1024, 2048)
         self.lin3 = Lin(2048, 2048 * 3)
     
@@ -71,6 +73,7 @@ def train(epoch):
         optimizer.step()
         total_loss += loss.item() * data.num_graphs
         if step % 10 == 0:
+            print(data)
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}\tLoss_recons: {:.6f}\tLoss_kld: {:.6f}'.format(
                 epoch, step * len(data), len(train_loader.dataset),
                 100. * step / len(train_loader),
@@ -78,7 +81,7 @@ def train(epoch):
                 CHM.item()/ len(data),
                 KLD.item()/len(data)))
         step += 1
-    return total_loss / len(dataset)
+    return total_loss / len(train_dataset)
 
 
 
@@ -86,9 +89,12 @@ if __name__ == '__main__':
 
     path = '../data/shapenet_2048'
     dataset = ShapeNet_2048(path, split='trainval', categories='Chair')
-    print(dataset[0])
+    indices = np.arange(len(dataset))
+    train_indeces, _ = train_test_split(indices, test_size=.25, random_state=42)
+    train_dataset = dataset[torch.tensor(train_indeces)]
+    print(len(train_dataset))
     train_loader = DataLoader(
-        dataset, batch_size=32, shuffle=True)
+        train_dataset, batch_size=32, shuffle=True)
     device = torch.device('cuda')
     model = Net().to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
