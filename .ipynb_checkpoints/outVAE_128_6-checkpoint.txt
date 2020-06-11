@@ -1,0 +1,68 @@
+5083
+Net(
+  (sa1_module): SAModule(
+    (conv): PointConv(local_nn=Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=6, out_features=64, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    ), global_nn=None)
+  )
+  (sa2_module): SAModule(
+    (conv): PointConv(local_nn=Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=131, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=128, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    ), global_nn=None)
+  )
+  (sa3_module): GlobalSAModule(
+    (nn): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=259, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=1024, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (mu_lin): Linear(in_features=1024, out_features=128, bias=True)
+  (sig_lin): Linear(in_features=1024, out_features=128, bias=True)
+  (lin1): Linear(in_features=128, out_features=1024, bias=True)
+  (lin2): Linear(in_features=1024, out_features=2048, bias=True)
+  (lin3): Linear(in_features=2048, out_features=6144, bias=True)
+)
+Training started:
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [0/5083 (0%)]	Loss: 0.062697	Loss_recons: 0.062374	Loss_kld: 0.000323

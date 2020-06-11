@@ -1,0 +1,2551 @@
+5083
+Net(
+  (sa1_module): SAModule(
+    (conv): PointConv(local_nn=Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=6, out_features=64, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=64, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    ), global_nn=None)
+  )
+  (sa2_module): SAModule(
+    (conv): PointConv(local_nn=Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=131, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=128, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    ), global_nn=None)
+  )
+  (sa3_module): GlobalSAModule(
+    (nn): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=259, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=1024, bias=True)
+        (1): ReLU()
+        (2): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (mu_lin): Linear(in_features=1024, out_features=256, bias=True)
+  (sig_lin): Linear(in_features=1024, out_features=256, bias=True)
+  (lin1): Linear(in_features=256, out_features=1024, bias=True)
+  (lin2): Linear(in_features=1024, out_features=2048, bias=True)
+  (lin3): Linear(in_features=2048, out_features=6144, bias=True)
+)
+Training started:
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [0/5083 (0%)]	Loss: 0.849497	Loss_recons: 0.845375	Loss_kld: 0.004123
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [30/5083 (6%)]	Loss: 32.856929	Loss_recons: 3.105035	Loss_kld: 29.751892
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [60/5083 (13%)]	Loss: 77.146159	Loss_recons: 0.253246	Loss_kld: 76.892914
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [90/5083 (19%)]	Loss: 0.349848	Loss_recons: 0.002341	Loss_kld: 0.347507
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [120/5083 (25%)]	Loss: 0.022747	Loss_recons: 0.001576	Loss_kld: 0.021172
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [150/5083 (31%)]	Loss: 0.022684	Loss_recons: 0.001792	Loss_kld: 0.020892
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [180/5083 (38%)]	Loss: 0.022925	Loss_recons: 0.001667	Loss_kld: 0.021257
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [210/5083 (44%)]	Loss: 0.021342	Loss_recons: 0.001620	Loss_kld: 0.019722
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [240/5083 (50%)]	Loss: 0.021831	Loss_recons: 0.001368	Loss_kld: 0.020463
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [270/5083 (57%)]	Loss: 0.025136	Loss_recons: 0.001992	Loss_kld: 0.023144
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [300/5083 (63%)]	Loss: 0.019983	Loss_recons: 0.001653	Loss_kld: 0.018331
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [330/5083 (69%)]	Loss: 0.021146	Loss_recons: 0.001748	Loss_kld: 0.019397
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [360/5083 (75%)]	Loss: 0.020576	Loss_recons: 0.001533	Loss_kld: 0.019043
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [390/5083 (82%)]	Loss: 0.020262	Loss_recons: 0.001318	Loss_kld: 0.018944
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [420/5083 (88%)]	Loss: 0.017850	Loss_recons: 0.001629	Loss_kld: 0.016221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 1 [450/5083 (94%)]	Loss: 0.023279	Loss_recons: 0.001688	Loss_kld: 0.021591
+Epoch 001, Loss: 2906.6253
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [0/5083 (0%)]	Loss: 0.021642	Loss_recons: 0.002305	Loss_kld: 0.019337
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [30/5083 (6%)]	Loss: 0.021945	Loss_recons: 0.001505	Loss_kld: 0.020440
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [60/5083 (13%)]	Loss: 0.022877	Loss_recons: 0.002195	Loss_kld: 0.020683
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [90/5083 (19%)]	Loss: 0.020469	Loss_recons: 0.001604	Loss_kld: 0.018865
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [120/5083 (25%)]	Loss: 0.020075	Loss_recons: 0.001774	Loss_kld: 0.018300
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [150/5083 (31%)]	Loss: 0.018779	Loss_recons: 0.001591	Loss_kld: 0.017187
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [180/5083 (38%)]	Loss: 0.020983	Loss_recons: 0.001631	Loss_kld: 0.019352
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [210/5083 (44%)]	Loss: 0.021130	Loss_recons: 0.001476	Loss_kld: 0.019655
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [240/5083 (50%)]	Loss: 0.020328	Loss_recons: 0.001499	Loss_kld: 0.018829
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [270/5083 (57%)]	Loss: 0.020655	Loss_recons: 0.001434	Loss_kld: 0.019220
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [300/5083 (63%)]	Loss: 0.018689	Loss_recons: 0.001802	Loss_kld: 0.016887
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [330/5083 (69%)]	Loss: 0.021600	Loss_recons: 0.001882	Loss_kld: 0.019718
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [360/5083 (75%)]	Loss: 0.017591	Loss_recons: 0.001613	Loss_kld: 0.015977
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [390/5083 (82%)]	Loss: 0.018755	Loss_recons: 0.001357	Loss_kld: 0.017397
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [420/5083 (88%)]	Loss: 0.018884	Loss_recons: 0.001447	Loss_kld: 0.017436
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 2 [450/5083 (94%)]	Loss: 0.018217	Loss_recons: 0.001492	Loss_kld: 0.016725
+Epoch 002, Loss: 0.0591
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [0/5083 (0%)]	Loss: 0.018574	Loss_recons: 0.001881	Loss_kld: 0.016693
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [30/5083 (6%)]	Loss: 0.017939	Loss_recons: 0.001466	Loss_kld: 0.016474
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [60/5083 (13%)]	Loss: 0.019310	Loss_recons: 0.002439	Loss_kld: 0.016871
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [90/5083 (19%)]	Loss: 0.020617	Loss_recons: 0.003049	Loss_kld: 0.017569
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [120/5083 (25%)]	Loss: 0.018437	Loss_recons: 0.001634	Loss_kld: 0.016802
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [150/5083 (31%)]	Loss: 0.017601	Loss_recons: 0.001260	Loss_kld: 0.016340
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [180/5083 (38%)]	Loss: 0.018638	Loss_recons: 0.001667	Loss_kld: 0.016970
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [210/5083 (44%)]	Loss: 0.016931	Loss_recons: 0.001788	Loss_kld: 0.015143
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [240/5083 (50%)]	Loss: 0.015117	Loss_recons: 0.001452	Loss_kld: 0.013665
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [270/5083 (57%)]	Loss: 0.020470	Loss_recons: 0.001354	Loss_kld: 0.019116
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [300/5083 (63%)]	Loss: 0.017059	Loss_recons: 0.001583	Loss_kld: 0.015476
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [330/5083 (69%)]	Loss: 0.017395	Loss_recons: 0.001686	Loss_kld: 0.015709
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [360/5083 (75%)]	Loss: 0.017169	Loss_recons: 0.002030	Loss_kld: 0.015139
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [390/5083 (82%)]	Loss: 0.017045	Loss_recons: 0.001565	Loss_kld: 0.015480
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [420/5083 (88%)]	Loss: 0.017704	Loss_recons: 0.001535	Loss_kld: 0.016169
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 3 [450/5083 (94%)]	Loss: 0.016326	Loss_recons: 0.001261	Loss_kld: 0.015065
+Epoch 003, Loss: 0.0533
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [0/5083 (0%)]	Loss: 0.016740	Loss_recons: 0.001518	Loss_kld: 0.015222
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [30/5083 (6%)]	Loss: 0.015895	Loss_recons: 0.001680	Loss_kld: 0.014215
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [60/5083 (13%)]	Loss: 0.015811	Loss_recons: 0.001302	Loss_kld: 0.014508
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [90/5083 (19%)]	Loss: 0.016557	Loss_recons: 0.001352	Loss_kld: 0.015205
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [120/5083 (25%)]	Loss: 0.017052	Loss_recons: 0.001207	Loss_kld: 0.015845
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [150/5083 (31%)]	Loss: 0.016452	Loss_recons: 0.001737	Loss_kld: 0.014715
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [180/5083 (38%)]	Loss: 0.015281	Loss_recons: 0.001510	Loss_kld: 0.013771
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [210/5083 (44%)]	Loss: 0.015544	Loss_recons: 0.001436	Loss_kld: 0.014108
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [240/5083 (50%)]	Loss: 0.015214	Loss_recons: 0.001430	Loss_kld: 0.013784
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [270/5083 (57%)]	Loss: 0.015515	Loss_recons: 0.001575	Loss_kld: 0.013940
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [300/5083 (63%)]	Loss: 0.015153	Loss_recons: 0.001217	Loss_kld: 0.013936
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [330/5083 (69%)]	Loss: 0.015756	Loss_recons: 0.001271	Loss_kld: 0.014485
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [360/5083 (75%)]	Loss: 0.016695	Loss_recons: 0.001143	Loss_kld: 0.015553
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [390/5083 (82%)]	Loss: 0.014423	Loss_recons: 0.001489	Loss_kld: 0.012934
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [420/5083 (88%)]	Loss: 0.014663	Loss_recons: 0.001290	Loss_kld: 0.013373
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 4 [450/5083 (94%)]	Loss: 0.014425	Loss_recons: 0.001328	Loss_kld: 0.013097
+Epoch 004, Loss: 0.0458
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [0/5083 (0%)]	Loss: 0.013795	Loss_recons: 0.001745	Loss_kld: 0.012051
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [30/5083 (6%)]	Loss: 0.013219	Loss_recons: 0.001363	Loss_kld: 0.011856
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [60/5083 (13%)]	Loss: 0.013351	Loss_recons: 0.001643	Loss_kld: 0.011708
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [90/5083 (19%)]	Loss: 0.011172	Loss_recons: 0.001560	Loss_kld: 0.009611
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [120/5083 (25%)]	Loss: 0.014393	Loss_recons: 0.002271	Loss_kld: 0.012122
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [150/5083 (31%)]	Loss: 0.013178	Loss_recons: 0.001418	Loss_kld: 0.011761
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [180/5083 (38%)]	Loss: 0.013802	Loss_recons: 0.001431	Loss_kld: 0.012371
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [210/5083 (44%)]	Loss: 0.012917	Loss_recons: 0.000984	Loss_kld: 0.011933
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [240/5083 (50%)]	Loss: 0.012821	Loss_recons: 0.001249	Loss_kld: 0.011573
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [270/5083 (57%)]	Loss: 0.011840	Loss_recons: 0.001506	Loss_kld: 0.010335
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [300/5083 (63%)]	Loss: 0.014135	Loss_recons: 0.001223	Loss_kld: 0.012912
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [330/5083 (69%)]	Loss: 0.011905	Loss_recons: 0.001255	Loss_kld: 0.010650
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [360/5083 (75%)]	Loss: 0.011574	Loss_recons: 0.001247	Loss_kld: 0.010327
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [390/5083 (82%)]	Loss: 0.012435	Loss_recons: 0.001336	Loss_kld: 0.011099
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [420/5083 (88%)]	Loss: 0.013034	Loss_recons: 0.001697	Loss_kld: 0.011337
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 5 [450/5083 (94%)]	Loss: 0.011889	Loss_recons: 0.001167	Loss_kld: 0.010721
+Epoch 005, Loss: 0.0392
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [0/5083 (0%)]	Loss: 0.012507	Loss_recons: 0.001255	Loss_kld: 0.011252
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [30/5083 (6%)]	Loss: 0.011894	Loss_recons: 0.001079	Loss_kld: 0.010815
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [60/5083 (13%)]	Loss: 0.010731	Loss_recons: 0.001111	Loss_kld: 0.009620
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [90/5083 (19%)]	Loss: 0.012816	Loss_recons: 0.001511	Loss_kld: 0.011304
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [120/5083 (25%)]	Loss: 0.012304	Loss_recons: 0.001713	Loss_kld: 0.010591
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [150/5083 (31%)]	Loss: 0.009511	Loss_recons: 0.001324	Loss_kld: 0.008187
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [180/5083 (38%)]	Loss: 0.011025	Loss_recons: 0.001160	Loss_kld: 0.009865
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [210/5083 (44%)]	Loss: 0.009549	Loss_recons: 0.001212	Loss_kld: 0.008336
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [240/5083 (50%)]	Loss: 0.011762	Loss_recons: 0.001497	Loss_kld: 0.010265
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [270/5083 (57%)]	Loss: 0.010526	Loss_recons: 0.001313	Loss_kld: 0.009213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [300/5083 (63%)]	Loss: 0.010707	Loss_recons: 0.001272	Loss_kld: 0.009434
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [330/5083 (69%)]	Loss: 0.011642	Loss_recons: 0.001282	Loss_kld: 0.010360
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [360/5083 (75%)]	Loss: 0.010282	Loss_recons: 0.001353	Loss_kld: 0.008929
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [390/5083 (82%)]	Loss: 0.010240	Loss_recons: 0.001159	Loss_kld: 0.009081
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [420/5083 (88%)]	Loss: 0.009718	Loss_recons: 0.001435	Loss_kld: 0.008283
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 6 [450/5083 (94%)]	Loss: 0.009963	Loss_recons: 0.001142	Loss_kld: 0.008821
+Epoch 006, Loss: 0.0332
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [0/5083 (0%)]	Loss: 0.008800	Loss_recons: 0.001546	Loss_kld: 0.007254
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [30/5083 (6%)]	Loss: 0.010384	Loss_recons: 0.001165	Loss_kld: 0.009220
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [60/5083 (13%)]	Loss: 0.012028	Loss_recons: 0.001389	Loss_kld: 0.010639
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [90/5083 (19%)]	Loss: 0.009324	Loss_recons: 0.001282	Loss_kld: 0.008043
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [120/5083 (25%)]	Loss: 0.009477	Loss_recons: 0.001770	Loss_kld: 0.007707
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [150/5083 (31%)]	Loss: 0.009839	Loss_recons: 0.001486	Loss_kld: 0.008353
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [180/5083 (38%)]	Loss: 0.009745	Loss_recons: 0.001217	Loss_kld: 0.008528
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [210/5083 (44%)]	Loss: 0.009069	Loss_recons: 0.001495	Loss_kld: 0.007574
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [240/5083 (50%)]	Loss: 0.009585	Loss_recons: 0.001241	Loss_kld: 0.008344
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [270/5083 (57%)]	Loss: 0.008892	Loss_recons: 0.001273	Loss_kld: 0.007619
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [300/5083 (63%)]	Loss: 0.008964	Loss_recons: 0.001309	Loss_kld: 0.007654
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [330/5083 (69%)]	Loss: 0.008883	Loss_recons: 0.001401	Loss_kld: 0.007482
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [360/5083 (75%)]	Loss: 0.008889	Loss_recons: 0.001070	Loss_kld: 0.007819
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [390/5083 (82%)]	Loss: 0.008154	Loss_recons: 0.001106	Loss_kld: 0.007048
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [420/5083 (88%)]	Loss: 0.008409	Loss_recons: 0.001225	Loss_kld: 0.007184
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 7 [450/5083 (94%)]	Loss: 0.008628	Loss_recons: 0.001284	Loss_kld: 0.007343
+Epoch 007, Loss: 0.0276
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [0/5083 (0%)]	Loss: 0.009055	Loss_recons: 0.001503	Loss_kld: 0.007551
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [30/5083 (6%)]	Loss: 0.008068	Loss_recons: 0.001125	Loss_kld: 0.006943
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [60/5083 (13%)]	Loss: 0.008416	Loss_recons: 0.001257	Loss_kld: 0.007159
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [90/5083 (19%)]	Loss: 0.008330	Loss_recons: 0.001171	Loss_kld: 0.007159
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [120/5083 (25%)]	Loss: 0.008141	Loss_recons: 0.001225	Loss_kld: 0.006917
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [150/5083 (31%)]	Loss: 0.007591	Loss_recons: 0.001218	Loss_kld: 0.006373
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [180/5083 (38%)]	Loss: 0.007367	Loss_recons: 0.001515	Loss_kld: 0.005851
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [210/5083 (44%)]	Loss: 0.007731	Loss_recons: 0.001293	Loss_kld: 0.006438
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [240/5083 (50%)]	Loss: 0.007527	Loss_recons: 0.001193	Loss_kld: 0.006335
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [270/5083 (57%)]	Loss: 0.008222	Loss_recons: 0.001136	Loss_kld: 0.007086
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [300/5083 (63%)]	Loss: 0.007664	Loss_recons: 0.001458	Loss_kld: 0.006206
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [330/5083 (69%)]	Loss: 0.007214	Loss_recons: 0.001009	Loss_kld: 0.006205
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [360/5083 (75%)]	Loss: 0.007496	Loss_recons: 0.001183	Loss_kld: 0.006313
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [390/5083 (82%)]	Loss: 0.006579	Loss_recons: 0.001376	Loss_kld: 0.005202
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [420/5083 (88%)]	Loss: 0.007222	Loss_recons: 0.001194	Loss_kld: 0.006029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 8 [450/5083 (94%)]	Loss: 0.006943	Loss_recons: 0.001201	Loss_kld: 0.005743
+Epoch 008, Loss: 0.0229
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [0/5083 (0%)]	Loss: 0.006745	Loss_recons: 0.001005	Loss_kld: 0.005740
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [30/5083 (6%)]	Loss: 0.007268	Loss_recons: 0.001208	Loss_kld: 0.006060
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [60/5083 (13%)]	Loss: 0.006426	Loss_recons: 0.001175	Loss_kld: 0.005250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [90/5083 (19%)]	Loss: 0.006640	Loss_recons: 0.001161	Loss_kld: 0.005479
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [120/5083 (25%)]	Loss: 0.007321	Loss_recons: 0.001318	Loss_kld: 0.006003
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [150/5083 (31%)]	Loss: 0.006503	Loss_recons: 0.001446	Loss_kld: 0.005057
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [180/5083 (38%)]	Loss: 0.005903	Loss_recons: 0.001019	Loss_kld: 0.004883
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [210/5083 (44%)]	Loss: 0.006097	Loss_recons: 0.001090	Loss_kld: 0.005008
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [240/5083 (50%)]	Loss: 0.006789	Loss_recons: 0.001687	Loss_kld: 0.005101
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [270/5083 (57%)]	Loss: 0.006711	Loss_recons: 0.001794	Loss_kld: 0.004916
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [300/5083 (63%)]	Loss: 0.006674	Loss_recons: 0.001299	Loss_kld: 0.005376
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [330/5083 (69%)]	Loss: 0.005904	Loss_recons: 0.001454	Loss_kld: 0.004450
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [360/5083 (75%)]	Loss: 0.005626	Loss_recons: 0.001674	Loss_kld: 0.003952
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [390/5083 (82%)]	Loss: 0.005509	Loss_recons: 0.001242	Loss_kld: 0.004267
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [420/5083 (88%)]	Loss: 0.005833	Loss_recons: 0.001324	Loss_kld: 0.004509
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 9 [450/5083 (94%)]	Loss: 0.005585	Loss_recons: 0.001376	Loss_kld: 0.004209
+Epoch 009, Loss: 0.0189
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [0/5083 (0%)]	Loss: 0.005784	Loss_recons: 0.000991	Loss_kld: 0.004793
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [30/5083 (6%)]	Loss: 0.005149	Loss_recons: 0.001020	Loss_kld: 0.004129
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [60/5083 (13%)]	Loss: 0.005512	Loss_recons: 0.001370	Loss_kld: 0.004143
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [90/5083 (19%)]	Loss: 0.005779	Loss_recons: 0.001243	Loss_kld: 0.004536
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [120/5083 (25%)]	Loss: 0.005427	Loss_recons: 0.001228	Loss_kld: 0.004199
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [150/5083 (31%)]	Loss: 0.005148	Loss_recons: 0.001106	Loss_kld: 0.004042
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [180/5083 (38%)]	Loss: 0.005037	Loss_recons: 0.001253	Loss_kld: 0.003784
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [210/5083 (44%)]	Loss: 0.005049	Loss_recons: 0.001261	Loss_kld: 0.003788
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [240/5083 (50%)]	Loss: 0.005273	Loss_recons: 0.001098	Loss_kld: 0.004176
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [270/5083 (57%)]	Loss: 0.004796	Loss_recons: 0.001132	Loss_kld: 0.003664
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [300/5083 (63%)]	Loss: 0.004958	Loss_recons: 0.001490	Loss_kld: 0.003468
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [330/5083 (69%)]	Loss: 0.004550	Loss_recons: 0.001111	Loss_kld: 0.003439
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [360/5083 (75%)]	Loss: 0.004754	Loss_recons: 0.001266	Loss_kld: 0.003488
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [390/5083 (82%)]	Loss: 0.004828	Loss_recons: 0.001318	Loss_kld: 0.003510
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [420/5083 (88%)]	Loss: 0.004828	Loss_recons: 0.001120	Loss_kld: 0.003708
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 10 [450/5083 (94%)]	Loss: 0.004825	Loss_recons: 0.001400	Loss_kld: 0.003425
+Epoch 010, Loss: 0.0155
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [0/5083 (0%)]	Loss: 0.004539	Loss_recons: 0.001281	Loss_kld: 0.003258
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [30/5083 (6%)]	Loss: 0.004374	Loss_recons: 0.001101	Loss_kld: 0.003273
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [60/5083 (13%)]	Loss: 0.004416	Loss_recons: 0.001235	Loss_kld: 0.003181
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [90/5083 (19%)]	Loss: 0.004579	Loss_recons: 0.001134	Loss_kld: 0.003445
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [120/5083 (25%)]	Loss: 0.004604	Loss_recons: 0.001351	Loss_kld: 0.003253
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [150/5083 (31%)]	Loss: 0.004103	Loss_recons: 0.001085	Loss_kld: 0.003017
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [180/5083 (38%)]	Loss: 0.004492	Loss_recons: 0.001248	Loss_kld: 0.003244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [210/5083 (44%)]	Loss: 0.004541	Loss_recons: 0.001055	Loss_kld: 0.003485
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [240/5083 (50%)]	Loss: 0.004439	Loss_recons: 0.001114	Loss_kld: 0.003325
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [270/5083 (57%)]	Loss: 0.004570	Loss_recons: 0.001123	Loss_kld: 0.003447
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [300/5083 (63%)]	Loss: 0.003821	Loss_recons: 0.001155	Loss_kld: 0.002666
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [330/5083 (69%)]	Loss: 0.003959	Loss_recons: 0.001131	Loss_kld: 0.002827
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [360/5083 (75%)]	Loss: 0.003566	Loss_recons: 0.000957	Loss_kld: 0.002609
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [390/5083 (82%)]	Loss: 0.004203	Loss_recons: 0.001182	Loss_kld: 0.003021
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [420/5083 (88%)]	Loss: 0.003954	Loss_recons: 0.001200	Loss_kld: 0.002754
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 11 [450/5083 (94%)]	Loss: 0.003931	Loss_recons: 0.001317	Loss_kld: 0.002614
+Epoch 011, Loss: 0.0128
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [0/5083 (0%)]	Loss: 0.003867	Loss_recons: 0.001313	Loss_kld: 0.002553
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [30/5083 (6%)]	Loss: 0.003772	Loss_recons: 0.001044	Loss_kld: 0.002728
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [60/5083 (13%)]	Loss: 0.003658	Loss_recons: 0.000990	Loss_kld: 0.002668
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [90/5083 (19%)]	Loss: 0.003697	Loss_recons: 0.001248	Loss_kld: 0.002450
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [120/5083 (25%)]	Loss: 0.003754	Loss_recons: 0.001116	Loss_kld: 0.002639
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [150/5083 (31%)]	Loss: 0.003472	Loss_recons: 0.001062	Loss_kld: 0.002410
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [180/5083 (38%)]	Loss: 0.004704	Loss_recons: 0.001720	Loss_kld: 0.002984
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [210/5083 (44%)]	Loss: 0.003670	Loss_recons: 0.001612	Loss_kld: 0.002058
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [240/5083 (50%)]	Loss: 0.003798	Loss_recons: 0.001295	Loss_kld: 0.002503
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [270/5083 (57%)]	Loss: 0.003355	Loss_recons: 0.001036	Loss_kld: 0.002318
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [300/5083 (63%)]	Loss: 0.003537	Loss_recons: 0.001061	Loss_kld: 0.002477
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [330/5083 (69%)]	Loss: 0.003165	Loss_recons: 0.001071	Loss_kld: 0.002094
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [360/5083 (75%)]	Loss: 0.003263	Loss_recons: 0.000972	Loss_kld: 0.002291
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [390/5083 (82%)]	Loss: 0.003238	Loss_recons: 0.001169	Loss_kld: 0.002069
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [420/5083 (88%)]	Loss: 0.002999	Loss_recons: 0.001206	Loss_kld: 0.001793
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 12 [450/5083 (94%)]	Loss: 0.003208	Loss_recons: 0.001125	Loss_kld: 0.002084
+Epoch 012, Loss: 0.0108
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [0/5083 (0%)]	Loss: 0.003429	Loss_recons: 0.001111	Loss_kld: 0.002318
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [30/5083 (6%)]	Loss: 0.003238	Loss_recons: 0.001118	Loss_kld: 0.002120
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [60/5083 (13%)]	Loss: 0.003577	Loss_recons: 0.001513	Loss_kld: 0.002064
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [90/5083 (19%)]	Loss: 0.002958	Loss_recons: 0.001008	Loss_kld: 0.001950
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [120/5083 (25%)]	Loss: 0.003123	Loss_recons: 0.001152	Loss_kld: 0.001971
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [150/5083 (31%)]	Loss: 0.003138	Loss_recons: 0.001058	Loss_kld: 0.002080
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [180/5083 (38%)]	Loss: 0.003151	Loss_recons: 0.001315	Loss_kld: 0.001836
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [210/5083 (44%)]	Loss: 0.003336	Loss_recons: 0.001030	Loss_kld: 0.002305
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [240/5083 (50%)]	Loss: 0.002816	Loss_recons: 0.001100	Loss_kld: 0.001715
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [270/5083 (57%)]	Loss: 0.003198	Loss_recons: 0.001198	Loss_kld: 0.002000
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [300/5083 (63%)]	Loss: 0.002869	Loss_recons: 0.001090	Loss_kld: 0.001779
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [330/5083 (69%)]	Loss: 0.003160	Loss_recons: 0.001177	Loss_kld: 0.001983
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [360/5083 (75%)]	Loss: 0.002980	Loss_recons: 0.001304	Loss_kld: 0.001676
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [390/5083 (82%)]	Loss: 0.002786	Loss_recons: 0.001098	Loss_kld: 0.001688
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [420/5083 (88%)]	Loss: 0.003062	Loss_recons: 0.001170	Loss_kld: 0.001892
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 13 [450/5083 (94%)]	Loss: 0.002771	Loss_recons: 0.001100	Loss_kld: 0.001670
+Epoch 013, Loss: 0.0093
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [0/5083 (0%)]	Loss: 0.002622	Loss_recons: 0.000967	Loss_kld: 0.001654
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [30/5083 (6%)]	Loss: 0.003198	Loss_recons: 0.001449	Loss_kld: 0.001749
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [60/5083 (13%)]	Loss: 0.002667	Loss_recons: 0.001070	Loss_kld: 0.001597
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [90/5083 (19%)]	Loss: 0.002675	Loss_recons: 0.001169	Loss_kld: 0.001506
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [120/5083 (25%)]	Loss: 0.002795	Loss_recons: 0.001227	Loss_kld: 0.001568
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [150/5083 (31%)]	Loss: 0.002571	Loss_recons: 0.001087	Loss_kld: 0.001484
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [180/5083 (38%)]	Loss: 0.002961	Loss_recons: 0.001273	Loss_kld: 0.001687
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [210/5083 (44%)]	Loss: 0.002492	Loss_recons: 0.000911	Loss_kld: 0.001580
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [240/5083 (50%)]	Loss: 0.002656	Loss_recons: 0.001134	Loss_kld: 0.001522
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [270/5083 (57%)]	Loss: 0.002771	Loss_recons: 0.001298	Loss_kld: 0.001473
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [300/5083 (63%)]	Loss: 0.002548	Loss_recons: 0.001386	Loss_kld: 0.001162
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [330/5083 (69%)]	Loss: 0.002345	Loss_recons: 0.001046	Loss_kld: 0.001299
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [360/5083 (75%)]	Loss: 0.002592	Loss_recons: 0.001216	Loss_kld: 0.001376
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [390/5083 (82%)]	Loss: 0.002689	Loss_recons: 0.001195	Loss_kld: 0.001494
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [420/5083 (88%)]	Loss: 0.002528	Loss_recons: 0.001273	Loss_kld: 0.001255
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 14 [450/5083 (94%)]	Loss: 0.002290	Loss_recons: 0.000998	Loss_kld: 0.001293
+Epoch 014, Loss: 0.0079
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [0/5083 (0%)]	Loss: 0.002612	Loss_recons: 0.001181	Loss_kld: 0.001432
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [30/5083 (6%)]	Loss: 0.002729	Loss_recons: 0.001202	Loss_kld: 0.001527
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [60/5083 (13%)]	Loss: 0.002445	Loss_recons: 0.001097	Loss_kld: 0.001348
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [90/5083 (19%)]	Loss: 0.002221	Loss_recons: 0.001140	Loss_kld: 0.001081
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [120/5083 (25%)]	Loss: 0.002271	Loss_recons: 0.001173	Loss_kld: 0.001098
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [150/5083 (31%)]	Loss: 0.002338	Loss_recons: 0.001167	Loss_kld: 0.001172
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [180/5083 (38%)]	Loss: 0.002448	Loss_recons: 0.001220	Loss_kld: 0.001229
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [210/5083 (44%)]	Loss: 0.002516	Loss_recons: 0.001244	Loss_kld: 0.001272
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [240/5083 (50%)]	Loss: 0.002382	Loss_recons: 0.001172	Loss_kld: 0.001210
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [270/5083 (57%)]	Loss: 0.002453	Loss_recons: 0.001377	Loss_kld: 0.001076
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [300/5083 (63%)]	Loss: 0.002093	Loss_recons: 0.001048	Loss_kld: 0.001045
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [330/5083 (69%)]	Loss: 0.002310	Loss_recons: 0.001328	Loss_kld: 0.000982
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [360/5083 (75%)]	Loss: 0.002289	Loss_recons: 0.001139	Loss_kld: 0.001151
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [390/5083 (82%)]	Loss: 0.002341	Loss_recons: 0.001293	Loss_kld: 0.001048
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [420/5083 (88%)]	Loss: 0.002230	Loss_recons: 0.001076	Loss_kld: 0.001154
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 15 [450/5083 (94%)]	Loss: 0.002064	Loss_recons: 0.001101	Loss_kld: 0.000963
+Epoch 015, Loss: 0.0069
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [0/5083 (0%)]	Loss: 0.002055	Loss_recons: 0.001081	Loss_kld: 0.000974
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [30/5083 (6%)]	Loss: 0.002110	Loss_recons: 0.001064	Loss_kld: 0.001046
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [60/5083 (13%)]	Loss: 0.001978	Loss_recons: 0.001022	Loss_kld: 0.000956
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [90/5083 (19%)]	Loss: 0.002350	Loss_recons: 0.001217	Loss_kld: 0.001133
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [120/5083 (25%)]	Loss: 0.002076	Loss_recons: 0.001095	Loss_kld: 0.000982
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [150/5083 (31%)]	Loss: 0.002032	Loss_recons: 0.001207	Loss_kld: 0.000824
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [180/5083 (38%)]	Loss: 0.001970	Loss_recons: 0.001153	Loss_kld: 0.000817
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [210/5083 (44%)]	Loss: 0.002060	Loss_recons: 0.001135	Loss_kld: 0.000924
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [240/5083 (50%)]	Loss: 0.001859	Loss_recons: 0.001054	Loss_kld: 0.000805
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [270/5083 (57%)]	Loss: 0.001906	Loss_recons: 0.001156	Loss_kld: 0.000750
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [300/5083 (63%)]	Loss: 0.002046	Loss_recons: 0.001172	Loss_kld: 0.000874
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [330/5083 (69%)]	Loss: 0.002090	Loss_recons: 0.001259	Loss_kld: 0.000831
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [360/5083 (75%)]	Loss: 0.002048	Loss_recons: 0.001192	Loss_kld: 0.000856
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [390/5083 (82%)]	Loss: 0.002062	Loss_recons: 0.001216	Loss_kld: 0.000846
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [420/5083 (88%)]	Loss: 0.002032	Loss_recons: 0.001155	Loss_kld: 0.000877
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 16 [450/5083 (94%)]	Loss: 0.001999	Loss_recons: 0.001187	Loss_kld: 0.000812
+Epoch 016, Loss: 0.0062
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [0/5083 (0%)]	Loss: 0.002111	Loss_recons: 0.001226	Loss_kld: 0.000885
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [30/5083 (6%)]	Loss: 0.001694	Loss_recons: 0.000890	Loss_kld: 0.000804
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [60/5083 (13%)]	Loss: 0.002096	Loss_recons: 0.001289	Loss_kld: 0.000807
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [90/5083 (19%)]	Loss: 0.001713	Loss_recons: 0.000977	Loss_kld: 0.000736
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [120/5083 (25%)]	Loss: 0.002145	Loss_recons: 0.001232	Loss_kld: 0.000914
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [150/5083 (31%)]	Loss: 0.001659	Loss_recons: 0.000913	Loss_kld: 0.000746
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [180/5083 (38%)]	Loss: 0.002209	Loss_recons: 0.001264	Loss_kld: 0.000946
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [210/5083 (44%)]	Loss: 0.001952	Loss_recons: 0.001233	Loss_kld: 0.000719
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [240/5083 (50%)]	Loss: 0.001954	Loss_recons: 0.001185	Loss_kld: 0.000769
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [270/5083 (57%)]	Loss: 0.001813	Loss_recons: 0.001089	Loss_kld: 0.000725
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [300/5083 (63%)]	Loss: 0.002016	Loss_recons: 0.001304	Loss_kld: 0.000713
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [330/5083 (69%)]	Loss: 0.001676	Loss_recons: 0.000961	Loss_kld: 0.000715
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [360/5083 (75%)]	Loss: 0.001735	Loss_recons: 0.000960	Loss_kld: 0.000775
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [390/5083 (82%)]	Loss: 0.001813	Loss_recons: 0.001107	Loss_kld: 0.000706
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [420/5083 (88%)]	Loss: 0.002111	Loss_recons: 0.001414	Loss_kld: 0.000696
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 17 [450/5083 (94%)]	Loss: 0.001685	Loss_recons: 0.001031	Loss_kld: 0.000653
+Epoch 017, Loss: 0.0057
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [0/5083 (0%)]	Loss: 0.001745	Loss_recons: 0.001161	Loss_kld: 0.000584
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [30/5083 (6%)]	Loss: 0.001869	Loss_recons: 0.001168	Loss_kld: 0.000701
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [60/5083 (13%)]	Loss: 0.001875	Loss_recons: 0.001228	Loss_kld: 0.000647
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [90/5083 (19%)]	Loss: 0.001628	Loss_recons: 0.000874	Loss_kld: 0.000754
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [120/5083 (25%)]	Loss: 0.001942	Loss_recons: 0.001362	Loss_kld: 0.000580
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [150/5083 (31%)]	Loss: 0.001595	Loss_recons: 0.000974	Loss_kld: 0.000621
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [180/5083 (38%)]	Loss: 0.001721	Loss_recons: 0.001053	Loss_kld: 0.000668
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [210/5083 (44%)]	Loss: 0.001595	Loss_recons: 0.001017	Loss_kld: 0.000579
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [240/5083 (50%)]	Loss: 0.001652	Loss_recons: 0.001073	Loss_kld: 0.000579
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [270/5083 (57%)]	Loss: 0.002164	Loss_recons: 0.001547	Loss_kld: 0.000617
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [300/5083 (63%)]	Loss: 0.001889	Loss_recons: 0.001195	Loss_kld: 0.000695
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [330/5083 (69%)]	Loss: 0.001685	Loss_recons: 0.001060	Loss_kld: 0.000625
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [360/5083 (75%)]	Loss: 0.002025	Loss_recons: 0.001314	Loss_kld: 0.000710
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [390/5083 (82%)]	Loss: 0.001663	Loss_recons: 0.000989	Loss_kld: 0.000673
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [420/5083 (88%)]	Loss: 0.001712	Loss_recons: 0.001151	Loss_kld: 0.000561
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 18 [450/5083 (94%)]	Loss: 0.001654	Loss_recons: 0.001084	Loss_kld: 0.000570
+Epoch 018, Loss: 0.0053
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [0/5083 (0%)]	Loss: 0.001726	Loss_recons: 0.001073	Loss_kld: 0.000654
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [30/5083 (6%)]	Loss: 0.001789	Loss_recons: 0.001206	Loss_kld: 0.000583
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [60/5083 (13%)]	Loss: 0.001804	Loss_recons: 0.001161	Loss_kld: 0.000642
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [90/5083 (19%)]	Loss: 0.001591	Loss_recons: 0.000984	Loss_kld: 0.000606
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [120/5083 (25%)]	Loss: 0.001563	Loss_recons: 0.001023	Loss_kld: 0.000540
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [150/5083 (31%)]	Loss: 0.001856	Loss_recons: 0.001286	Loss_kld: 0.000570
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [180/5083 (38%)]	Loss: 0.001630	Loss_recons: 0.001013	Loss_kld: 0.000616
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [210/5083 (44%)]	Loss: 0.001734	Loss_recons: 0.001168	Loss_kld: 0.000566
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [240/5083 (50%)]	Loss: 0.001667	Loss_recons: 0.001057	Loss_kld: 0.000610
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [270/5083 (57%)]	Loss: 0.001578	Loss_recons: 0.000995	Loss_kld: 0.000583
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [300/5083 (63%)]	Loss: 0.001391	Loss_recons: 0.000860	Loss_kld: 0.000531
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [330/5083 (69%)]	Loss: 0.001642	Loss_recons: 0.001031	Loss_kld: 0.000610
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [360/5083 (75%)]	Loss: 0.001553	Loss_recons: 0.001026	Loss_kld: 0.000527
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [390/5083 (82%)]	Loss: 0.001704	Loss_recons: 0.001125	Loss_kld: 0.000579
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [420/5083 (88%)]	Loss: 0.001550	Loss_recons: 0.000999	Loss_kld: 0.000551
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 19 [450/5083 (94%)]	Loss: 0.001545	Loss_recons: 0.000896	Loss_kld: 0.000649
+Epoch 019, Loss: 0.0051
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [0/5083 (0%)]	Loss: 0.001520	Loss_recons: 0.001010	Loss_kld: 0.000509
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [30/5083 (6%)]	Loss: 0.001934	Loss_recons: 0.001368	Loss_kld: 0.000566
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [60/5083 (13%)]	Loss: 0.001711	Loss_recons: 0.001230	Loss_kld: 0.000481
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [90/5083 (19%)]	Loss: 0.002177	Loss_recons: 0.001712	Loss_kld: 0.000465
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [120/5083 (25%)]	Loss: 0.001700	Loss_recons: 0.001205	Loss_kld: 0.000495
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [150/5083 (31%)]	Loss: 0.001894	Loss_recons: 0.001415	Loss_kld: 0.000479
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [180/5083 (38%)]	Loss: 0.001498	Loss_recons: 0.001016	Loss_kld: 0.000482
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [210/5083 (44%)]	Loss: 0.001496	Loss_recons: 0.001011	Loss_kld: 0.000484
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [240/5083 (50%)]	Loss: 0.001482	Loss_recons: 0.001030	Loss_kld: 0.000452
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [270/5083 (57%)]	Loss: 0.001559	Loss_recons: 0.001086	Loss_kld: 0.000473
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [300/5083 (63%)]	Loss: 0.001511	Loss_recons: 0.001003	Loss_kld: 0.000508
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [330/5083 (69%)]	Loss: 0.001537	Loss_recons: 0.001061	Loss_kld: 0.000476
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [360/5083 (75%)]	Loss: 0.001642	Loss_recons: 0.001179	Loss_kld: 0.000463
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [390/5083 (82%)]	Loss: 0.001629	Loss_recons: 0.001142	Loss_kld: 0.000486
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [420/5083 (88%)]	Loss: 0.001513	Loss_recons: 0.001039	Loss_kld: 0.000474
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 20 [450/5083 (94%)]	Loss: 0.001767	Loss_recons: 0.001306	Loss_kld: 0.000461
+Epoch 020, Loss: 0.0049
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [0/5083 (0%)]	Loss: 0.001618	Loss_recons: 0.001127	Loss_kld: 0.000491
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [30/5083 (6%)]	Loss: 0.001737	Loss_recons: 0.001243	Loss_kld: 0.000494
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [60/5083 (13%)]	Loss: 0.001575	Loss_recons: 0.001101	Loss_kld: 0.000474
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [90/5083 (19%)]	Loss: 0.001529	Loss_recons: 0.001054	Loss_kld: 0.000474
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [120/5083 (25%)]	Loss: 0.001633	Loss_recons: 0.001197	Loss_kld: 0.000435
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [150/5083 (31%)]	Loss: 0.001527	Loss_recons: 0.001106	Loss_kld: 0.000421
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [180/5083 (38%)]	Loss: 0.001731	Loss_recons: 0.001284	Loss_kld: 0.000447
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [210/5083 (44%)]	Loss: 0.001817	Loss_recons: 0.001286	Loss_kld: 0.000531
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [240/5083 (50%)]	Loss: 0.001620	Loss_recons: 0.001221	Loss_kld: 0.000399
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [270/5083 (57%)]	Loss: 0.001450	Loss_recons: 0.001024	Loss_kld: 0.000426
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [300/5083 (63%)]	Loss: 0.001594	Loss_recons: 0.001081	Loss_kld: 0.000513
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [330/5083 (69%)]	Loss: 0.001470	Loss_recons: 0.001050	Loss_kld: 0.000420
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [360/5083 (75%)]	Loss: 0.001400	Loss_recons: 0.000937	Loss_kld: 0.000464
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [390/5083 (82%)]	Loss: 0.001494	Loss_recons: 0.001050	Loss_kld: 0.000444
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [420/5083 (88%)]	Loss: 0.001398	Loss_recons: 0.000978	Loss_kld: 0.000420
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 21 [450/5083 (94%)]	Loss: 0.001435	Loss_recons: 0.001075	Loss_kld: 0.000361
+Epoch 021, Loss: 0.0047
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [0/5083 (0%)]	Loss: 0.001525	Loss_recons: 0.001110	Loss_kld: 0.000415
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [30/5083 (6%)]	Loss: 0.001554	Loss_recons: 0.001079	Loss_kld: 0.000475
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [60/5083 (13%)]	Loss: 0.001425	Loss_recons: 0.001017	Loss_kld: 0.000408
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [90/5083 (19%)]	Loss: 0.001622	Loss_recons: 0.001183	Loss_kld: 0.000439
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [120/5083 (25%)]	Loss: 0.001584	Loss_recons: 0.001180	Loss_kld: 0.000403
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [150/5083 (31%)]	Loss: 0.001481	Loss_recons: 0.001099	Loss_kld: 0.000382
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [180/5083 (38%)]	Loss: 0.001669	Loss_recons: 0.001195	Loss_kld: 0.000474
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [210/5083 (44%)]	Loss: 0.001468	Loss_recons: 0.001055	Loss_kld: 0.000413
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [240/5083 (50%)]	Loss: 0.001604	Loss_recons: 0.001220	Loss_kld: 0.000383
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [270/5083 (57%)]	Loss: 0.001405	Loss_recons: 0.000990	Loss_kld: 0.000415
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [300/5083 (63%)]	Loss: 0.001410	Loss_recons: 0.000980	Loss_kld: 0.000430
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [330/5083 (69%)]	Loss: 0.001342	Loss_recons: 0.000899	Loss_kld: 0.000443
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [360/5083 (75%)]	Loss: 0.001616	Loss_recons: 0.001124	Loss_kld: 0.000492
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [390/5083 (82%)]	Loss: 0.001567	Loss_recons: 0.001109	Loss_kld: 0.000458
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [420/5083 (88%)]	Loss: 0.001443	Loss_recons: 0.001036	Loss_kld: 0.000407
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 22 [450/5083 (94%)]	Loss: 0.001493	Loss_recons: 0.001063	Loss_kld: 0.000430
+Epoch 022, Loss: 0.0046
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [0/5083 (0%)]	Loss: 0.001228	Loss_recons: 0.000818	Loss_kld: 0.000410
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [30/5083 (6%)]	Loss: 0.001333	Loss_recons: 0.000942	Loss_kld: 0.000391
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [60/5083 (13%)]	Loss: 0.001454	Loss_recons: 0.001071	Loss_kld: 0.000383
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [90/5083 (19%)]	Loss: 0.001590	Loss_recons: 0.001178	Loss_kld: 0.000412
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [120/5083 (25%)]	Loss: 0.001462	Loss_recons: 0.001093	Loss_kld: 0.000369
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [150/5083 (31%)]	Loss: 0.001382	Loss_recons: 0.001014	Loss_kld: 0.000368
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [180/5083 (38%)]	Loss: 0.001642	Loss_recons: 0.001272	Loss_kld: 0.000370
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [210/5083 (44%)]	Loss: 0.001519	Loss_recons: 0.001137	Loss_kld: 0.000382
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [240/5083 (50%)]	Loss: 0.001446	Loss_recons: 0.001034	Loss_kld: 0.000412
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [270/5083 (57%)]	Loss: 0.001326	Loss_recons: 0.000921	Loss_kld: 0.000405
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [300/5083 (63%)]	Loss: 0.001674	Loss_recons: 0.001223	Loss_kld: 0.000451
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [330/5083 (69%)]	Loss: 0.001512	Loss_recons: 0.001162	Loss_kld: 0.000350
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [360/5083 (75%)]	Loss: 0.001349	Loss_recons: 0.000928	Loss_kld: 0.000421
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [390/5083 (82%)]	Loss: 0.001519	Loss_recons: 0.001114	Loss_kld: 0.000404
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [420/5083 (88%)]	Loss: 0.001323	Loss_recons: 0.000962	Loss_kld: 0.000361
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 23 [450/5083 (94%)]	Loss: 0.001547	Loss_recons: 0.001192	Loss_kld: 0.000355
+Epoch 023, Loss: 0.0044
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [0/5083 (0%)]	Loss: 0.001538	Loss_recons: 0.001202	Loss_kld: 0.000336
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [30/5083 (6%)]	Loss: 0.001554	Loss_recons: 0.001154	Loss_kld: 0.000400
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [60/5083 (13%)]	Loss: 0.001226	Loss_recons: 0.000890	Loss_kld: 0.000336
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [90/5083 (19%)]	Loss: 0.001290	Loss_recons: 0.000950	Loss_kld: 0.000340
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [120/5083 (25%)]	Loss: 0.001495	Loss_recons: 0.001092	Loss_kld: 0.000403
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [150/5083 (31%)]	Loss: 0.001739	Loss_recons: 0.001371	Loss_kld: 0.000368
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [180/5083 (38%)]	Loss: 0.001536	Loss_recons: 0.001095	Loss_kld: 0.000441
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [210/5083 (44%)]	Loss: 0.001490	Loss_recons: 0.001103	Loss_kld: 0.000386
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [240/5083 (50%)]	Loss: 0.001477	Loss_recons: 0.001121	Loss_kld: 0.000356
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [270/5083 (57%)]	Loss: 0.001464	Loss_recons: 0.001052	Loss_kld: 0.000413
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [300/5083 (63%)]	Loss: 0.001293	Loss_recons: 0.000919	Loss_kld: 0.000374
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [330/5083 (69%)]	Loss: 0.001554	Loss_recons: 0.001217	Loss_kld: 0.000338
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [360/5083 (75%)]	Loss: 0.001329	Loss_recons: 0.000957	Loss_kld: 0.000372
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [390/5083 (82%)]	Loss: 0.001343	Loss_recons: 0.000960	Loss_kld: 0.000383
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [420/5083 (88%)]	Loss: 0.001466	Loss_recons: 0.001128	Loss_kld: 0.000338
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 24 [450/5083 (94%)]	Loss: 0.001388	Loss_recons: 0.001073	Loss_kld: 0.000315
+Epoch 024, Loss: 0.0044
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [0/5083 (0%)]	Loss: 0.001382	Loss_recons: 0.001056	Loss_kld: 0.000326
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [30/5083 (6%)]	Loss: 0.001593	Loss_recons: 0.001276	Loss_kld: 0.000317
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [60/5083 (13%)]	Loss: 0.001525	Loss_recons: 0.001165	Loss_kld: 0.000361
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [90/5083 (19%)]	Loss: 0.001487	Loss_recons: 0.001126	Loss_kld: 0.000361
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [120/5083 (25%)]	Loss: 0.001558	Loss_recons: 0.001274	Loss_kld: 0.000284
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [150/5083 (31%)]	Loss: 0.001374	Loss_recons: 0.001037	Loss_kld: 0.000336
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [180/5083 (38%)]	Loss: 0.001369	Loss_recons: 0.001049	Loss_kld: 0.000320
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [210/5083 (44%)]	Loss: 0.001348	Loss_recons: 0.000950	Loss_kld: 0.000398
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [240/5083 (50%)]	Loss: 0.001400	Loss_recons: 0.001101	Loss_kld: 0.000299
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [270/5083 (57%)]	Loss: 0.001481	Loss_recons: 0.001201	Loss_kld: 0.000281
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [300/5083 (63%)]	Loss: 0.001384	Loss_recons: 0.001076	Loss_kld: 0.000308
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [330/5083 (69%)]	Loss: 0.001319	Loss_recons: 0.001016	Loss_kld: 0.000303
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [360/5083 (75%)]	Loss: 0.001398	Loss_recons: 0.001082	Loss_kld: 0.000317
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [390/5083 (82%)]	Loss: 0.001279	Loss_recons: 0.000977	Loss_kld: 0.000302
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [420/5083 (88%)]	Loss: 0.001329	Loss_recons: 0.001006	Loss_kld: 0.000323
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 25 [450/5083 (94%)]	Loss: 0.001269	Loss_recons: 0.000958	Loss_kld: 0.000311
+Epoch 025, Loss: 0.0042
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [0/5083 (0%)]	Loss: 0.001128	Loss_recons: 0.000818	Loss_kld: 0.000310
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [30/5083 (6%)]	Loss: 0.001263	Loss_recons: 0.000971	Loss_kld: 0.000292
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [60/5083 (13%)]	Loss: 0.001508	Loss_recons: 0.001201	Loss_kld: 0.000307
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [90/5083 (19%)]	Loss: 0.001335	Loss_recons: 0.001028	Loss_kld: 0.000307
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [120/5083 (25%)]	Loss: 0.001618	Loss_recons: 0.001333	Loss_kld: 0.000284
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [150/5083 (31%)]	Loss: 0.001505	Loss_recons: 0.001176	Loss_kld: 0.000329
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [180/5083 (38%)]	Loss: 0.001444	Loss_recons: 0.001153	Loss_kld: 0.000291
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [210/5083 (44%)]	Loss: 0.001387	Loss_recons: 0.000994	Loss_kld: 0.000393
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [240/5083 (50%)]	Loss: 0.001372	Loss_recons: 0.001063	Loss_kld: 0.000308
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [270/5083 (57%)]	Loss: 0.001260	Loss_recons: 0.000954	Loss_kld: 0.000306
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [300/5083 (63%)]	Loss: 0.001488	Loss_recons: 0.001183	Loss_kld: 0.000305
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [330/5083 (69%)]	Loss: 0.001273	Loss_recons: 0.000953	Loss_kld: 0.000320
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [360/5083 (75%)]	Loss: 0.001421	Loss_recons: 0.001116	Loss_kld: 0.000305
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [390/5083 (82%)]	Loss: 0.001153	Loss_recons: 0.000837	Loss_kld: 0.000316
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [420/5083 (88%)]	Loss: 0.001375	Loss_recons: 0.001084	Loss_kld: 0.000292
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 26 [450/5083 (94%)]	Loss: 0.001428	Loss_recons: 0.001090	Loss_kld: 0.000338
+Epoch 026, Loss: 0.0042
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [0/5083 (0%)]	Loss: 0.001376	Loss_recons: 0.001076	Loss_kld: 0.000299
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [30/5083 (6%)]	Loss: 0.001307	Loss_recons: 0.000975	Loss_kld: 0.000332
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [60/5083 (13%)]	Loss: 0.001397	Loss_recons: 0.001067	Loss_kld: 0.000331
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [90/5083 (19%)]	Loss: 0.001470	Loss_recons: 0.001170	Loss_kld: 0.000300
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [120/5083 (25%)]	Loss: 0.001564	Loss_recons: 0.001246	Loss_kld: 0.000318
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [150/5083 (31%)]	Loss: 0.001168	Loss_recons: 0.000873	Loss_kld: 0.000296
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [180/5083 (38%)]	Loss: 0.001337	Loss_recons: 0.001054	Loss_kld: 0.000282
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [210/5083 (44%)]	Loss: 0.001241	Loss_recons: 0.000954	Loss_kld: 0.000287
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [240/5083 (50%)]	Loss: 0.001241	Loss_recons: 0.000933	Loss_kld: 0.000309
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [270/5083 (57%)]	Loss: 0.001180	Loss_recons: 0.000885	Loss_kld: 0.000295
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [300/5083 (63%)]	Loss: 0.001134	Loss_recons: 0.000850	Loss_kld: 0.000283
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [330/5083 (69%)]	Loss: 0.001332	Loss_recons: 0.000994	Loss_kld: 0.000339
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [360/5083 (75%)]	Loss: 0.001266	Loss_recons: 0.000950	Loss_kld: 0.000316
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [390/5083 (82%)]	Loss: 0.001204	Loss_recons: 0.000897	Loss_kld: 0.000307
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [420/5083 (88%)]	Loss: 0.001733	Loss_recons: 0.001360	Loss_kld: 0.000373
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 27 [450/5083 (94%)]	Loss: 0.001233	Loss_recons: 0.000936	Loss_kld: 0.000298
+Epoch 027, Loss: 0.0041
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [0/5083 (0%)]	Loss: 0.001279	Loss_recons: 0.000987	Loss_kld: 0.000292
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [30/5083 (6%)]	Loss: 0.001235	Loss_recons: 0.000933	Loss_kld: 0.000302
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [60/5083 (13%)]	Loss: 0.001647	Loss_recons: 0.001337	Loss_kld: 0.000309
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [90/5083 (19%)]	Loss: 0.001672	Loss_recons: 0.001356	Loss_kld: 0.000316
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [120/5083 (25%)]	Loss: 0.001303	Loss_recons: 0.000951	Loss_kld: 0.000352
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [150/5083 (31%)]	Loss: 0.001493	Loss_recons: 0.001180	Loss_kld: 0.000313
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [180/5083 (38%)]	Loss: 0.001516	Loss_recons: 0.001134	Loss_kld: 0.000382
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [210/5083 (44%)]	Loss: 0.001324	Loss_recons: 0.001000	Loss_kld: 0.000324
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [240/5083 (50%)]	Loss: 0.001212	Loss_recons: 0.000904	Loss_kld: 0.000308
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [270/5083 (57%)]	Loss: 0.001199	Loss_recons: 0.000858	Loss_kld: 0.000341
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [300/5083 (63%)]	Loss: 0.001389	Loss_recons: 0.001078	Loss_kld: 0.000311
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [330/5083 (69%)]	Loss: 0.001227	Loss_recons: 0.000888	Loss_kld: 0.000338
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [360/5083 (75%)]	Loss: 0.001318	Loss_recons: 0.000987	Loss_kld: 0.000332
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [390/5083 (82%)]	Loss: 0.001284	Loss_recons: 0.001000	Loss_kld: 0.000284
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [420/5083 (88%)]	Loss: 0.001181	Loss_recons: 0.000922	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 28 [450/5083 (94%)]	Loss: 0.001341	Loss_recons: 0.001034	Loss_kld: 0.000306
+Epoch 028, Loss: 0.0040
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [0/5083 (0%)]	Loss: 0.001293	Loss_recons: 0.001030	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [30/5083 (6%)]	Loss: 0.001347	Loss_recons: 0.001047	Loss_kld: 0.000300
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [60/5083 (13%)]	Loss: 0.001271	Loss_recons: 0.000998	Loss_kld: 0.000273
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [90/5083 (19%)]	Loss: 0.001204	Loss_recons: 0.000866	Loss_kld: 0.000338
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [120/5083 (25%)]	Loss: 0.001258	Loss_recons: 0.000951	Loss_kld: 0.000307
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [150/5083 (31%)]	Loss: 0.001443	Loss_recons: 0.001183	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [180/5083 (38%)]	Loss: 0.001481	Loss_recons: 0.001186	Loss_kld: 0.000295
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [210/5083 (44%)]	Loss: 0.001624	Loss_recons: 0.001364	Loss_kld: 0.000260
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [240/5083 (50%)]	Loss: 0.001247	Loss_recons: 0.000960	Loss_kld: 0.000287
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [270/5083 (57%)]	Loss: 0.001303	Loss_recons: 0.001001	Loss_kld: 0.000301
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [300/5083 (63%)]	Loss: 0.001218	Loss_recons: 0.000899	Loss_kld: 0.000319
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [330/5083 (69%)]	Loss: 0.001424	Loss_recons: 0.001111	Loss_kld: 0.000313
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [360/5083 (75%)]	Loss: 0.001304	Loss_recons: 0.000990	Loss_kld: 0.000314
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [390/5083 (82%)]	Loss: 0.001235	Loss_recons: 0.000936	Loss_kld: 0.000299
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [420/5083 (88%)]	Loss: 0.001170	Loss_recons: 0.000869	Loss_kld: 0.000300
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 29 [450/5083 (94%)]	Loss: 0.001181	Loss_recons: 0.000924	Loss_kld: 0.000257
+Epoch 029, Loss: 0.0038
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [0/5083 (0%)]	Loss: 0.001158	Loss_recons: 0.000884	Loss_kld: 0.000274
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [30/5083 (6%)]	Loss: 0.001393	Loss_recons: 0.001130	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [60/5083 (13%)]	Loss: 0.001398	Loss_recons: 0.001109	Loss_kld: 0.000288
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [90/5083 (19%)]	Loss: 0.001355	Loss_recons: 0.001091	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [120/5083 (25%)]	Loss: 0.001186	Loss_recons: 0.000902	Loss_kld: 0.000284
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [150/5083 (31%)]	Loss: 0.001217	Loss_recons: 0.000902	Loss_kld: 0.000315
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [180/5083 (38%)]	Loss: 0.001170	Loss_recons: 0.000868	Loss_kld: 0.000302
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [210/5083 (44%)]	Loss: 0.001231	Loss_recons: 0.000899	Loss_kld: 0.000332
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [240/5083 (50%)]	Loss: 0.001423	Loss_recons: 0.001123	Loss_kld: 0.000300
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [270/5083 (57%)]	Loss: 0.001466	Loss_recons: 0.001152	Loss_kld: 0.000314
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [300/5083 (63%)]	Loss: 0.001193	Loss_recons: 0.000927	Loss_kld: 0.000266
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [330/5083 (69%)]	Loss: 0.001179	Loss_recons: 0.000870	Loss_kld: 0.000309
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [360/5083 (75%)]	Loss: 0.001370	Loss_recons: 0.001083	Loss_kld: 0.000286
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [390/5083 (82%)]	Loss: 0.001084	Loss_recons: 0.000794	Loss_kld: 0.000290
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [420/5083 (88%)]	Loss: 0.001327	Loss_recons: 0.001008	Loss_kld: 0.000319
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 30 [450/5083 (94%)]	Loss: 0.001347	Loss_recons: 0.001070	Loss_kld: 0.000277
+Epoch 030, Loss: 0.0038
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [0/5083 (0%)]	Loss: 0.001298	Loss_recons: 0.001039	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [30/5083 (6%)]	Loss: 0.001217	Loss_recons: 0.000941	Loss_kld: 0.000277
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [60/5083 (13%)]	Loss: 0.001165	Loss_recons: 0.000885	Loss_kld: 0.000280
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [90/5083 (19%)]	Loss: 0.001307	Loss_recons: 0.000990	Loss_kld: 0.000317
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [120/5083 (25%)]	Loss: 0.001191	Loss_recons: 0.000888	Loss_kld: 0.000303
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [150/5083 (31%)]	Loss: 0.001169	Loss_recons: 0.000894	Loss_kld: 0.000275
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [180/5083 (38%)]	Loss: 0.001415	Loss_recons: 0.001117	Loss_kld: 0.000298
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [210/5083 (44%)]	Loss: 0.001525	Loss_recons: 0.001216	Loss_kld: 0.000309
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [240/5083 (50%)]	Loss: 0.001133	Loss_recons: 0.000841	Loss_kld: 0.000291
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [270/5083 (57%)]	Loss: 0.001356	Loss_recons: 0.001062	Loss_kld: 0.000293
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [300/5083 (63%)]	Loss: 0.001087	Loss_recons: 0.000781	Loss_kld: 0.000306
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [330/5083 (69%)]	Loss: 0.001114	Loss_recons: 0.000834	Loss_kld: 0.000281
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [360/5083 (75%)]	Loss: 0.001133	Loss_recons: 0.000877	Loss_kld: 0.000255
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [390/5083 (82%)]	Loss: 0.001310	Loss_recons: 0.001061	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [420/5083 (88%)]	Loss: 0.001427	Loss_recons: 0.001153	Loss_kld: 0.000274
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 31 [450/5083 (94%)]	Loss: 0.001268	Loss_recons: 0.000967	Loss_kld: 0.000301
+Epoch 031, Loss: 0.0037
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [0/5083 (0%)]	Loss: 0.001552	Loss_recons: 0.001249	Loss_kld: 0.000303
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [30/5083 (6%)]	Loss: 0.001386	Loss_recons: 0.001106	Loss_kld: 0.000280
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [60/5083 (13%)]	Loss: 0.001411	Loss_recons: 0.001136	Loss_kld: 0.000275
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [90/5083 (19%)]	Loss: 0.001297	Loss_recons: 0.001010	Loss_kld: 0.000287
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [120/5083 (25%)]	Loss: 0.001418	Loss_recons: 0.001124	Loss_kld: 0.000294
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [150/5083 (31%)]	Loss: 0.001201	Loss_recons: 0.000914	Loss_kld: 0.000287
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [180/5083 (38%)]	Loss: 0.001212	Loss_recons: 0.000917	Loss_kld: 0.000295
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [210/5083 (44%)]	Loss: 0.001567	Loss_recons: 0.001290	Loss_kld: 0.000277
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [240/5083 (50%)]	Loss: 0.001075	Loss_recons: 0.000808	Loss_kld: 0.000267
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [270/5083 (57%)]	Loss: 0.003410	Loss_recons: 0.002422	Loss_kld: 0.000987
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [300/5083 (63%)]	Loss: 0.001513	Loss_recons: 0.001121	Loss_kld: 0.000393
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [330/5083 (69%)]	Loss: 0.001675	Loss_recons: 0.001285	Loss_kld: 0.000390
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [360/5083 (75%)]	Loss: 0.001522	Loss_recons: 0.001079	Loss_kld: 0.000443
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [390/5083 (82%)]	Loss: 0.001629	Loss_recons: 0.001039	Loss_kld: 0.000590
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [420/5083 (88%)]	Loss: 0.001451	Loss_recons: 0.001054	Loss_kld: 0.000397
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 32 [450/5083 (94%)]	Loss: 0.001353	Loss_recons: 0.000950	Loss_kld: 0.000403
+Epoch 032, Loss: 0.0054
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [0/5083 (0%)]	Loss: 0.001579	Loss_recons: 0.001192	Loss_kld: 0.000388
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [30/5083 (6%)]	Loss: 0.001447	Loss_recons: 0.001059	Loss_kld: 0.000388
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [60/5083 (13%)]	Loss: 0.001172	Loss_recons: 0.000811	Loss_kld: 0.000361
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [90/5083 (19%)]	Loss: 0.001428	Loss_recons: 0.001091	Loss_kld: 0.000337
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [120/5083 (25%)]	Loss: 0.001185	Loss_recons: 0.000819	Loss_kld: 0.000366
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [150/5083 (31%)]	Loss: 0.001226	Loss_recons: 0.000841	Loss_kld: 0.000385
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [180/5083 (38%)]	Loss: 0.001226	Loss_recons: 0.000881	Loss_kld: 0.000345
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [210/5083 (44%)]	Loss: 0.001310	Loss_recons: 0.000931	Loss_kld: 0.000379
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [240/5083 (50%)]	Loss: 0.001310	Loss_recons: 0.000929	Loss_kld: 0.000381
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [270/5083 (57%)]	Loss: 0.001255	Loss_recons: 0.000937	Loss_kld: 0.000318
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [300/5083 (63%)]	Loss: 0.001490	Loss_recons: 0.001158	Loss_kld: 0.000332
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [330/5083 (69%)]	Loss: 0.001314	Loss_recons: 0.000994	Loss_kld: 0.000320
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [360/5083 (75%)]	Loss: 0.001187	Loss_recons: 0.000863	Loss_kld: 0.000324
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [390/5083 (82%)]	Loss: 0.001320	Loss_recons: 0.000990	Loss_kld: 0.000330
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [420/5083 (88%)]	Loss: 0.001508	Loss_recons: 0.001178	Loss_kld: 0.000330
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 33 [450/5083 (94%)]	Loss: 0.001188	Loss_recons: 0.000849	Loss_kld: 0.000339
+Epoch 033, Loss: 0.0039
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [0/5083 (0%)]	Loss: 0.001397	Loss_recons: 0.001057	Loss_kld: 0.000340
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [30/5083 (6%)]	Loss: 0.001406	Loss_recons: 0.001043	Loss_kld: 0.000363
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [60/5083 (13%)]	Loss: 0.001242	Loss_recons: 0.000908	Loss_kld: 0.000335
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [90/5083 (19%)]	Loss: 0.001172	Loss_recons: 0.000848	Loss_kld: 0.000324
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [120/5083 (25%)]	Loss: 0.001373	Loss_recons: 0.001023	Loss_kld: 0.000350
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [150/5083 (31%)]	Loss: 0.001249	Loss_recons: 0.000925	Loss_kld: 0.000324
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [180/5083 (38%)]	Loss: 0.001197	Loss_recons: 0.000884	Loss_kld: 0.000314
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [210/5083 (44%)]	Loss: 0.001334	Loss_recons: 0.001004	Loss_kld: 0.000330
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [240/5083 (50%)]	Loss: 0.001303	Loss_recons: 0.000980	Loss_kld: 0.000323
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [270/5083 (57%)]	Loss: 0.001254	Loss_recons: 0.000939	Loss_kld: 0.000315
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [300/5083 (63%)]	Loss: 0.001338	Loss_recons: 0.000994	Loss_kld: 0.000343
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [330/5083 (69%)]	Loss: 0.001160	Loss_recons: 0.000828	Loss_kld: 0.000332
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [360/5083 (75%)]	Loss: 0.001463	Loss_recons: 0.001138	Loss_kld: 0.000324
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [390/5083 (82%)]	Loss: 0.001268	Loss_recons: 0.000937	Loss_kld: 0.000331
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [420/5083 (88%)]	Loss: 0.001237	Loss_recons: 0.000880	Loss_kld: 0.000356
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 34 [450/5083 (94%)]	Loss: 0.001485	Loss_recons: 0.001174	Loss_kld: 0.000310
+Epoch 034, Loss: 0.0039
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [0/5083 (0%)]	Loss: 0.001401	Loss_recons: 0.001091	Loss_kld: 0.000310
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [30/5083 (6%)]	Loss: 0.001344	Loss_recons: 0.001019	Loss_kld: 0.000325
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [60/5083 (13%)]	Loss: 0.001128	Loss_recons: 0.000800	Loss_kld: 0.000328
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [90/5083 (19%)]	Loss: 0.001087	Loss_recons: 0.000784	Loss_kld: 0.000303
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [120/5083 (25%)]	Loss: 0.001377	Loss_recons: 0.001086	Loss_kld: 0.000291
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [150/5083 (31%)]	Loss: 0.001233	Loss_recons: 0.000915	Loss_kld: 0.000319
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [180/5083 (38%)]	Loss: 0.001133	Loss_recons: 0.000805	Loss_kld: 0.000328
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [210/5083 (44%)]	Loss: 0.001268	Loss_recons: 0.000966	Loss_kld: 0.000302
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [240/5083 (50%)]	Loss: 0.001169	Loss_recons: 0.000838	Loss_kld: 0.000331
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [270/5083 (57%)]	Loss: 0.001068	Loss_recons: 0.000761	Loss_kld: 0.000307
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [300/5083 (63%)]	Loss: 0.001174	Loss_recons: 0.000847	Loss_kld: 0.000327
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [330/5083 (69%)]	Loss: 0.001153	Loss_recons: 0.000869	Loss_kld: 0.000284
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [360/5083 (75%)]	Loss: 0.001183	Loss_recons: 0.000883	Loss_kld: 0.000300
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [390/5083 (82%)]	Loss: 0.001141	Loss_recons: 0.000856	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [420/5083 (88%)]	Loss: 0.001168	Loss_recons: 0.000848	Loss_kld: 0.000320
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 35 [450/5083 (94%)]	Loss: 0.001391	Loss_recons: 0.001089	Loss_kld: 0.000302
+Epoch 035, Loss: 0.0037
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [0/5083 (0%)]	Loss: 0.001280	Loss_recons: 0.000965	Loss_kld: 0.000315
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [30/5083 (6%)]	Loss: 0.001464	Loss_recons: 0.001160	Loss_kld: 0.000305
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [60/5083 (13%)]	Loss: 0.001273	Loss_recons: 0.000927	Loss_kld: 0.000346
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [90/5083 (19%)]	Loss: 0.001053	Loss_recons: 0.000744	Loss_kld: 0.000309
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [120/5083 (25%)]	Loss: 0.001362	Loss_recons: 0.001045	Loss_kld: 0.000317
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [150/5083 (31%)]	Loss: 0.001176	Loss_recons: 0.000871	Loss_kld: 0.000305
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [180/5083 (38%)]	Loss: 0.001033	Loss_recons: 0.000740	Loss_kld: 0.000293
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [210/5083 (44%)]	Loss: 0.001171	Loss_recons: 0.000852	Loss_kld: 0.000319
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [240/5083 (50%)]	Loss: 0.001133	Loss_recons: 0.000856	Loss_kld: 0.000277
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [270/5083 (57%)]	Loss: 0.001466	Loss_recons: 0.001204	Loss_kld: 0.000262
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [300/5083 (63%)]	Loss: 0.001273	Loss_recons: 0.001000	Loss_kld: 0.000273
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [330/5083 (69%)]	Loss: 0.001237	Loss_recons: 0.000937	Loss_kld: 0.000301
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [360/5083 (75%)]	Loss: 0.001184	Loss_recons: 0.000912	Loss_kld: 0.000272
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [390/5083 (82%)]	Loss: 0.001313	Loss_recons: 0.001053	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [420/5083 (88%)]	Loss: 0.001376	Loss_recons: 0.001080	Loss_kld: 0.000296
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 36 [450/5083 (94%)]	Loss: 0.001317	Loss_recons: 0.001026	Loss_kld: 0.000291
+Epoch 036, Loss: 0.0037
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [0/5083 (0%)]	Loss: 0.001079	Loss_recons: 0.000798	Loss_kld: 0.000281
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [30/5083 (6%)]	Loss: 0.001484	Loss_recons: 0.001236	Loss_kld: 0.000249
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [60/5083 (13%)]	Loss: 0.001211	Loss_recons: 0.000902	Loss_kld: 0.000309
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [90/5083 (19%)]	Loss: 0.001378	Loss_recons: 0.001112	Loss_kld: 0.000266
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [120/5083 (25%)]	Loss: 0.001293	Loss_recons: 0.001007	Loss_kld: 0.000286
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [150/5083 (31%)]	Loss: 0.001266	Loss_recons: 0.000968	Loss_kld: 0.000298
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [180/5083 (38%)]	Loss: 0.001321	Loss_recons: 0.001038	Loss_kld: 0.000283
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [210/5083 (44%)]	Loss: 0.001076	Loss_recons: 0.000819	Loss_kld: 0.000257
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [240/5083 (50%)]	Loss: 0.001148	Loss_recons: 0.000874	Loss_kld: 0.000275
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [270/5083 (57%)]	Loss: 0.001233	Loss_recons: 0.000961	Loss_kld: 0.000272
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [300/5083 (63%)]	Loss: 0.001105	Loss_recons: 0.000813	Loss_kld: 0.000292
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [330/5083 (69%)]	Loss: 0.001230	Loss_recons: 0.000954	Loss_kld: 0.000276
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [360/5083 (75%)]	Loss: 0.001036	Loss_recons: 0.000757	Loss_kld: 0.000279
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [390/5083 (82%)]	Loss: 0.001276	Loss_recons: 0.000967	Loss_kld: 0.000310
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [420/5083 (88%)]	Loss: 0.001216	Loss_recons: 0.000933	Loss_kld: 0.000283
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 37 [450/5083 (94%)]	Loss: 0.001455	Loss_recons: 0.001190	Loss_kld: 0.000265
+Epoch 037, Loss: 0.0036
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [0/5083 (0%)]	Loss: 0.000995	Loss_recons: 0.000735	Loss_kld: 0.000260
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [30/5083 (6%)]	Loss: 0.001141	Loss_recons: 0.000851	Loss_kld: 0.000290
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [60/5083 (13%)]	Loss: 0.001346	Loss_recons: 0.001071	Loss_kld: 0.000275
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [90/5083 (19%)]	Loss: 0.001242	Loss_recons: 0.000983	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [120/5083 (25%)]	Loss: 0.001184	Loss_recons: 0.000926	Loss_kld: 0.000258
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [150/5083 (31%)]	Loss: 0.001104	Loss_recons: 0.000842	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [180/5083 (38%)]	Loss: 0.001390	Loss_recons: 0.001139	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [210/5083 (44%)]	Loss: 0.001309	Loss_recons: 0.001042	Loss_kld: 0.000267
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [240/5083 (50%)]	Loss: 0.001124	Loss_recons: 0.000885	Loss_kld: 0.000239
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [270/5083 (57%)]	Loss: 0.001158	Loss_recons: 0.000907	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [300/5083 (63%)]	Loss: 0.001259	Loss_recons: 0.001018	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [330/5083 (69%)]	Loss: 0.001359	Loss_recons: 0.001092	Loss_kld: 0.000267
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [360/5083 (75%)]	Loss: 0.001086	Loss_recons: 0.000801	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [390/5083 (82%)]	Loss: 0.001020	Loss_recons: 0.000759	Loss_kld: 0.000260
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [420/5083 (88%)]	Loss: 0.001062	Loss_recons: 0.000797	Loss_kld: 0.000265
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 38 [450/5083 (94%)]	Loss: 0.001094	Loss_recons: 0.000839	Loss_kld: 0.000255
+Epoch 038, Loss: 0.0035
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [0/5083 (0%)]	Loss: 0.001085	Loss_recons: 0.000840	Loss_kld: 0.000245
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [30/5083 (6%)]	Loss: 0.001045	Loss_recons: 0.000823	Loss_kld: 0.000222
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [60/5083 (13%)]	Loss: 0.001143	Loss_recons: 0.000904	Loss_kld: 0.000240
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [90/5083 (19%)]	Loss: 0.001123	Loss_recons: 0.000869	Loss_kld: 0.000254
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [120/5083 (25%)]	Loss: 0.001166	Loss_recons: 0.000945	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [150/5083 (31%)]	Loss: 0.001248	Loss_recons: 0.001000	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [180/5083 (38%)]	Loss: 0.001034	Loss_recons: 0.000812	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [210/5083 (44%)]	Loss: 0.001441	Loss_recons: 0.001206	Loss_kld: 0.000234
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [240/5083 (50%)]	Loss: 0.001297	Loss_recons: 0.001079	Loss_kld: 0.000218
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [270/5083 (57%)]	Loss: 0.001480	Loss_recons: 0.001256	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [300/5083 (63%)]	Loss: 0.001222	Loss_recons: 0.000965	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [330/5083 (69%)]	Loss: 0.001244	Loss_recons: 0.001005	Loss_kld: 0.000239
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [360/5083 (75%)]	Loss: 0.001090	Loss_recons: 0.000806	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [390/5083 (82%)]	Loss: 0.001374	Loss_recons: 0.001123	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [420/5083 (88%)]	Loss: 0.001083	Loss_recons: 0.000798	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 39 [450/5083 (94%)]	Loss: 0.001263	Loss_recons: 0.000980	Loss_kld: 0.000284
+Epoch 039, Loss: 0.0035
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [0/5083 (0%)]	Loss: 0.001109	Loss_recons: 0.000841	Loss_kld: 0.000268
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [30/5083 (6%)]	Loss: 0.001293	Loss_recons: 0.001005	Loss_kld: 0.000288
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [60/5083 (13%)]	Loss: 0.001493	Loss_recons: 0.001224	Loss_kld: 0.000269
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [90/5083 (19%)]	Loss: 0.001260	Loss_recons: 0.001015	Loss_kld: 0.000246
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [120/5083 (25%)]	Loss: 0.001167	Loss_recons: 0.000904	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [150/5083 (31%)]	Loss: 0.001116	Loss_recons: 0.000872	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [180/5083 (38%)]	Loss: 0.001473	Loss_recons: 0.001220	Loss_kld: 0.000253
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [210/5083 (44%)]	Loss: 0.001228	Loss_recons: 0.000819	Loss_kld: 0.000409
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [240/5083 (50%)]	Loss: 0.001065	Loss_recons: 0.000818	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [270/5083 (57%)]	Loss: 0.001324	Loss_recons: 0.001061	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [300/5083 (63%)]	Loss: 0.001185	Loss_recons: 0.000927	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [330/5083 (69%)]	Loss: 0.001197	Loss_recons: 0.000933	Loss_kld: 0.000264
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [360/5083 (75%)]	Loss: 0.001063	Loss_recons: 0.000794	Loss_kld: 0.000269
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [390/5083 (82%)]	Loss: 0.001080	Loss_recons: 0.000813	Loss_kld: 0.000267
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [420/5083 (88%)]	Loss: 0.001115	Loss_recons: 0.000852	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 40 [450/5083 (94%)]	Loss: 0.001206	Loss_recons: 0.000934	Loss_kld: 0.000272
+Epoch 040, Loss: 0.0035
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [0/5083 (0%)]	Loss: 0.001253	Loss_recons: 0.000993	Loss_kld: 0.000260
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [30/5083 (6%)]	Loss: 0.001157	Loss_recons: 0.000886	Loss_kld: 0.000270
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [60/5083 (13%)]	Loss: 0.001142	Loss_recons: 0.000895	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [90/5083 (19%)]	Loss: 0.001076	Loss_recons: 0.000818	Loss_kld: 0.000258
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [120/5083 (25%)]	Loss: 0.001070	Loss_recons: 0.000824	Loss_kld: 0.000246
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [150/5083 (31%)]	Loss: 0.001113	Loss_recons: 0.000845	Loss_kld: 0.000268
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [180/5083 (38%)]	Loss: 0.001027	Loss_recons: 0.000788	Loss_kld: 0.000239
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [210/5083 (44%)]	Loss: 0.001158	Loss_recons: 0.000897	Loss_kld: 0.000261
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [240/5083 (50%)]	Loss: 0.001143	Loss_recons: 0.000900	Loss_kld: 0.000243
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [270/5083 (57%)]	Loss: 0.001268	Loss_recons: 0.000996	Loss_kld: 0.000272
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [300/5083 (63%)]	Loss: 0.001140	Loss_recons: 0.000895	Loss_kld: 0.000245
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [330/5083 (69%)]	Loss: 0.001148	Loss_recons: 0.000892	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [360/5083 (75%)]	Loss: 0.001549	Loss_recons: 0.001301	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [390/5083 (82%)]	Loss: 0.001143	Loss_recons: 0.000887	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [420/5083 (88%)]	Loss: 0.001271	Loss_recons: 0.001027	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 41 [450/5083 (94%)]	Loss: 0.001240	Loss_recons: 0.000978	Loss_kld: 0.000262
+Epoch 041, Loss: 0.0035
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [0/5083 (0%)]	Loss: 0.001250	Loss_recons: 0.000989	Loss_kld: 0.000261
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [30/5083 (6%)]	Loss: 0.001007	Loss_recons: 0.000763	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [60/5083 (13%)]	Loss: 0.001049	Loss_recons: 0.000803	Loss_kld: 0.000246
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [90/5083 (19%)]	Loss: 0.000906	Loss_recons: 0.000676	Loss_kld: 0.000230
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [120/5083 (25%)]	Loss: 0.001113	Loss_recons: 0.000884	Loss_kld: 0.000229
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [150/5083 (31%)]	Loss: 0.001189	Loss_recons: 0.000926	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [180/5083 (38%)]	Loss: 0.001152	Loss_recons: 0.000911	Loss_kld: 0.000241
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [210/5083 (44%)]	Loss: 0.001009	Loss_recons: 0.000746	Loss_kld: 0.000262
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [240/5083 (50%)]	Loss: 0.001067	Loss_recons: 0.000837	Loss_kld: 0.000230
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [270/5083 (57%)]	Loss: 0.001269	Loss_recons: 0.001030	Loss_kld: 0.000239
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [300/5083 (63%)]	Loss: 0.001149	Loss_recons: 0.000912	Loss_kld: 0.000237
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [330/5083 (69%)]	Loss: 0.001097	Loss_recons: 0.000847	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [360/5083 (75%)]	Loss: 0.000912	Loss_recons: 0.000680	Loss_kld: 0.000233
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [390/5083 (82%)]	Loss: 0.001132	Loss_recons: 0.000903	Loss_kld: 0.000229
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [420/5083 (88%)]	Loss: 0.000995	Loss_recons: 0.000782	Loss_kld: 0.000214
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 42 [450/5083 (94%)]	Loss: 0.001163	Loss_recons: 0.000923	Loss_kld: 0.000240
+Epoch 042, Loss: 0.0034
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [0/5083 (0%)]	Loss: 0.001116	Loss_recons: 0.000885	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [30/5083 (6%)]	Loss: 0.001214	Loss_recons: 0.000970	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [60/5083 (13%)]	Loss: 0.001041	Loss_recons: 0.000804	Loss_kld: 0.000238
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [90/5083 (19%)]	Loss: 0.001110	Loss_recons: 0.000873	Loss_kld: 0.000237
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [120/5083 (25%)]	Loss: 0.000993	Loss_recons: 0.000755	Loss_kld: 0.000239
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [150/5083 (31%)]	Loss: 0.001574	Loss_recons: 0.001346	Loss_kld: 0.000229
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [180/5083 (38%)]	Loss: 0.001175	Loss_recons: 0.000944	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [210/5083 (44%)]	Loss: 0.001140	Loss_recons: 0.000911	Loss_kld: 0.000229
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [240/5083 (50%)]	Loss: 0.001245	Loss_recons: 0.001013	Loss_kld: 0.000232
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [270/5083 (57%)]	Loss: 0.001192	Loss_recons: 0.000948	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [300/5083 (63%)]	Loss: 0.001067	Loss_recons: 0.000808	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [330/5083 (69%)]	Loss: 0.001206	Loss_recons: 0.000980	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [360/5083 (75%)]	Loss: 0.001462	Loss_recons: 0.001243	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [390/5083 (82%)]	Loss: 0.001008	Loss_recons: 0.000748	Loss_kld: 0.000260
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [420/5083 (88%)]	Loss: 0.001268	Loss_recons: 0.001026	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 43 [450/5083 (94%)]	Loss: 0.001105	Loss_recons: 0.000873	Loss_kld: 0.000232
+Epoch 043, Loss: 0.0034
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [0/5083 (0%)]	Loss: 0.001107	Loss_recons: 0.000859	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [30/5083 (6%)]	Loss: 0.001201	Loss_recons: 0.000949	Loss_kld: 0.000252
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [60/5083 (13%)]	Loss: 0.001031	Loss_recons: 0.000789	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [90/5083 (19%)]	Loss: 0.001190	Loss_recons: 0.000955	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [120/5083 (25%)]	Loss: 0.000984	Loss_recons: 0.000726	Loss_kld: 0.000258
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [150/5083 (31%)]	Loss: 0.001209	Loss_recons: 0.000970	Loss_kld: 0.000238
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [180/5083 (38%)]	Loss: 0.001156	Loss_recons: 0.000891	Loss_kld: 0.000264
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [210/5083 (44%)]	Loss: 0.000976	Loss_recons: 0.000713	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [240/5083 (50%)]	Loss: 0.001194	Loss_recons: 0.000921	Loss_kld: 0.000274
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [270/5083 (57%)]	Loss: 0.001058	Loss_recons: 0.000800	Loss_kld: 0.000258
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [300/5083 (63%)]	Loss: 0.001156	Loss_recons: 0.000919	Loss_kld: 0.000237
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [330/5083 (69%)]	Loss: 0.001090	Loss_recons: 0.000840	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [360/5083 (75%)]	Loss: 0.001033	Loss_recons: 0.000788	Loss_kld: 0.000245
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [390/5083 (82%)]	Loss: 0.000964	Loss_recons: 0.000715	Loss_kld: 0.000249
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [420/5083 (88%)]	Loss: 0.001242	Loss_recons: 0.000978	Loss_kld: 0.000265
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 44 [450/5083 (94%)]	Loss: 0.001126	Loss_recons: 0.000886	Loss_kld: 0.000240
+Epoch 044, Loss: 0.0035
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [0/5083 (0%)]	Loss: 0.001170	Loss_recons: 0.000915	Loss_kld: 0.000255
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [30/5083 (6%)]	Loss: 0.001140	Loss_recons: 0.000886	Loss_kld: 0.000254
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [60/5083 (13%)]	Loss: 0.001196	Loss_recons: 0.000959	Loss_kld: 0.000237
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [90/5083 (19%)]	Loss: 0.001111	Loss_recons: 0.000832	Loss_kld: 0.000279
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [120/5083 (25%)]	Loss: 0.000957	Loss_recons: 0.000713	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [150/5083 (31%)]	Loss: 0.001183	Loss_recons: 0.000898	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [180/5083 (38%)]	Loss: 0.001200	Loss_recons: 0.000957	Loss_kld: 0.000243
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [210/5083 (44%)]	Loss: 0.001109	Loss_recons: 0.000863	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [240/5083 (50%)]	Loss: 0.001322	Loss_recons: 0.001084	Loss_kld: 0.000238
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [270/5083 (57%)]	Loss: 0.001091	Loss_recons: 0.000836	Loss_kld: 0.000255
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [300/5083 (63%)]	Loss: 0.001402	Loss_recons: 0.001139	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [330/5083 (69%)]	Loss: 0.001101	Loss_recons: 0.000850	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [360/5083 (75%)]	Loss: 0.001077	Loss_recons: 0.000832	Loss_kld: 0.000245
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [390/5083 (82%)]	Loss: 0.001083	Loss_recons: 0.000841	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [420/5083 (88%)]	Loss: 0.001242	Loss_recons: 0.001015	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 45 [450/5083 (94%)]	Loss: 0.001126	Loss_recons: 0.000905	Loss_kld: 0.000220
+Epoch 045, Loss: 0.0034
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [0/5083 (0%)]	Loss: 0.001171	Loss_recons: 0.000944	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [30/5083 (6%)]	Loss: 0.001111	Loss_recons: 0.000887	Loss_kld: 0.000224
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [60/5083 (13%)]	Loss: 0.001205	Loss_recons: 0.000978	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [90/5083 (19%)]	Loss: 0.001070	Loss_recons: 0.000852	Loss_kld: 0.000218
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [120/5083 (25%)]	Loss: 0.001001	Loss_recons: 0.000749	Loss_kld: 0.000252
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [150/5083 (31%)]	Loss: 0.001301	Loss_recons: 0.001075	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [180/5083 (38%)]	Loss: 0.001014	Loss_recons: 0.000786	Loss_kld: 0.000229
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [210/5083 (44%)]	Loss: 0.001034	Loss_recons: 0.000822	Loss_kld: 0.000212
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [240/5083 (50%)]	Loss: 0.001083	Loss_recons: 0.000863	Loss_kld: 0.000220
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [270/5083 (57%)]	Loss: 0.001013	Loss_recons: 0.000787	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [300/5083 (63%)]	Loss: 0.000985	Loss_recons: 0.000754	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [330/5083 (69%)]	Loss: 0.001256	Loss_recons: 0.000983	Loss_kld: 0.000273
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [360/5083 (75%)]	Loss: 0.001277	Loss_recons: 0.000987	Loss_kld: 0.000290
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [390/5083 (82%)]	Loss: 0.001125	Loss_recons: 0.000825	Loss_kld: 0.000300
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [420/5083 (88%)]	Loss: 0.001348	Loss_recons: 0.001045	Loss_kld: 0.000303
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 46 [450/5083 (94%)]	Loss: 0.001101	Loss_recons: 0.000812	Loss_kld: 0.000289
+Epoch 046, Loss: 0.0035
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [0/5083 (0%)]	Loss: 0.001303	Loss_recons: 0.000973	Loss_kld: 0.000329
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [30/5083 (6%)]	Loss: 0.001354	Loss_recons: 0.001031	Loss_kld: 0.000323
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [60/5083 (13%)]	Loss: 0.001191	Loss_recons: 0.000888	Loss_kld: 0.000303
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [90/5083 (19%)]	Loss: 0.001416	Loss_recons: 0.001129	Loss_kld: 0.000287
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [120/5083 (25%)]	Loss: 0.001130	Loss_recons: 0.000861	Loss_kld: 0.000269
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [150/5083 (31%)]	Loss: 0.001061	Loss_recons: 0.000806	Loss_kld: 0.000255
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [180/5083 (38%)]	Loss: 0.001131	Loss_recons: 0.000885	Loss_kld: 0.000246
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [210/5083 (44%)]	Loss: 0.001000	Loss_recons: 0.000748	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [240/5083 (50%)]	Loss: 0.001106	Loss_recons: 0.000865	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [270/5083 (57%)]	Loss: 0.001051	Loss_recons: 0.000832	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [300/5083 (63%)]	Loss: 0.001184	Loss_recons: 0.000934	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [330/5083 (69%)]	Loss: 0.001319	Loss_recons: 0.001071	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [360/5083 (75%)]	Loss: 0.001195	Loss_recons: 0.000954	Loss_kld: 0.000241
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [390/5083 (82%)]	Loss: 0.001131	Loss_recons: 0.000884	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [420/5083 (88%)]	Loss: 0.001044	Loss_recons: 0.000799	Loss_kld: 0.000245
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 47 [450/5083 (94%)]	Loss: 0.001036	Loss_recons: 0.000788	Loss_kld: 0.000248
+Epoch 047, Loss: 0.0034
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [0/5083 (0%)]	Loss: 0.001109	Loss_recons: 0.000863	Loss_kld: 0.000246
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [30/5083 (6%)]	Loss: 0.001106	Loss_recons: 0.000845	Loss_kld: 0.000261
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [60/5083 (13%)]	Loss: 0.001136	Loss_recons: 0.000886	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [90/5083 (19%)]	Loss: 0.001092	Loss_recons: 0.000841	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [120/5083 (25%)]	Loss: 0.001132	Loss_recons: 0.000847	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [150/5083 (31%)]	Loss: 0.001161	Loss_recons: 0.000895	Loss_kld: 0.000266
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [180/5083 (38%)]	Loss: 0.001112	Loss_recons: 0.000856	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [210/5083 (44%)]	Loss: 0.001097	Loss_recons: 0.000845	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [240/5083 (50%)]	Loss: 0.001058	Loss_recons: 0.000796	Loss_kld: 0.000262
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [270/5083 (57%)]	Loss: 0.001159	Loss_recons: 0.000900	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [300/5083 (63%)]	Loss: 0.001097	Loss_recons: 0.000833	Loss_kld: 0.000265
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [330/5083 (69%)]	Loss: 0.001064	Loss_recons: 0.000808	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [360/5083 (75%)]	Loss: 0.001287	Loss_recons: 0.001019	Loss_kld: 0.000268
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [390/5083 (82%)]	Loss: 0.001086	Loss_recons: 0.000826	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [420/5083 (88%)]	Loss: 0.001219	Loss_recons: 0.000961	Loss_kld: 0.000257
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 48 [450/5083 (94%)]	Loss: 0.001107	Loss_recons: 0.000864	Loss_kld: 0.000243
+Epoch 048, Loss: 0.0034
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [0/5083 (0%)]	Loss: 0.001129	Loss_recons: 0.000881	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [30/5083 (6%)]	Loss: 0.001076	Loss_recons: 0.000825	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [60/5083 (13%)]	Loss: 0.001085	Loss_recons: 0.000817	Loss_kld: 0.000267
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [90/5083 (19%)]	Loss: 0.000974	Loss_recons: 0.000706	Loss_kld: 0.000269
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [120/5083 (25%)]	Loss: 0.001114	Loss_recons: 0.000844	Loss_kld: 0.000270
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [150/5083 (31%)]	Loss: 0.001331	Loss_recons: 0.001053	Loss_kld: 0.000278
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [180/5083 (38%)]	Loss: 0.001096	Loss_recons: 0.000808	Loss_kld: 0.000288
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [210/5083 (44%)]	Loss: 0.001138	Loss_recons: 0.000830	Loss_kld: 0.000308
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [240/5083 (50%)]	Loss: 0.000964	Loss_recons: 0.000678	Loss_kld: 0.000286
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [270/5083 (57%)]	Loss: 0.001008	Loss_recons: 0.000749	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [300/5083 (63%)]	Loss: 0.001063	Loss_recons: 0.000770	Loss_kld: 0.000293
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [330/5083 (69%)]	Loss: 0.001167	Loss_recons: 0.000882	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [360/5083 (75%)]	Loss: 0.001095	Loss_recons: 0.000822	Loss_kld: 0.000273
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [390/5083 (82%)]	Loss: 0.001184	Loss_recons: 0.000916	Loss_kld: 0.000269
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [420/5083 (88%)]	Loss: 0.001243	Loss_recons: 0.000992	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 49 [450/5083 (94%)]	Loss: 0.000988	Loss_recons: 0.000738	Loss_kld: 0.000250
+Epoch 049, Loss: 0.0033
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [0/5083 (0%)]	Loss: 0.001029	Loss_recons: 0.000767	Loss_kld: 0.000262
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [30/5083 (6%)]	Loss: 0.000933	Loss_recons: 0.000690	Loss_kld: 0.000243
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [60/5083 (13%)]	Loss: 0.001132	Loss_recons: 0.000869	Loss_kld: 0.000262
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [90/5083 (19%)]	Loss: 0.001229	Loss_recons: 0.000969	Loss_kld: 0.000260
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [120/5083 (25%)]	Loss: 0.001044	Loss_recons: 0.000748	Loss_kld: 0.000295
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [150/5083 (31%)]	Loss: 0.001053	Loss_recons: 0.000757	Loss_kld: 0.000295
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [180/5083 (38%)]	Loss: 0.001136	Loss_recons: 0.000860	Loss_kld: 0.000276
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [210/5083 (44%)]	Loss: 0.001084	Loss_recons: 0.000831	Loss_kld: 0.000254
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [240/5083 (50%)]	Loss: 0.000959	Loss_recons: 0.000696	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [270/5083 (57%)]	Loss: 0.001028	Loss_recons: 0.000768	Loss_kld: 0.000260
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [300/5083 (63%)]	Loss: 0.000993	Loss_recons: 0.000745	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [330/5083 (69%)]	Loss: 0.001011	Loss_recons: 0.000778	Loss_kld: 0.000233
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [360/5083 (75%)]	Loss: 0.001092	Loss_recons: 0.000842	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [390/5083 (82%)]	Loss: 0.001020	Loss_recons: 0.000767	Loss_kld: 0.000253
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [420/5083 (88%)]	Loss: 0.001028	Loss_recons: 0.000780	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 50 [450/5083 (94%)]	Loss: 0.001116	Loss_recons: 0.000876	Loss_kld: 0.000240
+Epoch 050, Loss: 0.0032
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [0/5083 (0%)]	Loss: 0.001203	Loss_recons: 0.000947	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [30/5083 (6%)]	Loss: 0.001022	Loss_recons: 0.000774	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [60/5083 (13%)]	Loss: 0.001106	Loss_recons: 0.000885	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [90/5083 (19%)]	Loss: 0.000919	Loss_recons: 0.000665	Loss_kld: 0.000254
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [120/5083 (25%)]	Loss: 0.000967	Loss_recons: 0.000713	Loss_kld: 0.000254
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [150/5083 (31%)]	Loss: 0.001080	Loss_recons: 0.000857	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [180/5083 (38%)]	Loss: 0.001011	Loss_recons: 0.000765	Loss_kld: 0.000246
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [210/5083 (44%)]	Loss: 0.001129	Loss_recons: 0.000894	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [240/5083 (50%)]	Loss: 0.001051	Loss_recons: 0.000809	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [270/5083 (57%)]	Loss: 0.000957	Loss_recons: 0.000735	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [300/5083 (63%)]	Loss: 0.001195	Loss_recons: 0.000938	Loss_kld: 0.000257
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [330/5083 (69%)]	Loss: 0.001057	Loss_recons: 0.000818	Loss_kld: 0.000239
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [360/5083 (75%)]	Loss: 0.001063	Loss_recons: 0.000799	Loss_kld: 0.000263
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [390/5083 (82%)]	Loss: 0.001127	Loss_recons: 0.000870	Loss_kld: 0.000257
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [420/5083 (88%)]	Loss: 0.000943	Loss_recons: 0.000682	Loss_kld: 0.000261
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 51 [450/5083 (94%)]	Loss: 0.001269	Loss_recons: 0.001038	Loss_kld: 0.000232
+Epoch 051, Loss: 0.0032
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [0/5083 (0%)]	Loss: 0.001080	Loss_recons: 0.000830	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [30/5083 (6%)]	Loss: 0.001100	Loss_recons: 0.000871	Loss_kld: 0.000230
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [60/5083 (13%)]	Loss: 0.001113	Loss_recons: 0.000865	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [90/5083 (19%)]	Loss: 0.001091	Loss_recons: 0.000851	Loss_kld: 0.000240
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [120/5083 (25%)]	Loss: 0.001048	Loss_recons: 0.000797	Loss_kld: 0.000251
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [150/5083 (31%)]	Loss: 0.001037	Loss_recons: 0.000789	Loss_kld: 0.000248
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [180/5083 (38%)]	Loss: 0.000988	Loss_recons: 0.000734	Loss_kld: 0.000254
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [210/5083 (44%)]	Loss: 0.000995	Loss_recons: 0.000746	Loss_kld: 0.000249
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [240/5083 (50%)]	Loss: 0.000997	Loss_recons: 0.000754	Loss_kld: 0.000243
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [270/5083 (57%)]	Loss: 0.001012	Loss_recons: 0.000752	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [300/5083 (63%)]	Loss: 0.001028	Loss_recons: 0.000764	Loss_kld: 0.000264
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [330/5083 (69%)]	Loss: 0.000993	Loss_recons: 0.000729	Loss_kld: 0.000264
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [360/5083 (75%)]	Loss: 0.001001	Loss_recons: 0.000739	Loss_kld: 0.000262
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [390/5083 (82%)]	Loss: 0.001017	Loss_recons: 0.000764	Loss_kld: 0.000253
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [420/5083 (88%)]	Loss: 0.000948	Loss_recons: 0.000693	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 52 [450/5083 (94%)]	Loss: 0.000985	Loss_recons: 0.000742	Loss_kld: 0.000243
+Epoch 052, Loss: 0.0031
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [0/5083 (0%)]	Loss: 0.001012	Loss_recons: 0.000775	Loss_kld: 0.000237
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [30/5083 (6%)]	Loss: 0.001045	Loss_recons: 0.000778	Loss_kld: 0.000267
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [60/5083 (13%)]	Loss: 0.001155	Loss_recons: 0.000930	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [90/5083 (19%)]	Loss: 0.001274	Loss_recons: 0.001031	Loss_kld: 0.000243
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [120/5083 (25%)]	Loss: 0.000987	Loss_recons: 0.000747	Loss_kld: 0.000239
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [150/5083 (31%)]	Loss: 0.001058	Loss_recons: 0.000828	Loss_kld: 0.000230
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [180/5083 (38%)]	Loss: 0.000926	Loss_recons: 0.000696	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [210/5083 (44%)]	Loss: 0.001058	Loss_recons: 0.000838	Loss_kld: 0.000220
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [240/5083 (50%)]	Loss: 0.000856	Loss_recons: 0.000628	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [270/5083 (57%)]	Loss: 0.000878	Loss_recons: 0.000645	Loss_kld: 0.000233
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [300/5083 (63%)]	Loss: 0.000889	Loss_recons: 0.000663	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [330/5083 (69%)]	Loss: 0.000861	Loss_recons: 0.000615	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [360/5083 (75%)]	Loss: 0.001252	Loss_recons: 0.001018	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [390/5083 (82%)]	Loss: 0.001048	Loss_recons: 0.000844	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [420/5083 (88%)]	Loss: 0.000990	Loss_recons: 0.000754	Loss_kld: 0.000236
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 53 [450/5083 (94%)]	Loss: 0.001174	Loss_recons: 0.000913	Loss_kld: 0.000261
+Epoch 053, Loss: 0.0030
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [0/5083 (0%)]	Loss: 0.001104	Loss_recons: 0.000880	Loss_kld: 0.000224
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [30/5083 (6%)]	Loss: 0.001025	Loss_recons: 0.000766	Loss_kld: 0.000259
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [60/5083 (13%)]	Loss: 0.000894	Loss_recons: 0.000672	Loss_kld: 0.000222
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [90/5083 (19%)]	Loss: 0.001029	Loss_recons: 0.000811	Loss_kld: 0.000218
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [120/5083 (25%)]	Loss: 0.000910	Loss_recons: 0.000695	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [150/5083 (31%)]	Loss: 0.000992	Loss_recons: 0.000757	Loss_kld: 0.000236
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [180/5083 (38%)]	Loss: 0.001093	Loss_recons: 0.000852	Loss_kld: 0.000240
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [210/5083 (44%)]	Loss: 0.001021	Loss_recons: 0.000783	Loss_kld: 0.000238
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [240/5083 (50%)]	Loss: 0.001206	Loss_recons: 0.000949	Loss_kld: 0.000258
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [270/5083 (57%)]	Loss: 0.000953	Loss_recons: 0.000703	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [300/5083 (63%)]	Loss: 0.000953	Loss_recons: 0.000705	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [330/5083 (69%)]	Loss: 0.000936	Loss_recons: 0.000689	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [360/5083 (75%)]	Loss: 0.000997	Loss_recons: 0.000762	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [390/5083 (82%)]	Loss: 0.000999	Loss_recons: 0.000756	Loss_kld: 0.000243
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [420/5083 (88%)]	Loss: 0.001009	Loss_recons: 0.000790	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 54 [450/5083 (94%)]	Loss: 0.000949	Loss_recons: 0.000713	Loss_kld: 0.000236
+Epoch 054, Loss: 0.0030
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [0/5083 (0%)]	Loss: 0.001021	Loss_recons: 0.000777	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [30/5083 (6%)]	Loss: 0.000986	Loss_recons: 0.000752	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [60/5083 (13%)]	Loss: 0.000831	Loss_recons: 0.000588	Loss_kld: 0.000243
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [90/5083 (19%)]	Loss: 0.000997	Loss_recons: 0.000763	Loss_kld: 0.000234
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [120/5083 (25%)]	Loss: 0.001007	Loss_recons: 0.000780	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [150/5083 (31%)]	Loss: 0.001109	Loss_recons: 0.000857	Loss_kld: 0.000252
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [180/5083 (38%)]	Loss: 0.001085	Loss_recons: 0.000857	Loss_kld: 0.000228
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [210/5083 (44%)]	Loss: 0.000990	Loss_recons: 0.000768	Loss_kld: 0.000222
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [240/5083 (50%)]	Loss: 0.000984	Loss_recons: 0.000752	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [270/5083 (57%)]	Loss: 0.001023	Loss_recons: 0.000800	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [300/5083 (63%)]	Loss: 0.000993	Loss_recons: 0.000775	Loss_kld: 0.000217
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [330/5083 (69%)]	Loss: 0.000887	Loss_recons: 0.000678	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [360/5083 (75%)]	Loss: 0.000911	Loss_recons: 0.000704	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [390/5083 (82%)]	Loss: 0.000947	Loss_recons: 0.000740	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [420/5083 (88%)]	Loss: 0.000789	Loss_recons: 0.000572	Loss_kld: 0.000218
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 55 [450/5083 (94%)]	Loss: 0.000911	Loss_recons: 0.000671	Loss_kld: 0.000240
+Epoch 055, Loss: 0.0030
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [0/5083 (0%)]	Loss: 0.000887	Loss_recons: 0.000666	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [30/5083 (6%)]	Loss: 0.000895	Loss_recons: 0.000662	Loss_kld: 0.000233
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [60/5083 (13%)]	Loss: 0.001037	Loss_recons: 0.000809	Loss_kld: 0.000228
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [90/5083 (19%)]	Loss: 0.001016	Loss_recons: 0.000783	Loss_kld: 0.000233
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [120/5083 (25%)]	Loss: 0.000899	Loss_recons: 0.000652	Loss_kld: 0.000247
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [150/5083 (31%)]	Loss: 0.000933	Loss_recons: 0.000695	Loss_kld: 0.000238
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [180/5083 (38%)]	Loss: 0.001102	Loss_recons: 0.000883	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [210/5083 (44%)]	Loss: 0.001055	Loss_recons: 0.000834	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [240/5083 (50%)]	Loss: 0.000984	Loss_recons: 0.000763	Loss_kld: 0.000220
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [270/5083 (57%)]	Loss: 0.001134	Loss_recons: 0.000916	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [300/5083 (63%)]	Loss: 0.001193	Loss_recons: 0.000937	Loss_kld: 0.000256
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [330/5083 (69%)]	Loss: 0.001005	Loss_recons: 0.000768	Loss_kld: 0.000237
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [360/5083 (75%)]	Loss: 0.001021	Loss_recons: 0.000808	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [390/5083 (82%)]	Loss: 0.001004	Loss_recons: 0.000801	Loss_kld: 0.000202
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [420/5083 (88%)]	Loss: 0.001006	Loss_recons: 0.000775	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 56 [450/5083 (94%)]	Loss: 0.000984	Loss_recons: 0.000756	Loss_kld: 0.000228
+Epoch 056, Loss: 0.0030
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [0/5083 (0%)]	Loss: 0.001031	Loss_recons: 0.000801	Loss_kld: 0.000230
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [30/5083 (6%)]	Loss: 0.000871	Loss_recons: 0.000656	Loss_kld: 0.000215
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [60/5083 (13%)]	Loss: 0.001123	Loss_recons: 0.000906	Loss_kld: 0.000217
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [90/5083 (19%)]	Loss: 0.000893	Loss_recons: 0.000681	Loss_kld: 0.000212
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [120/5083 (25%)]	Loss: 0.000918	Loss_recons: 0.000714	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [150/5083 (31%)]	Loss: 0.000884	Loss_recons: 0.000671	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [180/5083 (38%)]	Loss: 0.000840	Loss_recons: 0.000637	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [210/5083 (44%)]	Loss: 0.000973	Loss_recons: 0.000769	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [240/5083 (50%)]	Loss: 0.000979	Loss_recons: 0.000776	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [270/5083 (57%)]	Loss: 0.000822	Loss_recons: 0.000611	Loss_kld: 0.000212
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [300/5083 (63%)]	Loss: 0.000872	Loss_recons: 0.000660	Loss_kld: 0.000212
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [330/5083 (69%)]	Loss: 0.000933	Loss_recons: 0.000707	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [360/5083 (75%)]	Loss: 0.000918	Loss_recons: 0.000695	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [390/5083 (82%)]	Loss: 0.000976	Loss_recons: 0.000752	Loss_kld: 0.000224
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [420/5083 (88%)]	Loss: 0.000983	Loss_recons: 0.000785	Loss_kld: 0.000197
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 57 [450/5083 (94%)]	Loss: 0.001001	Loss_recons: 0.000762	Loss_kld: 0.000239
+Epoch 057, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [0/5083 (0%)]	Loss: 0.000904	Loss_recons: 0.000700	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [30/5083 (6%)]	Loss: 0.000979	Loss_recons: 0.000762	Loss_kld: 0.000217
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [60/5083 (13%)]	Loss: 0.001145	Loss_recons: 0.000926	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [90/5083 (19%)]	Loss: 0.000910	Loss_recons: 0.000722	Loss_kld: 0.000188
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [120/5083 (25%)]	Loss: 0.000818	Loss_recons: 0.000622	Loss_kld: 0.000197
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [150/5083 (31%)]	Loss: 0.000882	Loss_recons: 0.000703	Loss_kld: 0.000179
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [180/5083 (38%)]	Loss: 0.000849	Loss_recons: 0.000669	Loss_kld: 0.000180
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [210/5083 (44%)]	Loss: 0.000913	Loss_recons: 0.000710	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [240/5083 (50%)]	Loss: 0.001132	Loss_recons: 0.000929	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [270/5083 (57%)]	Loss: 0.000908	Loss_recons: 0.000712	Loss_kld: 0.000195
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [300/5083 (63%)]	Loss: 0.000845	Loss_recons: 0.000651	Loss_kld: 0.000193
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [330/5083 (69%)]	Loss: 0.000920	Loss_recons: 0.000724	Loss_kld: 0.000196
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [360/5083 (75%)]	Loss: 0.000937	Loss_recons: 0.000736	Loss_kld: 0.000202
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [390/5083 (82%)]	Loss: 0.000881	Loss_recons: 0.000671	Loss_kld: 0.000210
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [420/5083 (88%)]	Loss: 0.001013	Loss_recons: 0.000814	Loss_kld: 0.000199
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 58 [450/5083 (94%)]	Loss: 0.000947	Loss_recons: 0.000745	Loss_kld: 0.000202
+Epoch 058, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [0/5083 (0%)]	Loss: 0.000908	Loss_recons: 0.000700	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [30/5083 (6%)]	Loss: 0.001043	Loss_recons: 0.000841	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [60/5083 (13%)]	Loss: 0.000900	Loss_recons: 0.000660	Loss_kld: 0.000240
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [90/5083 (19%)]	Loss: 0.000841	Loss_recons: 0.000606	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [120/5083 (25%)]	Loss: 0.000930	Loss_recons: 0.000689	Loss_kld: 0.000241
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [150/5083 (31%)]	Loss: 0.000993	Loss_recons: 0.000736	Loss_kld: 0.000257
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [180/5083 (38%)]	Loss: 0.000898	Loss_recons: 0.000670	Loss_kld: 0.000228
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [210/5083 (44%)]	Loss: 0.000983	Loss_recons: 0.000767	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [240/5083 (50%)]	Loss: 0.000991	Loss_recons: 0.000770	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [270/5083 (57%)]	Loss: 0.000876	Loss_recons: 0.000667	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [300/5083 (63%)]	Loss: 0.000911	Loss_recons: 0.000695	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [330/5083 (69%)]	Loss: 0.000871	Loss_recons: 0.000673	Loss_kld: 0.000198
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [360/5083 (75%)]	Loss: 0.000881	Loss_recons: 0.000663	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [390/5083 (82%)]	Loss: 0.000913	Loss_recons: 0.000687	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [420/5083 (88%)]	Loss: 0.001123	Loss_recons: 0.000882	Loss_kld: 0.000241
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 59 [450/5083 (94%)]	Loss: 0.000882	Loss_recons: 0.000644	Loss_kld: 0.000239
+Epoch 059, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [0/5083 (0%)]	Loss: 0.000845	Loss_recons: 0.000618	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [30/5083 (6%)]	Loss: 0.000805	Loss_recons: 0.000595	Loss_kld: 0.000210
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [60/5083 (13%)]	Loss: 0.000942	Loss_recons: 0.000736	Loss_kld: 0.000206
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [90/5083 (19%)]	Loss: 0.000918	Loss_recons: 0.000717	Loss_kld: 0.000201
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [120/5083 (25%)]	Loss: 0.001161	Loss_recons: 0.000957	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [150/5083 (31%)]	Loss: 0.000987	Loss_recons: 0.000769	Loss_kld: 0.000218
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [180/5083 (38%)]	Loss: 0.000980	Loss_recons: 0.000769	Loss_kld: 0.000212
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [210/5083 (44%)]	Loss: 0.000860	Loss_recons: 0.000652	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [240/5083 (50%)]	Loss: 0.001050	Loss_recons: 0.000846	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [270/5083 (57%)]	Loss: 0.000912	Loss_recons: 0.000684	Loss_kld: 0.000228
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [300/5083 (63%)]	Loss: 0.000937	Loss_recons: 0.000704	Loss_kld: 0.000233
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [330/5083 (69%)]	Loss: 0.000890	Loss_recons: 0.000662	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [360/5083 (75%)]	Loss: 0.000938	Loss_recons: 0.000711	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [390/5083 (82%)]	Loss: 0.000929	Loss_recons: 0.000715	Loss_kld: 0.000214
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [420/5083 (88%)]	Loss: 0.000969	Loss_recons: 0.000753	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 60 [450/5083 (94%)]	Loss: 0.000981	Loss_recons: 0.000773	Loss_kld: 0.000208
+Epoch 060, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [0/5083 (0%)]	Loss: 0.001011	Loss_recons: 0.000805	Loss_kld: 0.000206
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [30/5083 (6%)]	Loss: 0.000992	Loss_recons: 0.000777	Loss_kld: 0.000215
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [60/5083 (13%)]	Loss: 0.000905	Loss_recons: 0.000688	Loss_kld: 0.000217
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [90/5083 (19%)]	Loss: 0.001178	Loss_recons: 0.000988	Loss_kld: 0.000190
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [120/5083 (25%)]	Loss: 0.000797	Loss_recons: 0.000591	Loss_kld: 0.000206
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [150/5083 (31%)]	Loss: 0.000948	Loss_recons: 0.000745	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [180/5083 (38%)]	Loss: 0.000951	Loss_recons: 0.000761	Loss_kld: 0.000190
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [210/5083 (44%)]	Loss: 0.000875	Loss_recons: 0.000663	Loss_kld: 0.000212
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [240/5083 (50%)]	Loss: 0.001018	Loss_recons: 0.000802	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [270/5083 (57%)]	Loss: 0.000928	Loss_recons: 0.000714	Loss_kld: 0.000214
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [300/5083 (63%)]	Loss: 0.000949	Loss_recons: 0.000733	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [330/5083 (69%)]	Loss: 0.000887	Loss_recons: 0.000662	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [360/5083 (75%)]	Loss: 0.000890	Loss_recons: 0.000663	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [390/5083 (82%)]	Loss: 0.001115	Loss_recons: 0.000881	Loss_kld: 0.000234
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [420/5083 (88%)]	Loss: 0.001037	Loss_recons: 0.000814	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 61 [450/5083 (94%)]	Loss: 0.000965	Loss_recons: 0.000734	Loss_kld: 0.000231
+Epoch 061, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [0/5083 (0%)]	Loss: 0.001006	Loss_recons: 0.000773	Loss_kld: 0.000232
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [30/5083 (6%)]	Loss: 0.001041	Loss_recons: 0.000810	Loss_kld: 0.000230
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [60/5083 (13%)]	Loss: 0.000850	Loss_recons: 0.000589	Loss_kld: 0.000261
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [90/5083 (19%)]	Loss: 0.001011	Loss_recons: 0.000784	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [120/5083 (25%)]	Loss: 0.001194	Loss_recons: 0.000952	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [150/5083 (31%)]	Loss: 0.000989	Loss_recons: 0.000736	Loss_kld: 0.000253
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [180/5083 (38%)]	Loss: 0.000971	Loss_recons: 0.000727	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [210/5083 (44%)]	Loss: 0.000969	Loss_recons: 0.000726	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [240/5083 (50%)]	Loss: 0.001105	Loss_recons: 0.000874	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [270/5083 (57%)]	Loss: 0.000887	Loss_recons: 0.000659	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [300/5083 (63%)]	Loss: 0.000849	Loss_recons: 0.000618	Loss_kld: 0.000231
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [330/5083 (69%)]	Loss: 0.000933	Loss_recons: 0.000710	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [360/5083 (75%)]	Loss: 0.001208	Loss_recons: 0.000995	Loss_kld: 0.000212
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [390/5083 (82%)]	Loss: 0.001013	Loss_recons: 0.000791	Loss_kld: 0.000222
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [420/5083 (88%)]	Loss: 0.000944	Loss_recons: 0.000718	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 62 [450/5083 (94%)]	Loss: 0.000979	Loss_recons: 0.000751	Loss_kld: 0.000228
+Epoch 062, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [0/5083 (0%)]	Loss: 0.000845	Loss_recons: 0.000593	Loss_kld: 0.000252
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [30/5083 (6%)]	Loss: 0.001015	Loss_recons: 0.000793	Loss_kld: 0.000223
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [60/5083 (13%)]	Loss: 0.000979	Loss_recons: 0.000744	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [90/5083 (19%)]	Loss: 0.000946	Loss_recons: 0.000739	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [120/5083 (25%)]	Loss: 0.001136	Loss_recons: 0.000887	Loss_kld: 0.000249
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [150/5083 (31%)]	Loss: 0.000985	Loss_recons: 0.000698	Loss_kld: 0.000287
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [180/5083 (38%)]	Loss: 0.000991	Loss_recons: 0.000742	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [210/5083 (44%)]	Loss: 0.001061	Loss_recons: 0.000827	Loss_kld: 0.000234
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [240/5083 (50%)]	Loss: 0.000979	Loss_recons: 0.000744	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [270/5083 (57%)]	Loss: 0.001031	Loss_recons: 0.000804	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [300/5083 (63%)]	Loss: 0.000949	Loss_recons: 0.000725	Loss_kld: 0.000224
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [330/5083 (69%)]	Loss: 0.000902	Loss_recons: 0.000672	Loss_kld: 0.000230
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [360/5083 (75%)]	Loss: 0.000929	Loss_recons: 0.000709	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [390/5083 (82%)]	Loss: 0.000917	Loss_recons: 0.000709	Loss_kld: 0.000208
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [420/5083 (88%)]	Loss: 0.000956	Loss_recons: 0.000754	Loss_kld: 0.000202
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 63 [450/5083 (94%)]	Loss: 0.000916	Loss_recons: 0.000700	Loss_kld: 0.000216
+Epoch 063, Loss: 0.0030
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [0/5083 (0%)]	Loss: 0.000991	Loss_recons: 0.000784	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [30/5083 (6%)]	Loss: 0.001154	Loss_recons: 0.000933	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [60/5083 (13%)]	Loss: 0.000926	Loss_recons: 0.000685	Loss_kld: 0.000241
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [90/5083 (19%)]	Loss: 0.000894	Loss_recons: 0.000654	Loss_kld: 0.000240
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [120/5083 (25%)]	Loss: 0.000920	Loss_recons: 0.000709	Loss_kld: 0.000210
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [150/5083 (31%)]	Loss: 0.001007	Loss_recons: 0.000797	Loss_kld: 0.000210
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [180/5083 (38%)]	Loss: 0.000823	Loss_recons: 0.000604	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [210/5083 (44%)]	Loss: 0.001028	Loss_recons: 0.000818	Loss_kld: 0.000210
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [240/5083 (50%)]	Loss: 0.001009	Loss_recons: 0.000796	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [270/5083 (57%)]	Loss: 0.000915	Loss_recons: 0.000699	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [300/5083 (63%)]	Loss: 0.001033	Loss_recons: 0.000828	Loss_kld: 0.000205
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [330/5083 (69%)]	Loss: 0.000976	Loss_recons: 0.000748	Loss_kld: 0.000228
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [360/5083 (75%)]	Loss: 0.001001	Loss_recons: 0.000786	Loss_kld: 0.000215
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [390/5083 (82%)]	Loss: 0.001162	Loss_recons: 0.000948	Loss_kld: 0.000214
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [420/5083 (88%)]	Loss: 0.000945	Loss_recons: 0.000732	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 64 [450/5083 (94%)]	Loss: 0.000909	Loss_recons: 0.000707	Loss_kld: 0.000203
+Epoch 064, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [0/5083 (0%)]	Loss: 0.001077	Loss_recons: 0.000869	Loss_kld: 0.000208
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [30/5083 (6%)]	Loss: 0.000836	Loss_recons: 0.000630	Loss_kld: 0.000205
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [60/5083 (13%)]	Loss: 0.000958	Loss_recons: 0.000763	Loss_kld: 0.000195
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [90/5083 (19%)]	Loss: 0.001036	Loss_recons: 0.000858	Loss_kld: 0.000178
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [120/5083 (25%)]	Loss: 0.001093	Loss_recons: 0.000885	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [150/5083 (31%)]	Loss: 0.000956	Loss_recons: 0.000738	Loss_kld: 0.000217
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [180/5083 (38%)]	Loss: 0.000918	Loss_recons: 0.000704	Loss_kld: 0.000214
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [210/5083 (44%)]	Loss: 0.000907	Loss_recons: 0.000714	Loss_kld: 0.000193
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [240/5083 (50%)]	Loss: 0.001109	Loss_recons: 0.000925	Loss_kld: 0.000184
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [270/5083 (57%)]	Loss: 0.001127	Loss_recons: 0.000883	Loss_kld: 0.000244
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [300/5083 (63%)]	Loss: 0.001349	Loss_recons: 0.001081	Loss_kld: 0.000268
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [330/5083 (69%)]	Loss: 0.001075	Loss_recons: 0.000790	Loss_kld: 0.000285
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [360/5083 (75%)]	Loss: 0.001064	Loss_recons: 0.000786	Loss_kld: 0.000278
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [390/5083 (82%)]	Loss: 0.000985	Loss_recons: 0.000736	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [420/5083 (88%)]	Loss: 0.001102	Loss_recons: 0.000853	Loss_kld: 0.000250
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 65 [450/5083 (94%)]	Loss: 0.001026	Loss_recons: 0.000764	Loss_kld: 0.000263
+Epoch 065, Loss: 0.0034
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [0/5083 (0%)]	Loss: 0.001064	Loss_recons: 0.000785	Loss_kld: 0.000279
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [30/5083 (6%)]	Loss: 0.000944	Loss_recons: 0.000719	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [60/5083 (13%)]	Loss: 0.001007	Loss_recons: 0.000775	Loss_kld: 0.000232
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [90/5083 (19%)]	Loss: 0.001071	Loss_recons: 0.000833	Loss_kld: 0.000238
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [120/5083 (25%)]	Loss: 0.000879	Loss_recons: 0.000653	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [150/5083 (31%)]	Loss: 0.000822	Loss_recons: 0.000622	Loss_kld: 0.000201
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [180/5083 (38%)]	Loss: 0.001008	Loss_recons: 0.000798	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [210/5083 (44%)]	Loss: 0.000930	Loss_recons: 0.000717	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [240/5083 (50%)]	Loss: 0.000979	Loss_recons: 0.000771	Loss_kld: 0.000208
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [270/5083 (57%)]	Loss: 0.001037	Loss_recons: 0.000829	Loss_kld: 0.000208
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [300/5083 (63%)]	Loss: 0.000927	Loss_recons: 0.000700	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [330/5083 (69%)]	Loss: 0.000920	Loss_recons: 0.000687	Loss_kld: 0.000233
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [360/5083 (75%)]	Loss: 0.000922	Loss_recons: 0.000709	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [390/5083 (82%)]	Loss: 0.000907	Loss_recons: 0.000705	Loss_kld: 0.000202
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [420/5083 (88%)]	Loss: 0.000902	Loss_recons: 0.000677	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 66 [450/5083 (94%)]	Loss: 0.000973	Loss_recons: 0.000736	Loss_kld: 0.000237
+Epoch 066, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [0/5083 (0%)]	Loss: 0.000997	Loss_recons: 0.000773	Loss_kld: 0.000224
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [30/5083 (6%)]	Loss: 0.001086	Loss_recons: 0.000844	Loss_kld: 0.000242
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [60/5083 (13%)]	Loss: 0.000902	Loss_recons: 0.000668	Loss_kld: 0.000234
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [90/5083 (19%)]	Loss: 0.000936	Loss_recons: 0.000712	Loss_kld: 0.000224
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [120/5083 (25%)]	Loss: 0.001057	Loss_recons: 0.000819	Loss_kld: 0.000237
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [150/5083 (31%)]	Loss: 0.000887	Loss_recons: 0.000647	Loss_kld: 0.000240
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [180/5083 (38%)]	Loss: 0.000955	Loss_recons: 0.000727	Loss_kld: 0.000228
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [210/5083 (44%)]	Loss: 0.000892	Loss_recons: 0.000666	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [240/5083 (50%)]	Loss: 0.001057	Loss_recons: 0.000850	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [270/5083 (57%)]	Loss: 0.001051	Loss_recons: 0.000847	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [300/5083 (63%)]	Loss: 0.000914	Loss_recons: 0.000713	Loss_kld: 0.000201
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [330/5083 (69%)]	Loss: 0.000894	Loss_recons: 0.000696	Loss_kld: 0.000198
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [360/5083 (75%)]	Loss: 0.000810	Loss_recons: 0.000610	Loss_kld: 0.000201
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [390/5083 (82%)]	Loss: 0.000856	Loss_recons: 0.000643	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [420/5083 (88%)]	Loss: 0.000918	Loss_recons: 0.000692	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 67 [450/5083 (94%)]	Loss: 0.000971	Loss_recons: 0.000755	Loss_kld: 0.000216
+Epoch 067, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [0/5083 (0%)]	Loss: 0.000982	Loss_recons: 0.000747	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [30/5083 (6%)]	Loss: 0.000915	Loss_recons: 0.000698	Loss_kld: 0.000217
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [60/5083 (13%)]	Loss: 0.000903	Loss_recons: 0.000668	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [90/5083 (19%)]	Loss: 0.000980	Loss_recons: 0.000767	Loss_kld: 0.000213
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [120/5083 (25%)]	Loss: 0.000976	Loss_recons: 0.000761	Loss_kld: 0.000215
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [150/5083 (31%)]	Loss: 0.000871	Loss_recons: 0.000674	Loss_kld: 0.000198
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [180/5083 (38%)]	Loss: 0.001003	Loss_recons: 0.000798	Loss_kld: 0.000205
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [210/5083 (44%)]	Loss: 0.001012	Loss_recons: 0.000785	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [240/5083 (50%)]	Loss: 0.000885	Loss_recons: 0.000676	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [270/5083 (57%)]	Loss: 0.000883	Loss_recons: 0.000688	Loss_kld: 0.000195
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [300/5083 (63%)]	Loss: 0.000921	Loss_recons: 0.000717	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [330/5083 (69%)]	Loss: 0.000927	Loss_recons: 0.000699	Loss_kld: 0.000227
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [360/5083 (75%)]	Loss: 0.000981	Loss_recons: 0.000770	Loss_kld: 0.000211
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [390/5083 (82%)]	Loss: 0.001028	Loss_recons: 0.000775	Loss_kld: 0.000253
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [420/5083 (88%)]	Loss: 0.000854	Loss_recons: 0.000630	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 68 [450/5083 (94%)]	Loss: 0.000822	Loss_recons: 0.000608	Loss_kld: 0.000213
+Epoch 068, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [0/5083 (0%)]	Loss: 0.000884	Loss_recons: 0.000680	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [30/5083 (6%)]	Loss: 0.000888	Loss_recons: 0.000689	Loss_kld: 0.000199
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [60/5083 (13%)]	Loss: 0.000838	Loss_recons: 0.000650	Loss_kld: 0.000188
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [90/5083 (19%)]	Loss: 0.000902	Loss_recons: 0.000718	Loss_kld: 0.000185
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [120/5083 (25%)]	Loss: 0.000801	Loss_recons: 0.000612	Loss_kld: 0.000189
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [150/5083 (31%)]	Loss: 0.000860	Loss_recons: 0.000667	Loss_kld: 0.000194
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [180/5083 (38%)]	Loss: 0.001042	Loss_recons: 0.000817	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [210/5083 (44%)]	Loss: 0.000855	Loss_recons: 0.000630	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [240/5083 (50%)]	Loss: 0.000896	Loss_recons: 0.000699	Loss_kld: 0.000197
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [270/5083 (57%)]	Loss: 0.000779	Loss_recons: 0.000572	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [300/5083 (63%)]	Loss: 0.000898	Loss_recons: 0.000691	Loss_kld: 0.000207
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [330/5083 (69%)]	Loss: 0.000865	Loss_recons: 0.000638	Loss_kld: 0.000226
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [360/5083 (75%)]	Loss: 0.001049	Loss_recons: 0.000843	Loss_kld: 0.000206
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [390/5083 (82%)]	Loss: 0.000913	Loss_recons: 0.000712	Loss_kld: 0.000201
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [420/5083 (88%)]	Loss: 0.000817	Loss_recons: 0.000608	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 69 [450/5083 (94%)]	Loss: 0.000969	Loss_recons: 0.000769	Loss_kld: 0.000200
+Epoch 069, Loss: 0.0028
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [0/5083 (0%)]	Loss: 0.000931	Loss_recons: 0.000722	Loss_kld: 0.000209
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [30/5083 (6%)]	Loss: 0.000844	Loss_recons: 0.000661	Loss_kld: 0.000183
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [60/5083 (13%)]	Loss: 0.000936	Loss_recons: 0.000753	Loss_kld: 0.000184
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [90/5083 (19%)]	Loss: 0.000925	Loss_recons: 0.000751	Loss_kld: 0.000174
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [120/5083 (25%)]	Loss: 0.000968	Loss_recons: 0.000785	Loss_kld: 0.000183
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [150/5083 (31%)]	Loss: 0.001117	Loss_recons: 0.000927	Loss_kld: 0.000190
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [180/5083 (38%)]	Loss: 0.000991	Loss_recons: 0.000792	Loss_kld: 0.000199
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [210/5083 (44%)]	Loss: 0.001038	Loss_recons: 0.000849	Loss_kld: 0.000189
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [240/5083 (50%)]	Loss: 0.000902	Loss_recons: 0.000694	Loss_kld: 0.000208
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [270/5083 (57%)]	Loss: 0.001610	Loss_recons: 0.001333	Loss_kld: 0.000277
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [300/5083 (63%)]	Loss: 0.000981	Loss_recons: 0.000732	Loss_kld: 0.000249
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [330/5083 (69%)]	Loss: 0.001003	Loss_recons: 0.000761	Loss_kld: 0.000241
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [360/5083 (75%)]	Loss: 0.000863	Loss_recons: 0.000658	Loss_kld: 0.000205
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [390/5083 (82%)]	Loss: 0.000898	Loss_recons: 0.000704	Loss_kld: 0.000194
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [420/5083 (88%)]	Loss: 0.000905	Loss_recons: 0.000690	Loss_kld: 0.000216
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 70 [450/5083 (94%)]	Loss: 0.000831	Loss_recons: 0.000612	Loss_kld: 0.000220
+Epoch 070, Loss: 0.0029
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [0/5083 (0%)]	Loss: 0.000959	Loss_recons: 0.000776	Loss_kld: 0.000183
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [30/5083 (6%)]	Loss: 0.000855	Loss_recons: 0.000684	Loss_kld: 0.000171
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [60/5083 (13%)]	Loss: 0.000930	Loss_recons: 0.000739	Loss_kld: 0.000191
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [90/5083 (19%)]	Loss: 0.000924	Loss_recons: 0.000743	Loss_kld: 0.000180
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [120/5083 (25%)]	Loss: 0.000800	Loss_recons: 0.000625	Loss_kld: 0.000176
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [150/5083 (31%)]	Loss: 0.000911	Loss_recons: 0.000753	Loss_kld: 0.000158
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [180/5083 (38%)]	Loss: 0.000975	Loss_recons: 0.000799	Loss_kld: 0.000175
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [210/5083 (44%)]	Loss: 0.000905	Loss_recons: 0.000735	Loss_kld: 0.000170
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [240/5083 (50%)]	Loss: 0.000914	Loss_recons: 0.000742	Loss_kld: 0.000172
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [270/5083 (57%)]	Loss: 0.000887	Loss_recons: 0.000718	Loss_kld: 0.000169
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [300/5083 (63%)]	Loss: 0.000949	Loss_recons: 0.000772	Loss_kld: 0.000177
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [330/5083 (69%)]	Loss: 0.000856	Loss_recons: 0.000684	Loss_kld: 0.000172
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [360/5083 (75%)]	Loss: 0.000919	Loss_recons: 0.000766	Loss_kld: 0.000154
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [390/5083 (82%)]	Loss: 0.000946	Loss_recons: 0.000770	Loss_kld: 0.000176
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [420/5083 (88%)]	Loss: 0.000858	Loss_recons: 0.000690	Loss_kld: 0.000167
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 71 [450/5083 (94%)]	Loss: 0.000879	Loss_recons: 0.000707	Loss_kld: 0.000172
+Epoch 071, Loss: 0.0028
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [0/5083 (0%)]	Loss: 0.000810	Loss_recons: 0.000642	Loss_kld: 0.000168
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [30/5083 (6%)]	Loss: 0.000824	Loss_recons: 0.000664	Loss_kld: 0.000160
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [60/5083 (13%)]	Loss: 0.000828	Loss_recons: 0.000672	Loss_kld: 0.000156
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [90/5083 (19%)]	Loss: 0.000807	Loss_recons: 0.000660	Loss_kld: 0.000146
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [120/5083 (25%)]	Loss: 0.000819	Loss_recons: 0.000652	Loss_kld: 0.000168
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [150/5083 (31%)]	Loss: 0.000831	Loss_recons: 0.000682	Loss_kld: 0.000149
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [180/5083 (38%)]	Loss: 0.000926	Loss_recons: 0.000760	Loss_kld: 0.000166
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [210/5083 (44%)]	Loss: 0.000863	Loss_recons: 0.000698	Loss_kld: 0.000166
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [240/5083 (50%)]	Loss: 0.000905	Loss_recons: 0.000745	Loss_kld: 0.000160
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [270/5083 (57%)]	Loss: 0.000863	Loss_recons: 0.000696	Loss_kld: 0.000167
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [300/5083 (63%)]	Loss: 0.000973	Loss_recons: 0.000803	Loss_kld: 0.000171
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [330/5083 (69%)]	Loss: 0.000921	Loss_recons: 0.000740	Loss_kld: 0.000181
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [360/5083 (75%)]	Loss: 0.000935	Loss_recons: 0.000757	Loss_kld: 0.000178
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [390/5083 (82%)]	Loss: 0.001032	Loss_recons: 0.000851	Loss_kld: 0.000180
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [420/5083 (88%)]	Loss: 0.001006	Loss_recons: 0.000811	Loss_kld: 0.000195
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 72 [450/5083 (94%)]	Loss: 0.000844	Loss_recons: 0.000656	Loss_kld: 0.000189
+Epoch 072, Loss: 0.0027
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [0/5083 (0%)]	Loss: 0.000924	Loss_recons: 0.000721	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [30/5083 (6%)]	Loss: 0.000862	Loss_recons: 0.000666	Loss_kld: 0.000196
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [60/5083 (13%)]	Loss: 0.000768	Loss_recons: 0.000595	Loss_kld: 0.000174
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [90/5083 (19%)]	Loss: 0.000945	Loss_recons: 0.000765	Loss_kld: 0.000181
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [120/5083 (25%)]	Loss: 0.000985	Loss_recons: 0.000791	Loss_kld: 0.000195
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [150/5083 (31%)]	Loss: 0.001036	Loss_recons: 0.000873	Loss_kld: 0.000163
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [180/5083 (38%)]	Loss: 0.001038	Loss_recons: 0.000861	Loss_kld: 0.000177
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [210/5083 (44%)]	Loss: 0.000935	Loss_recons: 0.000767	Loss_kld: 0.000168
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [240/5083 (50%)]	Loss: 0.000827	Loss_recons: 0.000669	Loss_kld: 0.000158
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [270/5083 (57%)]	Loss: 0.000877	Loss_recons: 0.000724	Loss_kld: 0.000153
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [300/5083 (63%)]	Loss: 0.000784	Loss_recons: 0.000639	Loss_kld: 0.000144
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [330/5083 (69%)]	Loss: 0.000879	Loss_recons: 0.000725	Loss_kld: 0.000154
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [360/5083 (75%)]	Loss: 0.000843	Loss_recons: 0.000678	Loss_kld: 0.000165
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [390/5083 (82%)]	Loss: 0.000863	Loss_recons: 0.000693	Loss_kld: 0.000169
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [420/5083 (88%)]	Loss: 0.000945	Loss_recons: 0.000772	Loss_kld: 0.000172
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 73 [450/5083 (94%)]	Loss: 0.000904	Loss_recons: 0.000726	Loss_kld: 0.000178
+Epoch 073, Loss: 0.0027
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [0/5083 (0%)]	Loss: 0.000939	Loss_recons: 0.000770	Loss_kld: 0.000168
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [30/5083 (6%)]	Loss: 0.000830	Loss_recons: 0.000674	Loss_kld: 0.000155
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [60/5083 (13%)]	Loss: 0.000847	Loss_recons: 0.000684	Loss_kld: 0.000164
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [90/5083 (19%)]	Loss: 0.000876	Loss_recons: 0.000721	Loss_kld: 0.000155
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [120/5083 (25%)]	Loss: 0.000926	Loss_recons: 0.000775	Loss_kld: 0.000151
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [150/5083 (31%)]	Loss: 0.000968	Loss_recons: 0.000796	Loss_kld: 0.000172
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [180/5083 (38%)]	Loss: 0.000947	Loss_recons: 0.000780	Loss_kld: 0.000167
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [210/5083 (44%)]	Loss: 0.000828	Loss_recons: 0.000687	Loss_kld: 0.000141
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [240/5083 (50%)]	Loss: 0.000827	Loss_recons: 0.000670	Loss_kld: 0.000158
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [270/5083 (57%)]	Loss: 0.001040	Loss_recons: 0.000858	Loss_kld: 0.000182
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [300/5083 (63%)]	Loss: 0.000903	Loss_recons: 0.000739	Loss_kld: 0.000165
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [330/5083 (69%)]	Loss: 0.000888	Loss_recons: 0.000726	Loss_kld: 0.000162
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [360/5083 (75%)]	Loss: 0.000770	Loss_recons: 0.000631	Loss_kld: 0.000138
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [390/5083 (82%)]	Loss: 0.000964	Loss_recons: 0.000814	Loss_kld: 0.000150
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [420/5083 (88%)]	Loss: 0.000816	Loss_recons: 0.000670	Loss_kld: 0.000146
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 74 [450/5083 (94%)]	Loss: 0.000864	Loss_recons: 0.000698	Loss_kld: 0.000166
+Epoch 074, Loss: 0.0027
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [0/5083 (0%)]	Loss: 0.000911	Loss_recons: 0.000740	Loss_kld: 0.000171
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [30/5083 (6%)]	Loss: 0.000819	Loss_recons: 0.000660	Loss_kld: 0.000159
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [60/5083 (13%)]	Loss: 0.000983	Loss_recons: 0.000824	Loss_kld: 0.000159
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [90/5083 (19%)]	Loss: 0.001067	Loss_recons: 0.000909	Loss_kld: 0.000158
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [120/5083 (25%)]	Loss: 0.000956	Loss_recons: 0.000791	Loss_kld: 0.000165
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [150/5083 (31%)]	Loss: 0.000914	Loss_recons: 0.000739	Loss_kld: 0.000175
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [180/5083 (38%)]	Loss: 0.000759	Loss_recons: 0.000569	Loss_kld: 0.000190
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [210/5083 (44%)]	Loss: 0.000967	Loss_recons: 0.000748	Loss_kld: 0.000219
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [240/5083 (50%)]	Loss: 0.001050	Loss_recons: 0.000847	Loss_kld: 0.000203
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [270/5083 (57%)]	Loss: 0.000973	Loss_recons: 0.000736	Loss_kld: 0.000238
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [300/5083 (63%)]	Loss: 0.000885	Loss_recons: 0.000640	Loss_kld: 0.000245
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [330/5083 (69%)]	Loss: 0.000994	Loss_recons: 0.000774	Loss_kld: 0.000220
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [360/5083 (75%)]	Loss: 0.000968	Loss_recons: 0.000758	Loss_kld: 0.000210
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [390/5083 (82%)]	Loss: 0.000945	Loss_recons: 0.000710	Loss_kld: 0.000235
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [420/5083 (88%)]	Loss: 0.000979	Loss_recons: 0.000758	Loss_kld: 0.000221
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 75 [450/5083 (94%)]	Loss: 0.000945	Loss_recons: 0.000726	Loss_kld: 0.000219
+Epoch 075, Loss: 0.0030
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 76 [0/5083 (0%)]	Loss: 0.000954	Loss_recons: 0.000737	Loss_kld: 0.000217
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 76 [30/5083 (6%)]	Loss: 0.000931	Loss_recons: 0.000706	Loss_kld: 0.000225
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 76 [60/5083 (13%)]	Loss: 0.000849	Loss_recons: 0.000656	Loss_kld: 0.000193
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 76 [90/5083 (19%)]	Loss: 0.001144	Loss_recons: 0.000940	Loss_kld: 0.000204
+Batch(batch=[65536], category=[32], x=[65536, 3])
+Train Epoch: 76 [120/5083 (25%)]	Loss: 0.000803	Loss_recons: 0.000587	Loss_kld: 0.000216

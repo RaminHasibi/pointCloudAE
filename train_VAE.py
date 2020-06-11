@@ -11,7 +11,7 @@ from train_AE import SAModule, GlobalSAModule, MLP
 from sklearn.model_selection import train_test_split
 
 BETA = 1e-6
-Bottle = 256
+Bottle = 128
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
